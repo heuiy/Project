@@ -50,12 +50,12 @@
   - https://colab.research.google.com/drive/1pwbE6Jkahti9RHAGU0Ex8VWWRgcd4vkF#scrollTo=DFRQVFyr_k4p
 
 ### 210811_IVF-M HP pH 측정 간소화를 통한 공정시간 단축 및 GMP 리스크 감소
-- IVF-M HP pH 측정 간소화를 통한 공정시간 단축 및 GMP 리스크 감소_R.ipynb
+- IVF-M HP pH 측정 간소화를 통한 공정시간 단축 및 GMP 리스크 감소(R)_Rev.01.ipynb
   - https://colab.research.google.com/drive/1Vt2sT_thP53DqlsvOz3XPtnKe6-ec96w?usp=sharing
 
 ### 210813_PRP-TT 접합체 원액(IBP)
 - PRP-TT 접합체 원액(IBP)_Rev.01
    
 ### 210814_공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감
-- 공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감_Rev.01
+- 공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감(R)_Rev.01.ipynb
   - https://colab.research.google.com/drive/12Pw1_MM4FuBAjlo8eLfhThhUZh1mC6uM?usp=sharing
