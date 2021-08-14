@@ -58,3 +58,4 @@
    
 ### 210814_공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감
 - 공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감_Rev.01
+  - https://colab.research.google.com/drive/12Pw1_MM4FuBAjlo8eLfhThhUZh1mC6uM
