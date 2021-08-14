@@ -9,7 +9,7 @@
 
 
 
-# 210110_Lottery
+#### 210110_Lottery
 - 딥러닝(LSTM) 활용 연금복권 당첨 가능성 극대화_Rev.04
   - https://colab.research.google.com/drive/1dvxcXZ4Pq_hmpVg_mfiD7ccneSewmMa5
 
