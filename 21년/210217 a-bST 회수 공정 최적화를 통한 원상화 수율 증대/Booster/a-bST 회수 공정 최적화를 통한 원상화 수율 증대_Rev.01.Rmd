@@ -1,0 +1,584 @@
+---
+title: "a-bST 회수 공정 최적화를 통한 원상화 수율 증대_Rev.01"
+Date: "r format(Sys.Date())"
+output: 
+  html_document: 
+    fig_height: 6
+    fig_width: 10
+    highlight: textmate
+    theme: cosmo
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+# ■ Define
+
+### Step01 개선 기회 탐색
+* 정보화된 시스템 중 어느 시스템을 통해 개선 기회를 수시 점검 및 발굴 할 수 있는가?
+
+### Step02 개선 기회 발굴 및 과제 선정
+* 부스틴 발효 - 회수 공정을 최적화함
+* 목표 : 평균 수율 70% → 72% 
+
+### Step03 Project Y 선정
+* Project Y : 원상화(Refolding) (DP-0T) Yield  증대
+* 한외여과 공정 OT_UF OT 총량(kg) / 회수공정(X2) _ RWP(kg) x 100
+
+
+# ■ Measure
+
+### Step04 데이터 수집 및 검증 계획 수립
+
+Data 수집 계획 : 
+
+* 측정 지표 : 공정 파라미터
+
+* 수집 시스템 : 엔지니어 공정데이터 수기 취합 (MES 예정)
+
+* 수집 기간 : 19년01월 ~ 20년05월
+
+* 변수 : 27ea 
+
+### Step05 데이터 Set 구성
+* 데이터 형식 Numeric 확인함
+```{r warning=FALSE}
+library(readxl)
+Booster = read_excel("DAT/Booster_Rev.01.xlsx", sheet = 'sheet_03',  skip=2)
+str(Booster)
+```
+
+Dataset 의 Column 이름을 확인하고, 데이터 복사본을 생성함.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr)
+colnames(Booster)
+df <- Booster 
+
+```
+
+종속변수인 원상화 Yield 개략적인 데이터 분포를 확인함
+
+* Project Y : 원상화(Refolding) (DP-0T) Yield 
+* Project Y 산출 공식 : 한외여과 공정 OT_UF OT 총량(kg) / 회수공정(X2) _ RWP(kg) x 100
+* Project Y 산출 공식 : 변수 K / 변수 H x 100
+* Project Y 변수명을 BB 라 명명함 
+
+```{r}
+
+df <- df %>% 
+  mutate(BB = K / H * 100)
+
+hist(df$BB)
+plot(df$BB)
+boxplot(df$BB)
+summary(df$BB)
+```
+
+### Step06 데이터 취득 시스템(유용성)검증
+
+### Step07 프로세스 현수준 파악
+
+* Install.packages() 는 최초 1회 설치 후 주석처리 하도록 함.
+* R Markdown 에 Install.packages() 가 포함되어 있으면 knit 할 때마다 해당 패키지가 신규 설치됨 
+
+```{r warning=FALSE}
+#Install.packages(SixSigma)
+library(SixSigma)
+```
+
+* Plots a Histogram with density lines.
+* Usage : ss.study.ca(xST, xLT = NA, LSL = NA, USL = NA, Target = NA)
+* P-value 가 0.05보다 작으므로 정규분포한다고 보기 어려움
+
+```{r warning=FALSE}
+ss.study.ca(xST=df$BB, LSL =56.47, USL =79.74, Target = 70.26)
+```
+
+### Step08 개선 목표 설정  
+* 원상화 수율 평균 70.72% (Z bench 2.14) → 평균 72% 이상
+
+# ■ Analyze
+
+### Step09 X인자 검증 계획 수립
+
+데이터 수집 계획
+
+* project Y : BB data - LIMS 자동 Collecting
+
+* x's : 공정 Parameter Data MES 자동 Collecting
+
+### Step10 데이터 취득 및 전처리 실시
+
+전처리 도구 불러오기
+
+* 부스틴 생산팀(이형중 팀장님) 에서 수기로 기록한 데이터(.xlsx)를 분석함
+
+* Project Y 는 파생변수 BB 추가함
+
+```{r warning=FALSE}
+library(dplyr);library(tidyr)
+
+```
+
+### Step11 데이터 탐색
+
+데이터 요약
+```{r}
+summary(df)
+
+```
+
+Graph분석
+
+* 변수 A는 배치 번호이므로 제외함
+
+```{r warning=FALSE}
+df2 <- df %>% select(-A)
+df_cor <- cor(df2)
+df_cor
+
+library(corrplot)
+corrplot(df_cor)  
+```
+
+통계적 이상치 제거
+
+* Box-plot 에서 최소값 ~ 최대값 사이의 데이터만 분석 대상으로 설정함
+
+* Box-plot 에서 상자의 좌우 또는 상하로 뻗어나간 선(whisker)은 중앙값 - 1.5 * IQR 보다 큰 데이터 중 가장 작은 값(lower whisker), 중앙값 + 1.5 * IQR 보다 작은 데이터 중 가장 큰 값(upper whisker)을 각각 보여줌.
+
+* IQR (Inter Quartile Range) 산출식 = ‘제3사분위수 - 제1사분위수’로 계산함.
+
+* 그래프에 보여지는 점들은 outlier (lower whisker 보다 작은 데이터 또는 upper whisker 보다 큰 데이터) 임. 
+
+* boxplot(df$BB) #상자 그림 그려주는 함수 
+* boxplot.stats(df$BB) #상자 그림의 요소 확인
+* boxplot.stats(df$BB)$stats[1]   #Q1-1.5*IQR
+* boxplot.stats(df$BB)$stats[5]   #Q3+1.5*IQR 
+
+```{r}
+dim(df)
+df2  <-  df %>% filter(df$BB>boxplot.stats(df$BB)$stats[1], # Q1 - 1.5 * IQR 이하 제거
+                       df$BB<boxplot.stats(df$BB)$stats[5]) # Q3 + 1.5 * IQR 이상 제거 
+df <-  df2
+
+dim(df)
+
+```
+
+### Step12 핵심인자 선정
+
+데이터 Set 구분하기
+
+* 전체 107 obs. of 28 variables 중에서 70% 는 Train 세트로 설정하고 30% 는 Test 세트로 설정함
+
+set.seed()
+
+* 난수를 생성하는 초기값(seed)를 지정하기 위해 사용하는 함수임.
+* 난수를 사용하여 데이터를 분리하므로 매 호출시마다 서로 다른 folds 결과가 출력됨. 하지만 seed를 지정해주면 매번 같은 folds를 결과로 내놓게되어 교차 검증을 수회 반복하더라도 같은 folds를 사용해 안정적으로 모델을 개선할 수 있음.
+* set.seed 를 설정하지 않으면 매번 다른 샘플이 추출됨.
+* 집주소가 00 아파트 1303호라면 set.seed(1303) 으로 설정해도 무방함.
+
+```{r}
+str(df)
+dim(df)
+nrow(df)
+set.seed(1303)
+train=sample(nrow(df),nrow(df)*0.7)
+test=(1:c(nrow(df)))[-train]
+
+```
+
+Train 세트와 Test 세트의 데이터 프레임을 확인함
+
+```{r}
+length(train) # 전체 데이터 107의 70% 인 74이 Train Set가 됨
+length(test)  # 전체 데이터 107의 30% 인 33가 Test Set가 됨
+
+df_train = df[train,]
+df_test = df[test,]
+
+head(df_train)
+head(df_test)
+```
+ 
+### Step13 분석 모형 검토 
+
+회귀(Regression) 분석과 랜덤 포레스트를 통해 분석함
+
+# ■ Improve
+
+### Step14 최적 모형 수립
+
+분석실시(modeling) : Regression
+
+```{r}
+set.seed(1303)
+lm.fit=lm(BB~.-A,data=df_train)
+
+```
+
+* AIC(Akaike’s Information Criterion)는 낮을 수록 좋은 모델임
+
+* AIC 란?
+
+* 계산식 AIC = -2ln(L) + 2*k
+
+* L : Likeihood function을 의미하며, 모형 적합도를 나타내는 척도
+
+* 2k : 모형의 추정된 파라미터의 갯수(상수항 포함)를 의미
+
+* AIC가 낮다는 것은 모형 적합도가 높다는 의미(단, 절대적인 성능 지표는 아님)
+
+* AIC 값은 두 모델의 관측치 개수가 거의 동일할 때만 비교해야 함.
+
+* AIC 값은 음수일 수 있음. 
+
+* The Akaike information criterion (AIC) is an estimator of prediction error and thereby relative quality of statistical models for a given set of data.
+
+* https://en.wikipedia.org/wiki/Akaike_information_criterion
+
+```{r}
+step(lm.fit)
+
+```
+
+최적 회귀식 도출함
+
+```{r}
+lm.fit_best = lm(BB ~ F + H + J + K + L + M + N + P + Q + U + AB + AE + AJ, data = df_train)
+
+```
+
+분석실시(modeling) : rf
+
+```{r message=FALSE, warning=FALSE}
+library(randomForest) ; library(tree)
+
+set.seed(1303)
+rf.fit=randomForest(BB~.-A,data=df_train,importance=T)
+rf.fit
+
+```
+
+각 인자가 종속변수에 얼마나 영향을 주는지 확인함
+
+* 예측변수 중요도 확인
+
+* MSE의 퍼센트 증가(%IncMSE) 에 더 집중 
+
+* MSE 의 노드 순도 증가(IncNodePurity)는 편향이 있어서 결과 해석이 왜곡될 수 있음
+
+```{r}
+varImpPlot(rf.fit)
+
+```
+
+랜덤포레스트 주요 인자 기준으로 모형을 재수립함
+
+중요도 순서 : 
+
+* L  : 한외여과 공정 0T - 10K Tank 총량 (kg)
+
+* H  : 회수공정 (X2) - RWP (kg)
+
+* J  : 회수공정 (X2) - RWP4 전도도 
+
+* M  : 한외여과 공정 0T - UF 0T 10K 수율 (%)
+
+* U  : 한외여과 공정  Final T - 10K RP Peak 1 (%)
+
+* N  : 한외여과 공정 OT - 10K RP Peak 1 (%)
+
+```{r}
+
+rf.fit_best=randomForest(BB ~ L +
+                           H +
+                           J + 
+                           M +
+                           U +
+                           N, data=df_train,importance=T)
+
+rf.fit_best
+
+```
+
+### Step15 모형 검증 및 최적화
+
+실제 관측값을 회귀모형과 랜덤 포레스트 모형에 대입하여 예측값을 확인함
+
+```{r}
+lm_obs = df_test$BB #실제 관측값
+lm_pred = predict(lm.fit_best,newdata=df_test) # 예측값 
+rf_pred = predict(rf.fit_best,newdata=df_test) # 예측값 
+
+```
+
+각 모형의 MSE 를 확인함
+
+MSE 확인 : 
+
+* 선형회귀     : 0.0787
+
+* 랜덤포레스트 : 5.0016
+
+```{r warning=FALSE}
+library(DescTools)
+MSE(lm_pred, lm_obs)
+MSE(rf_pred, lm_obs)
+
+```
+
+평균 제곱근(RMSE) 편차? 
+
+* 평균 제곱근 오차(Root Mean Square Error; RMSE)는 추정 값 또는 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룰 때 흔히 사용하는 측도임
+
+* https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0_%EC%A0%9C%EA%B3%B1%EA%B7%BC_%ED%8E%B8%EC%B0%A8
+
+RMSE 확인 : 
+
+* 선형회귀     : 0.281
+
+* 랜덤포레스트 : 2.236
+
+```{r}
+RMSE(lm_pred, lm_obs)  
+RMSE(rf_pred, lm_obs) 
+```
+
+설명력(상관계수 제곱) 확인
+
+* 선형회귀 R^2     : 99%
+
+* 랜덤포레스트 R^2 : 58%
+
+```{r}
+(cor(lm_pred,lm_obs))^2 
+(cor(rf_pred,lm_obs))^2 
+
+```
+
+모델링에 활용된 인자 범위를 체크하고 불필요한 변수는 제거함
+
+* 배치 번호 (변수 A) 제거
+
+```{r}
+df_range <- df_test %>% 
+  select(-A)
+length(df_range)
+
+```
+
+For 문 
+
+for (i in 1: xx) : 1 ~ xx에 숫자를 length 값으로 넣어줌
+
+* FOR문은 변수 i가 주어진 벡터에 있는 1, 2, 3, · · · , XX 를 차례로 출력함.
+
+* 해당 데이터는 
+
+```{r}
+print("Feature range")
+for( i in 1:27){
+  A = df_range %>% filter(df_range[,i]>0) %>% .[,i] 
+  B = A[A>boxplot(A)$stats[1]&A<boxplot(A)$stats[5]] %>% range()
+  print(data.frame(names=colnames(df_range)[i] ,lower=B[1],upper=B[2]))
+}
+
+```
+
+
+최종 회귀식 도출
+
+* 해당 변수(13개)들로 만들어진 회귀식은 Y(수율) 변동의 99.76% 를 설명해줌
+
+```{r}
+summary(lm.fit_best) 
+
+# 최종 회귀식
+
+# y = 115.483026    
+#      +0.005841 * F
+#      -0.897979 * H
+#      -0.897979 * J
+#      +0.608136 * K
+#      -0.269485 * L
+#      +0.238101 * M
+#      -0.128299 * N
+#      +0.364841 * P
+#      -0.309187 * Q
+#      +0.045998 * U
+#      -0.033244 * AB
+#      -0.058158 * AE
+#      -0.159217 * AJ
+
+```
+
+최적 조건 : 전체 데이터 기준 
+
+* project Y 망대 특성
+* 각 변수의 양/음 상관관계를 고려하여 최적 조건을 도출함
+
+```{r}
+new=data.frame(F  = 97,       # 양 
+               H  = 102.9,    # 음 
+               J  = 0.16,     # 음 
+               K  = 97.768,   # 양 
+               L  = 35.334,   # 음 
+               M  = 63.01338, # 양 
+               N  = 97.6,     # 음 
+               P  = 92.61,    # 양 
+               Q  = 91.64553, # 음 
+               U  = 98.7,     # 양 
+               AB = 2.4,      # 음
+               AE = 76.2,     # 음
+               AJ = 95.8)     # 음
+               
+
+new
+```
+
+최적조건 구하기 : 인자별 Range확인 (예측) 
+
+* Project Y 수율 예측값 99.69(%)
+
+* '19년 ~ '20년 수율 평균 : 70%
+
+```{r}
+predict(lm.fit_best,newdata=new)
+
+```
+
+![랜덤 포레스트 활용 최적조건 추가 확인](D:/회사_더샵/원가절감/DX/21년/210217 a-bST 회수 공정 최적화를 통한 원상화 수율 증대/Booster/PIC/숲.jpg)
+
+최적조건 추가 확인 : randomForest
+
+* 최적 조건을 확인하기 위해 상기 도출한 "rf.fit_best" 을 활용하여 "tr.fit" 생성
+
+* 의사결정나무는 화이트박스 모형 (분기가 어떻게 되어 있는지 다 보임)
+
+* 랜덤포레스트는 블랙박스 모형 (분기가 어떻게 되어 있는지 안 보임)
+
+* 랜덤 포레스트는 의사결정 나무를 기반으로 구성되는데, 변수에 제약을 뒀다는 것이 포인트
+
+```{r}
+
+# rf.fit_best=randomForest(BB ~ L +
+#                            H +
+#                            J + 
+#                            M +
+#                            U +
+#                            N, data=df_train,importance=T)
+
+tr.fit = tree(BB ~ L +
+                H +
+                J + 
+                M +
+                U +
+                N,data=df_train)
+```
+
+최적 공정 파라미터 확인
+
+* L : 47.88 이상
+
+* H : 116.2 이하
+
+```{r}
+plot(tr.fit) ; text(tr.fit)
+
+```
+
+```{r message=FALSE, warning=FALSE}
+library(rpart); library(rattle)
+
+tree_Booster = rpart(BB ~ L +
+                  H +
+                  J + 
+                  M +
+                  U +
+                  N,data=df_train)
+
+fancyRpartPlot(tree_Booster)
+
+```
+
+랜덤 포레스트의 최적 조건을 도출하기 위해 앞서 확인한 최적 회귀모형 조건을 활용함
+
+```{r}
+# 회귀식의 new data
+# new=data.frame(F  = 97,       # 양 
+#                H  = 102.9,    # 음 
+#                J  = 0.16,     # 음 
+#                K  = 97.768,   # 양 
+#                L  = 35.334,   # 음 
+#                M  = 63.01338, # 양 
+#                N  = 97.6,     # 음 
+#                P  = 92.61,    # 양 
+#                Q  = 91.64553, # 음 
+#                U  = 98.7,     # 양 
+#                AB = 2.4,      # 음
+#                AE = 76.2,     # 음
+#                AJ = 95.8)     # 음
+
+```
+
+* 앞서 확인한 랜덤 포레스트 최적 공정 파라미터를 활용하여 아래와 같이 최적 조건을 수정함.
+
+```{r}
+# 최적 공정 파라미터 확인
+# L : 47.88 이상
+# H : 116.2 이하
+
+new_rf=data.frame(H  = 116.2,    # 음
+                  J  = 0.16,     # 음 # 회귀분석 결과
+                  L  = 47.88,    # 음
+                  M  = 63.01338, # 양 # 회귀분석 결과
+                  N  = 97.6,     # 음 # 회귀분석 결과
+                  U  = 98.7)     # 양 # 회귀분석 결과
+```
+
+
+최적조건 비교 : 회귀모형 vs 랜덤 포레스트
+
+* 회귀모형 : 99.7%
+
+* rf : 73.4%
+
+* '19년 ~ '20년 수율 평균 : 70%
+
+```{r}
+predict(lm.fit_best,newdata=new)      
+predict(rf.fit_best,newdata=new_rf)   
+
+```
+
+<!-- 
+fit_best 식이 10가지 인자라면 데이터도 10가지 인자여야 함.
+rf.fit_best 에는 w 인자 포함한 총 10가지 인자로 식이 구성되어 있는데
+new_rf 데이터에 w 인자가 누락되고 9가지 인자의 데이터만 있다면 오류남.
+w 인자는 초반에 회귀분석의 최적 조건으로 설정을 해줘야 Knit 할 때 오류가 안 남.
+-->
+
+<!-- Rmd 에서 실행했을 때의 predict 값과
+HTML 에서 보여지는 predict 값이 다름.
+
+지난 HA 분석 과제 때도 Rmd 에서 부분 실행했을 때와
+HTML 에서 Knit 했을 때의 값이 달랐음.
+
+최종 결과물은 HTML 이니까 통일성을 위해 HTML 값을 기준으로 함.
+-->
+
+### Step16 개선 결과 검증(Pilot Test) 
+상기 조건으로 실제 공정 진행 후 결과 체크 
+
+# ■ Control
+
+### Step17 최적모형 모니터링
+
+### Step18 표준화 및 수평전개 
+
+
+
+
