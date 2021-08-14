@@ -1,4 +1,15 @@
-## 210110_Lottery
+* 201115 HA 공정 파라미터 최적화를 통한 극한점도 극대화
+
+* 210114 DP67 공정 파라미터 최적화를 통한 수율 향상
+
+* 210120 폐수처리장 Turbo Blower 최적화를 통한 에너지 효율 증대
+
+* 210217 a-bST 회수 공정 최적화를 통한 원상화 수율 증대
+
+
+
+
+# 210110_Lottery
 - 딥러닝(LSTM) 활용 연금복권 당첨 가능성 극대화_Rev.04
   - https://colab.research.google.com/drive/1dvxcXZ4Pq_hmpVg_mfiD7ccneSewmMa5
 
