@@ -3,13 +3,13 @@
 LG화학 생명과학 DX 추진 프로젝트 :
 
 ## 210110_Lottery
-- 딥러닝(LSTM) 활용 연금복권 당첨 가능성 극대화_Rev.04
-- https://colab.research.google.com/drive/1dvxcXZ4Pq_hmpVg_mfiD7ccneSewmMa5
+  - 딥러닝(LSTM) 활용 연금복권 당첨 가능성 극대화_Rev.04
+  - https://colab.research.google.com/drive/1dvxcXZ4Pq_hmpVg_mfiD7ccneSewmMa5
 
 ## 210222_디클라제 충전 경향성 분석을 통한 품질관리수준 증대 (BDV0709)
 - 디클라제 충전 경향성 분석 (BDV0709)_Rev.03
-- https://colab.research.google.com/drive/1NsidZ8O_3iwGsYmUXb96DwI1tx0OojkB
-- https://drive.google.com/file/d/1NsidZ8O_3iwGsYmUXb96DwI1tx0OojkB/view?usp=sharing
+  - https://colab.research.google.com/drive/1NsidZ8O_3iwGsYmUXb96DwI1tx0OojkB
+  - https://drive.google.com/file/d/1NsidZ8O_3iwGsYmUXb96DwI1tx0OojkB/view?usp=sharing
 
 ## 210223 의료기기 공중하양(HA유래) 측정시스템(MSA) 강화를 통한 DSM 고도화
 - DSM_Rev.14
