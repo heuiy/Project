@@ -56,6 +56,7 @@
 ### 210813_PRP-TT 접합체 원액(IBP)
 - PRP-TT 접합체 원액(IBP)(R)_Rev.01
   - https://colab.research.google.com/drive/1-s4w2X9yRya65AgM7HS_1r2puXQq0GBV?usp=sharing
+  - https://gist.github.com/heuiy/3d65b3129cea10d1adcc3b45468ff899
    
 ### 210814_공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감
 - 공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감(R)_Rev.01.ipynb
