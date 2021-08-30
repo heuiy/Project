@@ -79,7 +79,7 @@
 ### 210830_DX Expert 실습_Elice
 - Case 01. 광석 처리 공단에서의 이산화규소 불순도 예측
     - [Case 1-1] 다중 회귀 분석 모델을 활용한 불순도 예측_Rev.01
-      https://drive.google.com/file/d/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk/view?usp=sharing
+      - https://drive.google.com/file/d/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk/view?usp=sharing
     - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측
     - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측
     - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측
