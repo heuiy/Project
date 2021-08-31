@@ -95,6 +95,7 @@
     - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.01
       - https://drive.google.com/file/d/1eiGz1gkPkFOrs2IHK-UwxzmPAkiecfYC/view?usp=sharing
     - [Case 2-2] 나이브베이즈 분류 모델을 활용한 공정 이상 예측_Rev.01
+      - https://drive.google.com/file/d/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F/view?usp=sharing
     - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01
     - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01
     - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01
