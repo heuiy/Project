@@ -86,9 +86,12 @@
       - https://drive.google.com/file/d/1e3F3ilyAMokPYZfjOPtQ-7CkDtYFOkxu/view?usp=sharing
     - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.01
       - https://drive.google.com/file/d/1eBNYmHHqVFA9cXSNSvjTeHOjBgL0ZP-y/view?usp=sharing
+    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.02
+      - https://drive.google.com/file/d/1ejyQrW7yakytvqERYK_-gZ3SbYuvr4tG/view?usp=sharing
 
 - Case 02. 반도체 공정 데이터를 활용한 공정 이상 예측
     - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.01
+      - https://drive.google.com/file/d/1eiGz1gkPkFOrs2IHK-UwxzmPAkiecfYC/view?usp=sharing
     - [Case 2-2] 나이브베이즈 분류 모델을 활용한 공정 이상 예측_Rev.01
     - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01
     - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01
