@@ -78,25 +78,25 @@
 
 ### 210830_DX Expert 실습_Elice
 - Case 01. 광석 처리 공단에서의 이산화규소 불순도 예측
-    - [Case 1-1] 다중 회귀 분석 모델을 활용한 불순도 예측_Rev.01
+    - [Case 1-1] 다중 회귀 분석 모델을 활용한 불순도 예측_Rev.01 (100점)
       - https://drive.google.com/file/d/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk/view?usp=sharing
     - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.01
       - https://drive.google.com/file/d/1e1iDzycV8FSyf9i3-rVNZFumrr9EitZs/view?usp=sharing
-    - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.02
+    - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.02 (90점)
       - https://drive.google.com/file/d/1ekYLKjlCTcimKHpVKw2-gX3lfRtT6wnM/view?usp=sharing
-    - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측_Rev.01
+    - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측_Rev.01 (90점)
       - https://drive.google.com/file/d/1e3F3ilyAMokPYZfjOPtQ-7CkDtYFOkxu/view?usp=sharing
-    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.01
+    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.01 
       - https://drive.google.com/file/d/1eBNYmHHqVFA9cXSNSvjTeHOjBgL0ZP-y/view?usp=sharing
-    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.02
+    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.02 (80점)
       - https://drive.google.com/file/d/1ejyQrW7yakytvqERYK_-gZ3SbYuvr4tG/view?usp=sharing
 
 - Case 02. 반도체 공정 데이터를 활용한 공정 이상 예측
     - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.01
       - https://drive.google.com/file/d/1eiGz1gkPkFOrs2IHK-UwxzmPAkiecfYC/view?usp=sharing
-    - [Case 2-2] 나이브베이즈 분류 모델을 활용한 공정 이상 예측_Rev.01
+    - [Case 2-2] 나이브베이즈 분류 모델을 활용한 공정 이상 예측_Rev.01 (100점)
       - https://drive.google.com/file/d/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F/view?usp=sharing
-    - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01
+    - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01 (100점)
       - https://drive.google.com/file/d/1eu0BLOb_EK3S1VElzhqFaJAZRUexfoCY/view?usp=sharing
     - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01
     - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01
