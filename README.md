@@ -106,7 +106,8 @@
       - https://drive.google.com/file/d/1f3IF7rhqPi5UaQfQK2qz49qby9KLhITh/view?usp=sharing
     - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01 (80점)
       - https://drive.google.com/file/d/1fBDi5N_WbEPGOy55sxxYmVsX5jxX3GA0/view?usp=sharing
-    - [Case 2-6] KNN 모델을 활용한 공정 이상 예측_Rev.01
+    - [Case 2-6] KNN 모델을 활용한 공정 이상 예측_Rev.01 (60점)
+      - https://drive.google.com/file/d/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6/view?usp=sharing
 
 - Case 03. 제품 감성 분석 (Product Sentiment Analysis)을 위한 자연어처리
     - [Case 3-1] RNN 모델을 활용한 텍스트 감성 분류_Rev.01
