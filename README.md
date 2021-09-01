@@ -102,7 +102,8 @@
       - https://drive.google.com/file/d/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F/view?usp=sharing
     - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01 (100점)
       - https://drive.google.com/file/d/1eu0BLOb_EK3S1VElzhqFaJAZRUexfoCY/view?usp=sharing
-    - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01
+    - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01 
+      - https://drive.google.com/file/d/1f3IF7rhqPi5UaQfQK2qz49qby9KLhITh/view?usp=sharing
     - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01
     - [Case 2-6] KNN 모델을 활용한 공정 이상 예측_Rev.01
 
