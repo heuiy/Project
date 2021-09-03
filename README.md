@@ -114,7 +114,8 @@
       - https://drive.google.com/file/d/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg/view?usp=sharing
     - [Case 3-2] Word2Vec와 FastText 모델을 활용한 단어 임베딩_Rev.01 (100점)
       - https://drive.google.com/file/d/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI/view?usp=sharing
-    - [Case 3-3] 사전 학습된 임베딩 모델을 활용한 감성 분석_Rev.01
+    - [Case 3-3] 사전 학습된 임베딩 모델을 활용한 감성 분석_Rev.01 (70)
+      - https://drive.google.com/file/d/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH/view?usp=sharing
     - [Case 3-4] BERT 모델을 활용한 감성 분석_Rev.01
 
 - Case 04. 품질 검증을 위한 생산라인 파손 제품 이미지 분류
