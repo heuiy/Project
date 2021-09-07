@@ -121,8 +121,10 @@
 
 - Case 04. 품질 검증을 위한 생산라인 파손 제품 이미지 분류
     - [Case 4-1] LeNet 모델을 활용한 파손 제품 이미지 분류_Rev.01
+      - https://colab.research.google.com/drive/1nhYIzOmw0vStmzsSuxMeNcZZJBuLu5J9
       - https://drive.google.com/file/d/1nhYIzOmw0vStmzsSuxMeNcZZJBuLu5J9/view?usp=sharing
     - [Case 4-2] ResNet 모델을 활용한 파손 제품 이미지 분류_Rev.01
+      - https://colab.research.google.com/drive/1nhIU0AYqyd5Wcq191TcmjYiR6U1uEaJ0
       - https://drive.google.com/file/d/1nhIU0AYqyd5Wcq191TcmjYiR6U1uEaJ0/view?usp=sharing
     - [Case 4-3] 이미지 데이터 증강 기법을 활용한 파손 제품 이미지 분류_Rev.01
       - https://colab.research.google.com/drive/1njvfwsUpazUB1zM-5i_qJ1bOyRQ_Des2
