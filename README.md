@@ -127,4 +127,5 @@
     - [Case 4-3] 이미지 데이터 증강 기법을 활용한 파손 제품 이미지 분류_Rev.01
       - https://drive.google.com/file/d/1njvfwsUpazUB1zM-5i_qJ1bOyRQ_Des2/view?usp=sharing
     - [Case 4-4] 전이학습을 이용한 파손 제품 이미지 분류_Rev.01
+      - https://colab.research.google.com/drive/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7
       - https://drive.google.com/file/d/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7/view?usp=sharing
