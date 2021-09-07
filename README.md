@@ -107,16 +107,21 @@
     - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01
       - https://drive.google.com/file/d/1fBDi5N_WbEPGOy55sxxYmVsX5jxX3GA0/view?usp=sharing
     - [Case 2-6] KNN 모델을 활용한 공정 이상 예측_Rev.01
+      - https://colab.research.google.com/drive/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6
       - https://drive.google.com/file/d/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6/view?usp=sharing
 
 - Case 03. 제품 감성 분석 (Product Sentiment Analysis)을 위한 자연어처리
     - [Case 3-1] RNN 모델을 활용한 텍스트 감성 분류_Rev.01
+      - https://colab.research.google.com/drive/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg
       - https://drive.google.com/file/d/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg/view?usp=sharing
     - [Case 3-2] Word2Vec와 FastText 모델을 활용한 단어 임베딩_Rev.01
+      - https://colab.research.google.com/drive/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI
       - https://drive.google.com/file/d/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI/view?usp=sharing
     - [Case 3-3] 사전 학습된 임베딩 모델을 활용한 감성 분석_Rev.01
+      - https://colab.research.google.com/drive/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH
       - https://drive.google.com/file/d/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH/view?usp=sharing
     - [Case 3-4] BERT 모델을 활용한 감성 분석_Rev.01
+      - https://colab.research.google.com/drive/1m_XhG36duQtWTXuNWhw9NPiW8rs-t0Ph
       - https://drive.google.com/file/d/1m_XhG36duQtWTXuNWhw9NPiW8rs-t0Ph/view?usp=sharing
 
 - Case 04. 품질 검증을 위한 생산라인 파손 제품 이미지 분류
