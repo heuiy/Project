@@ -150,4 +150,5 @@
 ### 210909_뇌수막염 백신 PRP-원말 공정의 배양 배지 멸균 안정화를 통한 생산성 개선
 - Hib(R)_Rev.01
   - https://colab.research.google.com/drive/1sAkkJF2jqgnQGvYPbELPhfYTVz7c5aNp?usp=sharing
-
+- Hib(R)_Rev.02
+  - https://colab.research.google.com/drive/1MZWiWNoAJKy4tdPMSkbTfnL_enNtW9u1?usp=sharing
