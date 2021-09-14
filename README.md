@@ -152,3 +152,5 @@
   - https://colab.research.google.com/drive/1sAkkJF2jqgnQGvYPbELPhfYTVz7c5aNp?usp=sharing
 - Hib(R)_Rev.02
   - https://colab.research.google.com/drive/1MZWiWNoAJKy4tdPMSkbTfnL_enNtW9u1?usp=sharing
+- Hib(R)_Rev.03
+  - https://colab.research.google.com/drive/18qio5CKb9pFVPIWGx_MC6KZGTBFffTX5?usp=sharing
