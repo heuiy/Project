@@ -55,6 +55,8 @@
 ### 210811_IVF-M HP pH 측정 간소화를 통한 공정시간 단축 및 GMP 리스크 감소
 - IVF-M HP pH 측정 간소화를 통한 공정시간 단축 및 GMP 리스크 감소(R)_Rev.01.ipynb
   - https://colab.research.google.com/drive/1Vt2sT_thP53DqlsvOz3XPtnKe6-ec96w?usp=sharing
+- IVF-M HP pH 측정 간소화를 통한 공정시간 단축 및 GMP 리스크 감소(R)_Rev.02.ipynb
+  - https://colab.research.google.com/drive/1ZZCzFgYzCTtruyzjWI5l7K6MjoNTQo8h?usp=sharing
 
 ### 210813_PRP-TT 접합체 원액(IBP)
 - PRP-TT 접합체 원액(IBP)(R)_Rev.01
