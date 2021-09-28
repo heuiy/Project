@@ -83,9 +83,9 @@
 
 ### 210830_DX Expert 실습_Elice
 - Case 01. 광석 처리 공단에서의 이산화규소 불순도 예측
-    - [Case 1-1] 다중 회귀 분석 모델을 활용한 불순도 예측_Rev.01
-      - https://colab.research.google.com/drive/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk
-      - https://drive.google.com/file/d/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk/view?usp=sharing
+  - [Case 1-1] 다중 회귀 분석 모델을 활용한 불순도 예측_Rev.01
+    - https://colab.research.google.com/drive/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk
+    - https://drive.google.com/file/d/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk/view?usp=sharing
     - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.01
       - https://drive.google.com/file/d/1e1iDzycV8FSyf9i3-rVNZFumrr9EitZs/view?usp=sharing
     - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.02
@@ -151,6 +151,10 @@
     - [Case 4-4] 전이학습을 이용한 파손 제품 이미지 분류_Rev.01
       - https://colab.research.google.com/drive/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7
       - https://drive.google.com/file/d/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7/view?usp=sharing
+
+### 210907_LG Chem 인사이드 DX 해커톤
+- 주제 1 [Classification] 설비 이상여부(정상, 불량) 분류
+  - 
 
 ### 210909_뇌수막염 백신 PRP-원말 공정의 배양 배지 멸균 안정화를 통한 생산성 개선
 - Hib(R)_Rev.01
