@@ -33,7 +33,6 @@
   - https://colab.research.google.com/drive/1kuk6mbgtzwy1Bi7abyIWOFNRyDeutPA_#scrollTo=kdvjhgju4N_v
 - 컬럼 패턴 분석 자동화 시스템 도입을 통한 공정 관리 수준 증대_Rev.03
   - https://colab.research.google.com/drive/1L5BbahIrwLHhJoxiXirMfDQJpZLdOw0J#scrollTo=WnCqktZVAjhc
-- 컬럼 패턴 분석 자동화 시스템 도입을 통한 공정 관리 수준 증대_Rev.03.ipynb
   - https://gist.github.com/heuiy/d1dd37ebd7eec3afdeb3a8990b5bcdf9
 
 ### 210614_AI CAMP 해커톤
