@@ -157,6 +157,8 @@
   - 설비 이상여부(정상-불량) 분류_Rev.11
     - https://colab.research.google.com/drive/1-by8tR_FflPeA8_brFPnOzZDgbxmSvdQ
 - 주제 2 [Regression] 공정 프로세스 최종 품질값 예측
+  - 공정 프로세스 최종 품질값 예측_Rev.21
+    - https://colab.research.google.com/drive/1GklY2FQMQZC2r5KKYaXYE57MjwnJR0Eo
   - 공정 프로세스 최종 품질값 예측_Rev.53
     - https://colab.research.google.com/drive/14F66pJlI9pw8fl-u-_6dCgnUiaLK1-qz
 - 주제 3 [Image Process] 제품 생산 공정 결함 확인
