@@ -86,75 +86,85 @@
   - [Case 1-1] 다중 회귀 분석 모델을 활용한 불순도 예측_Rev.01
     - https://colab.research.google.com/drive/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk
     - https://drive.google.com/file/d/1dslS-tTrs3HB1jlj5krWbw2zJCLYfmDk/view?usp=sharing
-    - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.01
-      - https://drive.google.com/file/d/1e1iDzycV8FSyf9i3-rVNZFumrr9EitZs/view?usp=sharing
-    - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.02
-      - https://colab.research.google.com/drive/1ekYLKjlCTcimKHpVKw2-gX3lfRtT6wnM
-      - https://drive.google.com/file/d/1ekYLKjlCTcimKHpVKw2-gX3lfRtT6wnM/view?usp=sharing
-    - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측_Rev.01
-      - https://drive.google.com/file/d/1e3F3ilyAMokPYZfjOPtQ-7CkDtYFOkxu/view?usp=sharing
-    - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측_Rev.02
-      - https://colab.research.google.com/drive/1exb4zmei3gv2KymaqxUAJ8ZrqTkUaRb0
-      - https://drive.google.com/file/d/1exb4zmei3gv2KymaqxUAJ8ZrqTkUaRb0/view?usp=sharing
-    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.01 
-      - https://drive.google.com/file/d/1eBNYmHHqVFA9cXSNSvjTeHOjBgL0ZP-y/view?usp=sharing
-    - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.02
-      - https://colab.research.google.com/drive/1ejyQrW7yakytvqERYK_-gZ3SbYuvr4tG
-      - https://drive.google.com/file/d/1ejyQrW7yakytvqERYK_-gZ3SbYuvr4tG/view?usp=sharing
+  - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.01
+    - https://drive.google.com/file/d/1e1iDzycV8FSyf9i3-rVNZFumrr9EitZs/view?usp=sharing
+  - [Case 1-2] 회귀 의사결정 나무 모델을 활용한 불순도 예측_Rev.02
+    - https://colab.research.google.com/drive/1ekYLKjlCTcimKHpVKw2-gX3lfRtT6wnM
+    - https://drive.google.com/file/d/1ekYLKjlCTcimKHpVKw2-gX3lfRtT6wnM/view?usp=sharing
+  - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측_Rev.01
+    - https://drive.google.com/file/d/1e3F3ilyAMokPYZfjOPtQ-7CkDtYFOkxu/view?usp=sharing
+  - [Case 1-3] 다항 회귀 모델을 활용한 불순도 예측_Rev.02
+    - https://colab.research.google.com/drive/1exb4zmei3gv2KymaqxUAJ8ZrqTkUaRb0
+    - https://drive.google.com/file/d/1exb4zmei3gv2KymaqxUAJ8ZrqTkUaRb0/view?usp=sharing
+  - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.01 
+    - https://drive.google.com/file/d/1eBNYmHHqVFA9cXSNSvjTeHOjBgL0ZP-y/view?usp=sharing
+  - [Case 1-4] 다층퍼셉트론 모델을 활용한 불순도 예측_Rev.02
+    - https://colab.research.google.com/drive/1ejyQrW7yakytvqERYK_-gZ3SbYuvr4tG
+    - https://drive.google.com/file/d/1ejyQrW7yakytvqERYK_-gZ3SbYuvr4tG/view?usp=sharing
 
 - Case 02. 반도체 공정 데이터를 활용한 공정 이상 예측
-    - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.01
-      - https://drive.google.com/file/d/1eiGz1gkPkFOrs2IHK-UwxzmPAkiecfYC/view?usp=sharing
-    - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.02
-      - https://colab.research.google.com/drive/1eyLlpaJtMyBd7Zr7szFUFSHNJjrN4oeG
-      - https://drive.google.com/file/d/1eyLlpaJtMyBd7Zr7szFUFSHNJjrN4oeG/view?usp=sharing
-    - [Case 2-2] 나이브베이즈 분류 모델을 활용한 공정 이상 예측_Rev.01
-      - https://colab.research.google.com/drive/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F
-      - https://drive.google.com/file/d/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F/view?usp=sharing
-    - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01
-      - https://colab.research.google.com/drive/1eu0BLOb_EK3S1VElzhqFaJAZRUexfoCY
-      - https://drive.google.com/file/d/1eu0BLOb_EK3S1VElzhqFaJAZRUexfoCY/view?usp=sharing
-    - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01
-      - https://colab.research.google.com/drive/1f3IF7rhqPi5UaQfQK2qz49qby9KLhITh
-      - https://drive.google.com/file/d/1f3IF7rhqPi5UaQfQK2qz49qby9KLhITh/view?usp=sharing
-    - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01
-      - https://colab.research.google.com/drive/1fBDi5N_WbEPGOy55sxxYmVsX5jxX3GA0
-      - https://drive.google.com/file/d/1fBDi5N_WbEPGOy55sxxYmVsX5jxX3GA0/view?usp=sharing
-    - [Case 2-6] KNN 모델을 활용한 공정 이상 예측_Rev.01
-      - https://colab.research.google.com/drive/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6
-      - https://drive.google.com/file/d/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6/view?usp=sharing
+  - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.01
+    - https://drive.google.com/file/d/1eiGz1gkPkFOrs2IHK-UwxzmPAkiecfYC/view?usp=sharing
+  - [Case 2-1] 로지스틱 분류 모델을 활용한 공정 이상 예측_Rev.02
+    - https://colab.research.google.com/drive/1eyLlpaJtMyBd7Zr7szFUFSHNJjrN4oeG
+    - https://drive.google.com/file/d/1eyLlpaJtMyBd7Zr7szFUFSHNJjrN4oeG/view?usp=sharing
+  - [Case 2-2] 나이브베이즈 분류 모델을 활용한 공정 이상 예측_Rev.01
+    - https://colab.research.google.com/drive/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F
+    - https://drive.google.com/file/d/1emVq5QDGtoixXdWgQKllU8Eipvgn_C4F/view?usp=sharing
+  - [Case 2-3] 분류 의사결정 나무 모델을 활용한 공정 이상 예측_Rev.01
+    - https://colab.research.google.com/drive/1eu0BLOb_EK3S1VElzhqFaJAZRUexfoCY
+    - https://drive.google.com/file/d/1eu0BLOb_EK3S1VElzhqFaJAZRUexfoCY/view?usp=sharing
+  - [Case 2-4] SVM 모델을 활용한 공정 이상 예측_Rev.01
+    - https://colab.research.google.com/drive/1f3IF7rhqPi5UaQfQK2qz49qby9KLhITh
+    - https://drive.google.com/file/d/1f3IF7rhqPi5UaQfQK2qz49qby9KLhITh/view?usp=sharing
+  - [Case 2-5] 다층 퍼셉트론 모델을 활용한 공정 이상 예측_Rev.01
+    - https://colab.research.google.com/drive/1fBDi5N_WbEPGOy55sxxYmVsX5jxX3GA0
+    - https://drive.google.com/file/d/1fBDi5N_WbEPGOy55sxxYmVsX5jxX3GA0/view?usp=sharing
+  - [Case 2-6] KNN 모델을 활용한 공정 이상 예측_Rev.01
+    - https://colab.research.google.com/drive/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6
+    - https://drive.google.com/file/d/1fBUI8ZuRKL3teZ7hv_VQ-NAK40SSI3H6/view?usp=sharing
 
 - Case 03. 제품 감성 분석 (Product Sentiment Analysis)을 위한 자연어처리
-    - [Case 3-1] RNN 모델을 활용한 텍스트 감성 분류_Rev.01
-      - https://colab.research.google.com/drive/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg
-      - https://drive.google.com/file/d/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg/view?usp=sharing
-    - [Case 3-2] Word2Vec와 FastText 모델을 활용한 단어 임베딩_Rev.01
-      - https://colab.research.google.com/drive/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI
-      - https://drive.google.com/file/d/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI/view?usp=sharing
-    - [Case 3-3] 사전 학습된 임베딩 모델을 활용한 감성 분석_Rev.01
-      - https://colab.research.google.com/drive/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH
-      - https://drive.google.com/file/d/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH/view?usp=sharing
-    - [Case 3-4] BERT 모델을 활용한 감성 분석_Rev.01
-      - https://colab.research.google.com/drive/1m_XhG36duQtWTXuNWhw9NPiW8rs-t0Ph
-      - https://drive.google.com/file/d/1m_XhG36duQtWTXuNWhw9NPiW8rs-t0Ph/view?usp=sharing
+  - [Case 3-1] RNN 모델을 활용한 텍스트 감성 분류_Rev.01
+    - https://colab.research.google.com/drive/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg
+    - https://drive.google.com/file/d/1ffOYKnQpVnt6kenyH6LyUMHY6rq9JKFg/view?usp=sharing
+  - [Case 3-2] Word2Vec와 FastText 모델을 활용한 단어 임베딩_Rev.01
+    - https://colab.research.google.com/drive/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI
+    - https://drive.google.com/file/d/1fYpGd8M_bZT4M2MCr9_afWD8EZ39vTbI/view?usp=sharing
+  - [Case 3-3] 사전 학습된 임베딩 모델을 활용한 감성 분석_Rev.01
+    - https://colab.research.google.com/drive/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH
+    - https://drive.google.com/file/d/1mQz6JAFW45vBlBOjZF-uhmeR6HAGCWIH/view?usp=sharing
+  - [Case 3-4] BERT 모델을 활용한 감성 분석_Rev.01
+    - https://colab.research.google.com/drive/1m_XhG36duQtWTXuNWhw9NPiW8rs-t0Ph
+    - https://drive.google.com/file/d/1m_XhG36duQtWTXuNWhw9NPiW8rs-t0Ph/view?usp=sharing
 
 - Case 04. 품질 검증을 위한 생산라인 파손 제품 이미지 분류
-    - [Case 4-1] LeNet 모델을 활용한 파손 제품 이미지 분류_Rev.01
-      - https://colab.research.google.com/drive/1nhYIzOmw0vStmzsSuxMeNcZZJBuLu5J9
-      - https://drive.google.com/file/d/1nhYIzOmw0vStmzsSuxMeNcZZJBuLu5J9/view?usp=sharing
-    - [Case 4-2] ResNet 모델을 활용한 파손 제품 이미지 분류_Rev.01
-      - https://colab.research.google.com/drive/1nhIU0AYqyd5Wcq191TcmjYiR6U1uEaJ0
-      - https://drive.google.com/file/d/1nhIU0AYqyd5Wcq191TcmjYiR6U1uEaJ0/view?usp=sharing
-    - [Case 4-3] 이미지 데이터 증강 기법을 활용한 파손 제품 이미지 분류_Rev.01
-      - https://colab.research.google.com/drive/1njvfwsUpazUB1zM-5i_qJ1bOyRQ_Des2
-      - https://drive.google.com/file/d/1njvfwsUpazUB1zM-5i_qJ1bOyRQ_Des2/view?usp=sharing
-    - [Case 4-4] 전이학습을 이용한 파손 제품 이미지 분류_Rev.01
-      - https://colab.research.google.com/drive/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7
-      - https://drive.google.com/file/d/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7/view?usp=sharing
+  - [Case 4-1] LeNet 모델을 활용한 파손 제품 이미지 분류_Rev.01
+    - https://colab.research.google.com/drive/1nhYIzOmw0vStmzsSuxMeNcZZJBuLu5J9
+    - https://drive.google.com/file/d/1nhYIzOmw0vStmzsSuxMeNcZZJBuLu5J9/view?usp=sharing
+  - [Case 4-2] ResNet 모델을 활용한 파손 제품 이미지 분류_Rev.01
+    - https://colab.research.google.com/drive/1nhIU0AYqyd5Wcq191TcmjYiR6U1uEaJ0
+    - https://drive.google.com/file/d/1nhIU0AYqyd5Wcq191TcmjYiR6U1uEaJ0/view?usp=sharing
+  - [Case 4-3] 이미지 데이터 증강 기법을 활용한 파손 제품 이미지 분류_Rev.01
+    - https://colab.research.google.com/drive/1njvfwsUpazUB1zM-5i_qJ1bOyRQ_Des2
+    - https://drive.google.com/file/d/1njvfwsUpazUB1zM-5i_qJ1bOyRQ_Des2/view?usp=sharing
+  - [Case 4-4] 전이학습을 이용한 파손 제품 이미지 분류_Rev.01
+    - https://colab.research.google.com/drive/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7
+    - https://drive.google.com/file/d/1nVMXpE7KqAWKHACb2aTI6jlXyTpVW_V7/view?usp=sharing
 
 ### 210907_LG Chem 인사이드 DX 해커톤
 - 주제 1 [Classification] 설비 이상여부(정상, 불량) 분류
-  - 
+  - 설비 이상여부(정상-불량) 분류_Rev.11
+    - https://colab.research.google.com/drive/1-by8tR_FflPeA8_brFPnOzZDgbxmSvdQ
+- 주제 2 [Regression] 공정 프로세스 최종 품질값 예측
+  - 공정 프로세스 최종 품질값 예측_Rev.53
+    - https://colab.research.google.com/drive/14F66pJlI9pw8fl-u-_6dCgnUiaLK1-qz
+- 주제 3 [Image Process] 제품 생산 공정 결함 확인
+  - 라인 품질 관리에서 손상된 패키징 분류_Rev.13
+    - https://colab.research.google.com/drive/11uQI3ExigJIafmHN9xO_zv7_ZO7jANbM
+- 주제 4 [Text Mining] 화학 논문 기반 중요문장 요약
+  - 화학 논문 메타 데이터 기반 출간 저널 분류_Rev.22
+    - https://colab.research.google.com/drive/1PtmYxl0ZRXyRevDdt0kT3EqzMhgUNqcj
 
 ### 210909_뇌수막염 백신 PRP-원말 공정의 배양 배지 멸균 안정화를 통한 생산성 개선
 - Hib(R)_Rev.01
