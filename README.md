@@ -78,6 +78,8 @@
   - https://colab.research.google.com/drive/1NYAeK4ZAN90762YC47uStlASt30dA2IO?usp=sharing
 - 공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감(R)_Rev.03
   - https://colab.research.google.com/drive/1hB2W-DEkuPupsKYmtV_ld3o0yrXQKANQ?usp=sharing
+- 공정용 소모품 사용 예측 수준 증대를 통한 낭비비용 절감(R)_Rev.04
+  - https://colab.research.google.com/drive/1umZFAmcg2K_8OwsA_NHgMhGIKUORIizu?usp=sharing
 
 ### 210819_의료기기 공정 최적화를 통한 수율 증대
 - 의료기기 공정 최적화를 통한 수율 증대_Rev.01
