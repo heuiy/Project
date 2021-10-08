@@ -34,6 +34,7 @@
 - 컬럼 패턴 분석 자동화 시스템 도입을 통한 공정 관리 수준 증대_Rev.03
   - https://colab.research.google.com/drive/1L5BbahIrwLHhJoxiXirMfDQJpZLdOw0J#scrollTo=WnCqktZVAjhc
   - https://gist.github.com/heuiy/d1dd37ebd7eec3afdeb3a8990b5bcdf9
+  - https://gist.github.com/heuiy/36e3297f3a2e676fbe8476440e6bde17
 
 ### 210601_충전기(FL-PF-101) 파라미터 최적화를 통한 RTY 극대화
 - 충전기(FL-PF-101) 파라미터 최적화를 통한 RTY 극대화(R)_Rev.01
