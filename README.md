@@ -40,6 +40,8 @@
   - https://colab.research.google.com/drive/1pQ2ML6LZgGNSmSBKcEe7vtk0kCAdUCaa?usp=sharing
 - 충전기(FL-PF-101) 파라미터 최적화를 통한 RTY 극대화(R)_Rev.02
   - https://colab.research.google.com/drive/1eNe_vaWtx547Nj5tdiHJ-4BB2muEe9J-?usp=sharing
+- 충전기(FL-PF-101) 파라미터 최적화를 통한 RTY 극대화(R)_Rev.03
+  - https://colab.research.google.com/drive/1gvhN8d9Ou6NWUhn4uh4no7KwQ6viPfxa?usp=sharing
 
 ### 210614_AI CAMP 해커톤
 - Speech_recognition_Spectrogram_Rev.01
