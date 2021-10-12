@@ -1,5 +1,6 @@
 ### 200312 머신러닝을 통한 바이알제형 APV 양성 분별력 증대
-- 머신러닝을 통한 바이알제형 APV 양성 분별력 증대_Rev.01
+- 이물검사 자동화를 통한 생산성 증대_Rev.01
+  - https://drive.google.com/file/d/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG/view?usp=sharing
 
 ### 201115 HA 공정 파라미터 최적화를 통한 극한점도 극대화
 
