@@ -29,6 +29,8 @@
   - https://gist.github.com/heuiy/36e3297f3a2e676fbe8476440e6bde17
 
 ### 210304 HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출
+- HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출_Rev.01
+  - https://colab.research.google.com/drive/12VQvFxDanqUnAWxUz4aQ4sEVl3FgwcOi
 
 ### 210322 GMP 문서 자동화(RPA)를 통한 업무 효율 증대
 
