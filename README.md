@@ -205,3 +205,7 @@
 - Spray_Rev.01
   - https://colab.research.google.com/drive/1KJrbUVK6_mJzb5_jyhXCS2W_zXttr7GN
 
+### 211013_GMP 가이드라인 요약본 학습을 통한 품질 마인드 확립
+- GMP 가이드라인 요약본 학습을 통한 품질 마인드 확립_Rev.01
+  - https://colab.research.google.com/drive/1ToDUHqi93f_ngn-TLSyZFRpMpS-GrasE?usp=sharing
+
