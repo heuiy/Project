@@ -211,4 +211,4 @@
 
 ### 211015_시노비안 공정 최적화를 통한 공중하얀 불량 최소화
 - 시노비안 공정 최적화를 통한 공중하얀 불량 최소화_Rev.01
-  - 
+  - https://colab.research.google.com/drive/1K0YVwuqQc0r5SRZFilKWtN_XVsASW5dQ
