@@ -1,3 +1,9 @@
+### 190701~12 LG AIB 입문 3차
+- GIANA_dataset_Image_Segmentation
+  - 
+- sentiment_classification
+  - 
+
 ### 200312 머신러닝을 통한 바이알제형 APV 양성 분별력 증대
 - 이물검사 자동화를 통한 생산성 증대_Rev.01
   - https://colab.research.google.com/drive/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG
