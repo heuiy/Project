@@ -2,7 +2,8 @@
 - GIANA_Challenge
   - 
 - IMDB_sentiment_classification
-  - 
+  - sentiment_classification_Rev.01
+    - https://colab.research.google.com/drive/1MpYTedZh-9z0WjpQv9CBzsyktxkClynN#scrollTo=Wet3CT3EE_99
 
 ### 200312_머신러닝을 통한 바이알제형 APV 양성 분별력 증대
 - 이물검사 자동화를 통한 생산성 증대_Rev.01
