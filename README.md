@@ -1,5 +1,5 @@
 ### 190701_LG AIB 입문 3차
-- GIANA(Gastrointestinal Image ANAlys) Challenges
+- GIANA(Gastrointestinal Image ANAlys Challenges)
   - image_segmentation_Rev.01
     - https://colab.research.google.com/drive/1g0mS0Uifqt1UvC4IxDiA1eVFhcCnVr2Z
 - IMDB 감정 분류
