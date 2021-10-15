@@ -1,32 +1,32 @@
-### 190701~12 LG AIB 입문 3차
+### 190701_LG AIB 입문 3차
 - GIANA_dataset_Image_Segmentation
   - 
 - sentiment_classification
   - 
 
-### 200312 머신러닝을 통한 바이알제형 APV 양성 분별력 증대
+### 200312_머신러닝을 통한 바이알제형 APV 양성 분별력 증대
 - 이물검사 자동화를 통한 생산성 증대_Rev.01
   - https://colab.research.google.com/drive/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG
   - https://drive.google.com/file/d/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG/view?usp=sharing
   
-### 201115 HA 공정 파라미터 최적화를 통한 극한점도 극대화
+### 201115_HA 공정 파라미터 최적화를 통한 극한점도 극대화
 
 ### 210110_Lottery
 - 딥러닝(LSTM) 활용 연금복권 당첨 가능성 극대화_Rev.04
   - https://colab.research.google.com/drive/1dvxcXZ4Pq_hmpVg_mfiD7ccneSewmMa5
 
-### 210114 DP67 공정 파라미터 최적화를 통한 수율 향상
+### 210114_DP67 공정 파라미터 최적화를 통한 수율 향상
 
-### 210120 폐수처리장 Turbo Blower 최적화를 통한 에너지 효율 증대
+### 210120_폐수처리장 Turbo Blower 최적화를 통한 에너지 효율 증대
 
-### 210217 a-bST 회수 공정 최적화를 통한 원상화 수율 증대
+### 210217_a-bST 회수 공정 최적화를 통한 원상화 수율 증대
 
 ### 210222_디클라제 충전 경향성 분석을 통한 품질관리수준 증대 (BDV0709)
 - 디클라제 충전 경향성 분석 (BDV0709)_Rev.03
   - https://colab.research.google.com/drive/1NsidZ8O_3iwGsYmUXb96DwI1tx0OojkB
   - https://drive.google.com/file/d/1NsidZ8O_3iwGsYmUXb96DwI1tx0OojkB/view?usp=sharing
 
-### 210223 의료기기 공중하양(HA유래) 측정시스템(MSA) 강화를 통한 DSM 고도화
+### 210223_의료기기 공중하양(HA유래) 측정시스템(MSA) 강화를 통한 DSM 고도화
 - DSM_Rev.14
   - https://colab.research.google.com/drive/1wYrJyIHObVnze5JMPfmuHeDJ_Evbuprz#scrollTo=yb0bT4zzseH9
 - DSM_Rev.15
@@ -34,11 +34,11 @@
   - https://drive.google.com/file/d/18zkzNyE_BLXNfjN4qrEBNoz1LO_F14As/view?usp=sharing
   - https://gist.github.com/heuiy/36e3297f3a2e676fbe8476440e6bde17
 
-### 210304 HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출
+### 210304_HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출
 - HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출_Rev.01
   - https://colab.research.google.com/drive/12VQvFxDanqUnAWxUz4aQ4sEVl3FgwcOi
 
-### 210322 GMP 문서 자동화(RPA)를 통한 업무 효율 증대
+### 210322_GMP 문서 자동화(RPA)를 통한 업무 효율 증대
 
 ### 210403_컬럼 패턴 분석 자동화 시스템 도입을 통한 공정 관리 수준 증대
 - 컬럼 패턴 분석 자동화 시스템 도입을 통한 공정 관리 수준 증대_Rev.01
