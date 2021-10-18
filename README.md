@@ -10,6 +10,8 @@
 - 이물검사 자동화를 통한 생산성 증대_Rev.01
   - https://colab.research.google.com/drive/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG
   - https://drive.google.com/file/d/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG/view?usp=sharing
+- 이물검사 자동화를 통한 생산성 증대_Rev.02
+  - https://colab.research.google.com/drive/1xcwx1tbSC1rVPbedKAfb0XwO_of9pUPN
   
 ### 201115_HA 공정 파라미터 최적화를 통한 극한점도 극대화
 
