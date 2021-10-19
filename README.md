@@ -12,6 +12,8 @@
   - https://drive.google.com/file/d/1IWqKyMOco_zZUHaZcMrQ0sSHsj6o9xZG/view?usp=sharing
 - 이물검사 자동화를 통한 생산성 증대_Rev.02
   - https://colab.research.google.com/drive/1xcwx1tbSC1rVPbedKAfb0XwO_of9pUPN
+- 이물검사 자동화를 통한 생산성 증대_Rev.03
+  - https://colab.research.google.com/drive/1ZJzLNVwEicpjzVcw15Gb2_efIRxlrrGs
 - 이물검사 자동화를 통한 생산성 증대_별첨
   - https://prezi.com/view/sc0AYDp4THjsJZwQxfMQ/
   
