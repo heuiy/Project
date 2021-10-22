@@ -226,3 +226,7 @@
 ### 211015_시노비안 공정 최적화를 통한 공중하얀 불량 최소화
 - 시노비안 공정 최적화를 통한 공중하얀 불량 최소화_Rev.01
   - https://colab.research.google.com/drive/1K0YVwuqQc0r5SRZFilKWtN_XVsASW5dQ
+
+### 211022_디클라제 충전 경향성 분석을 통한 품질관리수준 증대 (BDV1008)
+- SGD21012(R)_Rev.01
+  - https://colab.research.google.com/drive/1fznfOwjMACkDQ0TJSVpiVRS9CcWwUc7P?usp=sharing
