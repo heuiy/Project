@@ -232,6 +232,6 @@
   - https://colab.research.google.com/drive/1fznfOwjMACkDQ0TJSVpiVRS9CcWwUc7P?usp=sharing
 
 ### 211025_동물 울음소리 Classification을 통한 동물시험 고도화
-- wave_classification_Rev.01
+- ave_classification_Rev.01
   - https://colab.research.google.com/drive/1smSzMOgiquh4KI2DYrIKq7xz61FPVxCs?usp=sharing
 
