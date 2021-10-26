@@ -195,19 +195,51 @@
 - 주제 1 [Classification] 설비 이상여부(정상, 불량) 분류
   - 설비 이상여부(정상-불량) 분류_Rev.11
     - https://colab.research.google.com/drive/1-by8tR_FflPeA8_brFPnOzZDgbxmSvdQ
+  - 1등 수상
+    - 
+  - 2등 수상
+    - 
+  - 3등 수상
+    - 
+  - 4등 수상
+    - 
 - 주제 2 [Regression] 공정 프로세스 최종 품질값 예측
   - 공정 프로세스 최종 품질값 예측_Rev.21
     - https://colab.research.google.com/drive/1GklY2FQMQZC2r5KKYaXYE57MjwnJR0Eo
   - 공정 프로세스 최종 품질값 예측_Rev.53
     - https://colab.research.google.com/drive/14F66pJlI9pw8fl-u-_6dCgnUiaLK1-qz
+  - 1등 수상
+    - 
+  - 2등 수상
+    - 
+  - 3등 수상
+    - 
+  - 4등 수상
+    - 
 - 주제 3 [Image Process] 제품 생산 공정 결함 확인
   - 라인 품질 관리에서 손상된 패키징 분류_Rev.13
     - https://colab.research.google.com/drive/11uQI3ExigJIafmHN9xO_zv7_ZO7jANbM
+  - 1등 수상
+    - 
+  - 2등 수상
+    - 
+  - 3등 수상
+    - 
+  - 4등 수상
+    - 
 - 주제 4 [Text Mining] 화학 논문 기반 중요문장 요약
   - 화학 논문 메타 데이터 기반 출간 저널 분류_Rev.22
     - https://colab.research.google.com/drive/1PtmYxl0ZRXyRevDdt0kT3EqzMhgUNqcj
   - Inflearn NLP tutorial part 2
     - https://colab.research.google.com/drive/1bGyl_WBWMFUflHNblM34Lo7XE3IBaMGe?usp=sharing
+  - 1등 수상
+    - 
+  - 2등 수상
+    - 
+  - 3등 수상
+    - 
+  - 4등 수상
+    - 
 
 ### 210909_뇌수막염 백신 PRP-원말 공정의 배양 배지 멸균 안정화를 통한 생산성 개선
 - Hib(R)_Rev.01
