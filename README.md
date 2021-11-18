@@ -264,3 +264,6 @@
 - Wave_classification_Rev.01
   - https://colab.research.google.com/drive/1smSzMOgiquh4KI2DYrIKq7xz61FPVxCs?usp=sharing
 
+### 220105_GMP 게임 어플 제작을 통한 품질 Mind Set 확립
+- GMP_Rev.01
+  - 
