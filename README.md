@@ -18,6 +18,7 @@
 - Vision System_Rev.01
   - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
  
+### 220217_AI 인력 양성 Kaggle
  
  
  
