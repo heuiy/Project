@@ -20,7 +20,7 @@
  
 ### 220217_AI 인력 양성 Kaggle
 - 2021_dl_challenge_Rev.01
-  - https://drive.google.com/file/d/1q4sCf2L7xciAA213gRoMgagz11GN63op/view?usp=sharing
+  - https://drive.google.com/file/d/1ckn-rpoR4nbYyT6qb3xWZQZbRn99o2l0/view?usp=sharing
 - challenge안내_Rev.01.pptx
-  - https://docs.google.com/presentation/d/1LdU5kiAw6WRdxrK8SqqDrYE2zgtiR-OG/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+  - https://docs.google.com/presentation/d/1-E5zbmGocZVjvN8VYMBVHJOvNZDsB8Im/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
 
