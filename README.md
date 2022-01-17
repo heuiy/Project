@@ -19,6 +19,8 @@
   - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
  
 ### 220217_AI 인력 양성 Kaggle
- 
- 
- 
+- 2021_dl_challenge
+  - https://drive.google.com/file/d/1elksicEG4it0V2NDKx84nGqTZksqypbU/view?usp=sharing 
+- challenge안내.pptx
+  - https://docs.google.com/presentation/d/1lOxzhmVNJn0jnppGfAElfdR1GImbp4si/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+
