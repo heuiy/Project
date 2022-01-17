@@ -25,4 +25,5 @@
   - https://docs.google.com/presentation/d/1-E5zbmGocZVjvN8VYMBVHJOvNZDsB8Im/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
 - 6팀 보고서_Rev.01
   - https://docs.google.com/document/d/13352zMYocEH1CvLDNUF9KK-W9dtIia-RwjE3M3bY9J0/edit?usp=sharing
-
+- challenge안내_조교님 .pptx
+  - https://docs.google.com/presentation/d/1L8obKuweFo3pHunLsmbGmY-J-Ahcu8EY/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
