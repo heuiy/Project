@@ -70,6 +70,8 @@
         - https://docs.google.com/presentation/d/1SK7oiZdmthRHOOhCJGRqvMtaReZrs2VE/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
       - 6조.pptx
         - https://docs.google.com/presentation/d/1euBYyKe4aIXX5imjf57cH-FADpzNuXfi/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 쥬피터
-        - _Rev.01
+    - 쥬피터
+      - challenge_Rev.01
+        - https://drive.google.com/file/d/1G5Rr7ScOQMgWBe_LmRlu3b_QKF6UfhXt/view?usp=sharing
+
 
