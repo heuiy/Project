@@ -29,7 +29,7 @@
   - https://drive.google.com/file/d/1hpI5CCQ5VbxBE8XCnalPd5liXodlI2LE/view?usp=sharing
 - 2021_dl_challenge_Rev.13
   - https://colab.research.google.com/drive/1F7a3ZxD6LMF73k1AiPyU34gzomoBztpl?usp=sharing
-- 2021_dl_challenge_6조 (최종본)
+- 2021_dl_challenge_6조(최종본).ipynb
   - https://drive.google.com/file/d/1a_DiuJALhu6GQcpdoarefLZkPQ72tnoj/view?usp=sharing
 - challenge안내_Rev.01.pptx
   - https://docs.google.com/presentation/d/1-E5zbmGocZVjvN8VYMBVHJOvNZDsB8Im/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
