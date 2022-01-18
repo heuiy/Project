@@ -39,7 +39,9 @@
   - https://docs.google.com/document/d/13352zMYocEH1CvLDNUF9KK-W9dtIia-RwjE3M3bY9J0/edit?usp=sharing
 
 ### 220217_종합 챌린지
-- 조교님 안내
+- 조교님 안내.pptx
+- Rev.99
+- 6팀 보고서.docx
   - 21년
     - [Day 11] Challenge Introduction (updated).pptx
       - https://docs.google.com/presentation/d/1Kie-nQnUNs-6kxDyTM8YZy2ifoEdzCnj/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
