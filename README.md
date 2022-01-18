@@ -43,8 +43,10 @@
 - Rev.99
 - 6팀 보고서.docx
   - 21년
-    - 캐글
+    - 캐글_오리지널
       - https://www.kaggle.com/c/cassava-leaf-disease-classification/overview
+    - 캐글_LG
+      - https://www.kaggle.com/kuc2477/notebooks?userId=721142&sortBy=dateRun&tab=profile
     - [Day 11] Challenge Introduction (updated).pptx
       - https://docs.google.com/presentation/d/1Kie-nQnUNs-6kxDyTM8YZy2ifoEdzCnj/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
     - 1조.pptx
