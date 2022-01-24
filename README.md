@@ -14,7 +14,7 @@
 - 설비 리스트_Rev.01
   - https://colab.research.google.com/drive/1AAZqJmjA45AcXyU2KlbXd7JrTw2lOcvD
 
-### 220208_Vision System 도입을 통한 생산성 증대
+### 220208_포장실 Vision System 도입을 통한 생산성 증대
 - Vision System_Rev.01
   - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
  
