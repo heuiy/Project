@@ -45,7 +45,7 @@
 - Direction
   - 조교님 안내.pptx
 - 보고서
-  - 6팀 보고서.docx
+  - 6팀 보고서.pptx
     - https://docs.google.com/presentation/d/1VV_IRok1Vn5ffnMDPnHBRn7uS4aQaNFFpBGperHM5xE/edit?usp=sharing
 - 쥬피터
   - Rev.99
