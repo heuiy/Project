@@ -36,6 +36,7 @@
     - https://drive.google.com/file/d/1vjas4tLrQadSBAYfeCNBFcewnu1XgU_z/view?usp=sharing
   - 2021_dl_challenge_Rev.04
     - https://drive.google.com/file/d/1hpI5CCQ5VbxBE8XCnalPd5liXodlI2LE/view?usp=sharing
+      - LGBM AUC 81%
   - 2021_dl_challenge_Rev.13
     - https://colab.research.google.com/drive/1F7a3ZxD6LMF73k1AiPyU34gzomoBztpl?usp=sharing
   - 2021_dl_challenge_6조(최종본).ipynb
