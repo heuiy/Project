@@ -1,0 +1,512 @@
+---
+title: "HA 공정 파라미터 최적화를 통한 극한점도 극대화_Rev.04"
+Date: "r format(Sys.Date())"
+output: 
+  html_document: 
+    fig_height: 6
+    fig_width: 10
+    highlight: textmate
+    theme: cosmo
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+# ■ Define
+
+### Step01 개선 기회 탐색
+* 정보화된 시스템 중 어느 시스템을 통해 개선 기회를 수시 점검 및 발굴 할 수 있는가?
+
+### Step02 개선 기회 발굴 및 과제 선정
+* Y-y 전개? FMEA, QFD, Process Map 등 
+
+### Step03 Project Y 선정
+* 히알루론산나트륨의 극한 점도를 KPI로 선정
+
+
+# ■ Measure
+
+### Step04 데이터 수집 및 검증 계획 수립
+
+Data 수집 계획 : 
+
+* 측정 지표 : QC 릴리즈 - 극한점도(%),
+
+* 수집 시스템 : 공정 Parameter
+
+* 수집 기간 : 18년 ~ 20년
+
+* 변수 : 18ea (종배양 ~  침전)
+
+### Step05 데이터 Set 구성
+
+```{r warning=FALSE}
+library(readxl)
+HA = read_excel("DAT/HSB.xlsx", sheet = 'HSB',  skip=5)
+str(HA)
+```
+
+Dataset 의 Column 이름을 확인하고, 데이터 복사본을 생성함.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(dplyr)
+colnames(HA)
+df <- HA 
+
+```
+
+종속변수인 극한점도(bz)의 개략적인 데이터 분포를 확인함
+
+```{r}
+hist(df$bz)       
+plot(df$bz)
+boxplot(df$bz)
+summary(df$bz)
+```
+
+### Step06 데이터 취득 시스템(유용성)검증
+
+### Step07 프로세스 현수준 파악
+
+* Install.packages() 는 최초 1회 설치 후 주석처리 하도록 함.
+* R Markdown 에 Install.packages() 가 포함되어 있으면 knit 할 때마다 해당 패키지가 신규 설치됨 
+
+```{r warning=FALSE}
+#Install.packages(SixSigma)
+library(SixSigma)
+```
+
+* Plots a Histogram with density lines.
+* Usage : ss.study.ca(xST, xLT = NA, LSL = NA, USL = NA, Target = NA)
+* P-value 가 0.05보다 작으므로 정규분포한다고 보기 어려움
+
+```{r warning=FALSE}
+ss.study.ca(xST=df$bz, LSL =90, USL =120, Target = 105)
+```
+
+### Step08 개선 목표 설정  
+* QC점도 평균 105%(Z bench 2.19) → 평균 107ppm 이상
+
+# ■ Analyze
+
+### Step09 X인자 검증 계획 수립
+
+데이터 수집 계획
+
+* project Y : bz data - LIMS
+
+* x's : 공정 Parameter Data
+
+### Step10 데이터 취득 및 전처리 실시
+
+전처리 도구 불러오기
+
+* 원제생산팀에서 수기로 기록한 데이터(.xlsx)를 분석함
+* 사전 데이터 전처리 완료되었으며, 데이터 Merge 불필요함
+
+```{r warning=FALSE}
+library(dplyr);library(tidyr)
+
+```
+
+### Step11 데이터 탐색
+
+데이터 요약
+```{r}
+summary(df)
+
+```
+
+Graph분석
+```{r warning=FALSE}
+df2 <- df %>% select(-a)
+df_cor <- cor(df2)
+df_cor
+
+library(corrplot)
+corrplot(df_cor)  
+```
+
+통계적 이상치 제거
+
+* Box-plot 에서 최소값 ~ 최대값 사이의 데이터만 분석 대상으로 설정함
+
+* Box-plot 에서 상자의 좌우 또는 상하로 뻗어나간 선(whisker 라고 부름)은 중앙값 - 1.5 * IQR 보다 큰 데이터 중 가장 작은 값(lower whisker라고 부름) 중앙값 + 1.5 * IQR 보다 작은 데이터 중 가장 큰 값(upper whisker)을 각각 보여줌.
+
+* IQR은 Inter Quartile Range의 약자로 ‘제3사분위수 - 제1사분위수’로 계산함.
+
+* 그래프에 보여지는 점들은 outlier에 해당하는데 lower whisker 보다 작은 데이터 또는 upper whisker 보다 큰 데이터가 이에 해당함.
+
+* boxplot(df$bz) #상자 그림 그려주는 함수 
+* boxplot.stats(df$bz) #상자 그림의 요소 보여줌
+* boxplot.stats(df$bz)$stats[1]   #Q1-1.5*IQR
+* boxplot.stats(df$bz)$stats[5]   #Q3+1.5*IQR 
+
+```{r}
+dim(df)
+df2  <-  df %>% filter(df$bz>boxplot.stats(df$bz)$stats[1], # Q1 - 1.5 * IQR 이하 제거
+                       df$bz<boxplot.stats(df$bz)$stats[5]) # Q3 + 1.5 * IQR 이상 제거 
+df <-  df2
+
+dim(df)
+
+```
+
+### Step12 핵심인자 선정
+
+데이터 Set 구분하기
+
+* 전체 82 row 중에서 70% 는 Train 세트로 설정하고 30% 는 Test 세트로 설정함
+
+set.seed()
+
+* 난수를 생성하는 초기값(seed)를 지정하기 위해 사용하는 함수임.
+* 난수를 사용하여 데이터를 분리하므로 매 호출시마다 서로 다른 folds 결과가 출력됨. 하지만 seed를 지정해주면 매번 같은 folds를 결과로 내놓게되어 교차 검증을 수회 반복하더라도 같은 folds를 사용해 안정적으로 모델을 개선할 수 있음.
+* set.seed 를 설정하지 않으면 매번 다른 샘플이 추출됨.
+* 집주소가 00 아파트 1303호라면 set.seed(1303) 으로 설정해도 무방함
+
+```{r}
+str(df)
+dim(df)
+nrow(df)
+set.seed(1303)
+train=sample(nrow(df),nrow(df)*0.7)
+test=(1:c(nrow(df)))[-train]
+
+```
+
+Train 세트와 Test 세트의 데이터 프레임을 확인함
+
+```{r}
+length(train) # 전체 데이터 82의 70% 인 57이 Train Set가 됨
+length(test)  # 전체 데이터 82의 30% 인 25가 Test Set가 됨
+
+df_train = df[train,]
+df_test = df[test,]
+
+head(df_train)
+head(df_test)
+```
+ 
+### Step13 분석 모형 검토 
+
+회귀(Regression) 분석과 랜덤 포레스트를 통해 분석함
+
+# ■ Improve
+
+### Step14 최적 모형 수립
+
+분석실시(modeling) : Regression
+
+```{r}
+set.seed(1303)
+lm.fit=lm(bz~.-a,data=df_train)
+
+```
+
+AIC 가 낮을수록 좋은 모델임
+
+AIC 란?
+
+* The Akaike information criterion (AIC) is an estimator of prediction error and thereby relative quality of statistical models for a given set of data.
+
+* https://en.wikipedia.org/wiki/Akaike_information_criterion
+
+```{r}
+step(lm.fit)
+lm.fit_best = lm(bz ~ m + s + u + x + z + an + ao + bd + be, data = df_train)
+
+```
+
+분석실시(modeling) : rf
+
+```{r message=FALSE, warning=FALSE}
+library(randomForest) ; library(tree)
+
+set.seed(1303)
+rf.fit=randomForest(bz~.-a,data=df_train,importance=T)
+rf.fit
+
+```
+
+각 인자가 종속변수에 얼마나 영향을 주는지 확인함
+
+```{r}
+varImpPlot(rf.fit)
+
+```
+
+랜덤포레스트 주요 인자 기준으로 모형을 재수립함
+
+중요도 순서 : 
+
+* y  : 균체 제거 공정 - Recovery(회수) 시간(min)
+
+* x  : 균체 제거 공정 - 균체 제거 시간(min)
+
+* ao : 한외여과 공정 - 분리모드 전환 후 총 분리시간(h) 
+
+* an : 한외여과 공정 - 순환 시간 흐름 시간 13.5초 이하 도달하기까지 시간 (min)
+
+* m  : 종배양 3 공정 - 종배양 3 시간(h)
+
+* r  : 본배양 공정 - 본배양액 무게(kg)
+
+```{r}
+
+rf.fit_best=randomForest(bz ~ y +
+                           x +
+                           ao + 
+                           an +
+                           m +
+                           r +
+                           ak +
+                           w +
+                           s +
+                           bd, data=df_train,importance=T)
+
+rf.fit_best
+
+```
+
+### Step15 모형 검증 및 최적화
+
+실제 관측값을 회귀모형과 랜덤 포레스트 모형에 대입하여 예측값을 확인함
+
+```{r}
+lm_obs = df_test$bz #실제 관측값
+lm_pred = predict(lm.fit_best,newdata=df_test) # 예측값 
+rf_pred = predict(rf.fit_best,newdata=df_test) # 예측값 
+
+```
+
+각 모형의 MSE 를 확인함
+
+```{r warning=FALSE}
+library(DescTools)
+MSE(lm_pred, lm_obs)
+MSE(rf_pred, lm_obs)
+
+```
+
+평균 제곱근(RMSE) 편차? 
+
+* 평균 제곱근 오차(Root Mean Square Error; RMSE)는 추정 값 또는 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룰 때 흔히 사용하는 측도임
+
+* https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0_%EC%A0%9C%EA%B3%B1%EA%B7%BC_%ED%8E%B8%EC%B0%A8
+
+RMSE 확인 : 
+
+* 선형회귀     : 3.17
+
+* 랜덤포레스트 : 3.50
+
+```{r}
+RMSE(lm_pred, lm_obs) # 3.17 
+RMSE(rf_pred, lm_obs) # 3.50
+```
+
+설명력(상관계수 제곱) 확인
+
+* 선형회귀 R^2     : 82%
+
+* 랜덤포레스트 R^2 : 74%
+
+```{r}
+(cor(lm_pred,lm_obs))^2 # 82%
+(cor(rf_pred,lm_obs))^2 # 74%
+
+```
+
+모델링에 활용된 인자 범위를 체크하고 불필요한 변수는 제거함
+
+```{r}
+df_range <- df_test %>% 
+  select(-a)
+length(df_range)
+
+```
+
+for (i in 1: xx) : xx에 숫자를 length 값으로 넣어줌
+
+* FOR문은 변수 i가 주어진 벡터에 있는 1, 2, 3, · · · , XX 를 차례로 출력함.
+
+```{r}
+print("Feature range")
+for( i in 1:17){
+  A = df_range %>% filter(df_range[,i]>0) %>% .[,i] 
+  B = A[A>boxplot(A)$stats[1]&A<boxplot(A)$stats[5]] %>% range()
+  print(data.frame(names=colnames(df_range)[i] ,lower=B[1],upper=B[2]))
+}
+
+```
+
+최종 회귀식 도출
+
+y = 90.342        +
+    -1.619   * m  +
+    -1.005   * s  +
+    -0.8907  * u  +
+    +0.1807  * x  +
+    -0.02151 * z  +
+    -0.05559 * an +
+    +1.911   * ao +
+    +0.7362  * bd +
+    -0.02156 * be
+
+* 해당 회귀식은 Y 변동의 74.32% 를 설명해줌
+
+```{r}
+summary(lm.fit_best) 
+
+```
+
+최적 조건 : 전체 데이터 기준 
+
+* project Y 망대 특성
+* 각 변수의 양/음 상관관계를 고려하여 최적 조건을 도출함
+
+```{r}
+new=data.frame(m  = 17.6, # 음 / 종배양 3(h)
+               s  = 16,   # 음 / 본배양 (h)       
+               u  = 1.8,  # 음 / 균체제거 공정 - 회수 후 균체 제거 전 Holding시간
+               x  = 68,   # 양 / 균체 제거 공정 - 균체 제거 시간(min)
+               z  = 700,  # 음 / 균체 제거 공정 - Recovery 정체수 부피 (L)
+               an = 105,  # 음 / 순환 시간 흐름 시간 13.5 이하 도달까지 시간(min)
+               ao = 12.3, # 양 / 분리 모드 전환 후 총 분리 시간(h)
+               bd = 12,   # 양 / 흡착 공정 - 흡착 시간(h)
+               be = 2354) # 음 / 흡착 공정 - 흡착제 제거 후 부피 (L)
+
+new
+```
+
+최적조건 구하기 : 인자별 Range확인 (예측) 
+
+* Project Y 예측값 118.7(%)
+
+```{r}
+predict(lm.fit_best,newdata=new)
+
+```
+
+최적조건 추가 확인 : randomForest
+
+* 최적 조건을 확인하기 위해 상기 도출한 "rf.fit_best" 을 활용하여 "tr.fit" 생성
+
+```{r}
+tr.fit = tree(bz ~ ao +
+                y +
+                x + 
+                an +
+                s +
+                z +
+                m +
+                ak +
+                r +
+                bd,data=df_train)
+```
+
+최적 공정 파라미터 확인
+
+* y : 121.5 이상
+
+* m : 18.05 이하
+
+```{r}
+plot(tr.fit) ; text(tr.fit)
+
+```
+
+최적 공정 파라미터 확인
+
+* y : 122 이상
+
+* m : 18 미만
+
+```{r message=FALSE, warning=FALSE}
+library(rpart); library(rattle)
+
+df %>% head
+tree_HA = rpart(bz ~ ao +
+                  y +
+                  x + 
+                  an +
+                  s +
+                  z +
+                  m +
+                  ak +
+                  r +
+                  bd,data=df_train)
+
+fancyRpartPlot(tree_HA)
+
+```
+
+랜덤 포레스트의 최적 조건을 도출하기 위해 앞서 확인한 최적 회귀모형 조건을 활용함
+
+```{r}
+new=data.frame(m  = 17.6, # 음 / 종배양 3(h)
+               s  = 16,   # 음 / 본배양 (h)       
+               u  = 1.8,  # 음 / 균체제거 공정 - 회수 후 균체 제거 전 Holding시간
+               x  = 68,   # 양 / 균체 제거 공정 - 균체 제거 시간(min)
+               z  = 700,  # 음 / 균체 제거 공정 - Recovery 정체수 부피 (L)
+               an = 105,  # 음 / 순환 시간 흐름 시간 13.5 이하 도달까지 시간(min)
+               ao = 12.3, # 양 / 분리 모드 전환 후 총 분리 시간(h)
+               bd = 12,   # 양 / 흡착 공정 - 흡착 시간(h)
+               be = 2354) # 음 / 흡착 공정 - 흡착제 제거 후 부피 (L)
+
+```
+
+* 랜덤 포레스트의 최적 조건을 도출하기 위해 앞서 확인한 랜덤 포레스트 최적 공정 파라미터를 활용함
+* 각 인자가 종속변수에 얼마나 영향을 주는지 확인하기 위해 앞서 varImPlot() 를 확인했었음
+
+```{r}
+varImpPlot(rf.fit) # y 122 이상, m 18 미만 
+
+```
+
+랜덤 포레스트의 최적 파라미터 조건을 아래와 같이 도출함
+
+```{r}
+new_rf=data.frame(y = 179,   # 양
+                  m = 17.6,  # 음
+                  s  = 16,   # 음  #이하는 회귀분석 시 도출된 최적값 반영  
+                  u  = 1.8,  # 음 
+                  w  = 20,   # 양
+                  x  = 68,   # 양 
+                  z  = 700,  # 음 
+                  an = 105,  # 음 
+                  ao = 12.3, # 양 
+                  bd = 12,   # 양 
+                  be = 2354, # 음
+                  ak = 2170, # 임의값(1860~2170) 
+                  r  = 1185) # 임의값(1146~1185)
+```
+
+
+최적조건 비교 : 회귀모형 vs 랜덤 포레스트 
+```{r}
+predict(lm.fit_best,newdata=new)      #119%
+predict(rf.fit_best,newdata=new_rf)   #111%
+
+```
+
+<!-- 
+fit_best 식이 10가지 인자라면 데이터도 10가지 인자여야 함.
+rf.fit_best 에는 w 인자 포함한 총 10가지 인자로 식이 구성되어 있는데
+new_rf 데이터에 w 인자가 누락되고 9가지 인자의 데이터만 있다면 오류남.
+w 인자는 초반에 회귀분석의 최적 조건으로 설정을 해줘야 Knit 할 때 오류가 안 남.
+-->
+
+### Step16 개선 결과 검증(Pilot Test) 
+상기 조건으로 실제 공정 진행 후 결과 체크 
+
+# ■ Control
+
+### Step17 최적모형 모니터링
+
+### Step18 표준화 및 수평전개 
+
+
+
+
