@@ -330,7 +330,7 @@
 ### 220208_포장실 Vision System 도입을 통한 생산성 증대
 - Vision System_Rev.01
   - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
-- clear mask visualization and simple eda(Kaggle)_Rev.01
+- Clear mask visualization(kaggle)_Rev.01
   - https://www.kaggle.com/team63/clear-mask-visualization-and-simple-eda-rev-01/edit
  
 ### 220117_AI 인력 양성 Kaggle
