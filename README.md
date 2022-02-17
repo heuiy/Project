@@ -364,10 +364,9 @@
 - 보고서
   - 4팀 보고서.pptx
     - https://docs.google.com/presentation/d/1VV_IRok1Vn5ffnMDPnHBRn7uS4aQaNFFpBGperHM5xE/edit?usp=sharing
-- 캐글
-  - Pytorch Efficientnet Baseline [Train] AMP+Aug_Rev.01
+- 쥬피터
+  - Pytorch Efficientnet Baseline [Train] AMP+Aug(kaggle)_Rev.01
     - https://www.kaggle.com/team63/pytorch-efficientnet-baseline-train-amp-aug/edit
-- 코랩
   - Data download.ipynb
     - https://drive.google.com/file/d/11hQjhWN4UTZWu1_I9RozKTcWkL3ETjAg/view?usp=sharing
   - challenge_Rev.01
