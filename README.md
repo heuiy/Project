@@ -358,14 +358,15 @@
 ### 220217_종합 챌린지
 - Direction
   - 조교님 안내.pptx
+    - https://docs.google.com/presentation/d/13tM0vtt7bpk7tNAo3urCU8rM-98ugUBl/edit#slide=id.p5
 - 보고서
-  - 6팀 보고서.pptx
+  - 4팀 보고서.pptx
     - https://docs.google.com/presentation/d/1VV_IRok1Vn5ffnMDPnHBRn7uS4aQaNFFpBGperHM5xE/edit?usp=sharing
 - 쥬피터
   - Rev.99
 
   - 21년
-    - 디렉션
+    - Direction
       - 캐글_오리지널
         - https://www.kaggle.com/c/cassava-leaf-disease-classification/overview
       - 캐글_LG
