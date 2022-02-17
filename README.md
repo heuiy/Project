@@ -363,7 +363,7 @@
   - 4팀 보고서.pptx
     - https://docs.google.com/presentation/d/1VV_IRok1Vn5ffnMDPnHBRn7uS4aQaNFFpBGperHM5xE/edit?usp=sharing
 - 캐글
-  - Pytorch Efficientnet Baseline [Train] AMP+Aug_Rev.01
+  - Pytorch Efficientnet Baseline AMP+Aug_Rev.01
     - https://www.kaggle.com/team63/pytorch-efficientnet-baseline-train-amp-aug/edit
   - 21년
     - Direction
