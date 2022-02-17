@@ -368,30 +368,30 @@
 - 코랩
   - Data download.ipynb
     - https://drive.google.com/file/d/11hQjhWN4UTZWu1_I9RozKTcWkL3ETjAg/view?usp=sharing
-  - 21년
-    - Direction
-      - 캐글_오리지널
-        - https://www.kaggle.com/c/cassava-leaf-disease-classification/overview
-      - 캐글_LG
-        - https://www.kaggle.com/kuc2477/notebooks?userId=721142&sortBy=dateRun&tab=profile
-      - [Day 11] Challenge Introduction (updated).pptx
-        - https://docs.google.com/presentation/d/1Kie-nQnUNs-6kxDyTM8YZy2ifoEdzCnj/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-    - 보고서
-      - 1조.pptx
-        - https://docs.google.com/presentation/d/1R3Zv9xn7uHYsRa3KIq-D7DmvlGNr9m1R/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 2조.pptx
-        - https://docs.google.com/presentation/d/1BYF-veYGtUDYQqhnVdEqk_WECr-3uJ3B/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 3조.pptx
-        - https://docs.google.com/presentation/d/1Pn0L0N61UwF-H1G7WxGDlk0dKBnjleab/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 4조.pptx
-        - https://docs.google.com/presentation/d/111daPo0J1Q1yu1XElCrTRIGLbFwsqyrL/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 5조.pptx
-        - https://docs.google.com/presentation/d/1SK7oiZdmthRHOOhCJGRqvMtaReZrs2VE/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 6조.pptx
-        - https://docs.google.com/presentation/d/1euBYyKe4aIXX5imjf57cH-FADpzNuXfi/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-    - 쥬피터
-      - challenge_Rev.01
-        - https://drive.google.com/file/d/1G5Rr7ScOQMgWBe_LmRlu3b_QKF6UfhXt/view?usp=sharing
+- 21년
+  - Direction
+    - 캐글_오리지널
+      - https://www.kaggle.com/c/cassava-leaf-disease-classification/overview
+    - 캐글_LG
+      - https://www.kaggle.com/kuc2477/notebooks?userId=721142&sortBy=dateRun&tab=profile
+    - [Day 11] Challenge Introduction (updated).pptx
+      - https://docs.google.com/presentation/d/1Kie-nQnUNs-6kxDyTM8YZy2ifoEdzCnj/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+  - 보고서
+    - 1조.pptx
+      - https://docs.google.com/presentation/d/1R3Zv9xn7uHYsRa3KIq-D7DmvlGNr9m1R/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+    - 2조.pptx
+      - https://docs.google.com/presentation/d/1BYF-veYGtUDYQqhnVdEqk_WECr-3uJ3B/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+    - 3조.pptx
+      - https://docs.google.com/presentation/d/1Pn0L0N61UwF-H1G7WxGDlk0dKBnjleab/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+    - 4조.pptx
+      - https://docs.google.com/presentation/d/111daPo0J1Q1yu1XElCrTRIGLbFwsqyrL/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+    - 5조.pptx
+      - https://docs.google.com/presentation/d/1SK7oiZdmthRHOOhCJGRqvMtaReZrs2VE/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+    - 6조.pptx
+      - https://docs.google.com/presentation/d/1euBYyKe4aIXX5imjf57cH-FADpzNuXfi/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+  - 쥬피터
+    - challenge_Rev.01
+      - https://drive.google.com/file/d/1G5Rr7ScOQMgWBe_LmRlu3b_QKF6UfhXt/view?usp=sharing
 
 
 
