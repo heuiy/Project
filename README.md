@@ -370,7 +370,7 @@
   - Data download.ipynb
     - https://drive.google.com/file/d/11hQjhWN4UTZWu1_I9RozKTcWkL3ETjAg/view?usp=sharing
   - challenge_Rev.01
-    - https://drive.google.com/file/d/1G5Rr7ScOQMgWBe_LmRlu3b_QKF6UfhXt/view?usp=sharing
+    - https://drive.google.com/file/d/1sDn6reVljuxAYpzq0xy3QOqR3hBJ1r8O/view?usp=sharing
 - 21년
   - Direction
     - 캐글_오리지널
