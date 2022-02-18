@@ -362,8 +362,20 @@
   - 조교님 안내.pptx
     - https://docs.google.com/presentation/d/13tM0vtt7bpk7tNAo3urCU8rM-98ugUBl/edit#slide=id.p5
 - 보고서
-  - 4팀 보고서.pptx
+  - 1조_발표자료.pptx
+    - 
+  - 2조_발표자료.pptx
+    - 
+  - 3조_발표자료.pptx
+    - 
+  - 4조_발표자료.pptx
     - https://docs.google.com/presentation/d/1VV_IRok1Vn5ffnMDPnHBRn7uS4aQaNFFpBGperHM5xE/edit?usp=sharing
+  - 5조_발표자료.pptx
+    - 
+  - 6조_발표자료.pptx
+    - 
+  - 7조_발표자료.pptx
+    - 
 - 쥬피터
   - Pytorch Efficientnet Baseline [Train] AMP+Aug(kaggle)_Rev.01
     - https://www.kaggle.com/team63/pytorch-efficientnet-baseline-train-amp-aug/edit
