@@ -373,16 +373,28 @@
         - Ensemble 적용
   - 4조_발표자료.pptx
     - https://docs.google.com/presentation/d/10SDuBpYw7fQlfQNxhowNoFfdocc21vzP/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
-      - 캐글 점수 기준 두 번째
+      - 캐글 점수 기준 Class 2등
   - 5조_발표자료.pptx
     - https://docs.google.com/presentation/d/1TwBgdPAwd4f9BYEMb3jAcJolbrrqRGut/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
       - 초반 데이터에 EDA 적용한 부분 좋았음
       - Ensemble 적용
-      - 캐글 점수 가장 높음
+      - 캐글 점수 기준 Class 1등
   - 6조_발표자료.pptx
     - https://docs.google.com/presentation/d/13-Hb9YOfRF91jv_4m8nzSLnf5HA6nWYI/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+      - EDA 적용함
+      - 4개 Ensemble 하려다가 2개 실패해서 2개만 Ensemble 함
+        - 짧은 시간 안에 4개 모델 돌린 것 자체가 대단한 것
+      - Xception net 모델
+        - 가볍고, 남들이 추천하는 모델이라서 돌려봤음
   - 7조_발표자료.pptx
     - https://docs.google.com/presentation/d/1n-kE5JUi6ZKqGqO3oCMuPFFv95Tv3blz/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+      - 각 이슈에 대한 솔루션 다각도로 고민했음
+      - 캐글 2등한 조의 성공 전략
+        - 원래 간단하게 5개 클래스인데, Unknown 이라고 1개 클래스 더 추가해서 데이터를 깨끗하게 함
+          - 간단한 모델로 데이터도 크게 안 바꿨음에도
+      - 캐글 점수 기준 Class 3등
+      - 챌린지 많이 할수록 실력 성장함
+      - 챌린지 할 때는 캐글에서 비슷한 과제 찾아서 거기에서 솔루션을 찾을 것
 - 쥬피터
   - Pytorch Efficientnet Baseline [Train] AMP+Aug(kaggle)_Rev.01
     - https://www.kaggle.com/team63/pytorch-efficientnet-baseline-train-amp-aug/edit
