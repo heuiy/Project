@@ -363,22 +363,26 @@
     - https://docs.google.com/presentation/d/13tM0vtt7bpk7tNAo3urCU8rM-98ugUBl/edit#slide=id.p5
 - 보고서
   - 1조_발표자료.pptx
-    - 
+    - https://docs.google.com/presentation/d/1EQbXAJPxXLduU2J784qmNa3LNP4Xt_AE/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
   - 2조_발표자료.pptx
-    - 
+    - https://docs.google.com/presentation/d/17ZTS4Ztrjron252KGCZgmwXRuO8fZPGh/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
   - 3조_발표자료.pptx
-    - 
+    - https://docs.google.com/presentation/d/14VCE994-jkrBL9EeUJ2NgREXbj6fEgXh/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+    - 3조_발표자료.pdf
+      - https://drive.google.com/file/d/1j4v9auO52qpwi-vwDOjbXWaF-NwQvhqE/view?usp=sharing
   - 4조_발표자료.pptx
-    - https://docs.google.com/presentation/d/1VV_IRok1Vn5ffnMDPnHBRn7uS4aQaNFFpBGperHM5xE/edit?usp=sharing
+    - https://docs.google.com/presentation/d/10SDuBpYw7fQlfQNxhowNoFfdocc21vzP/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
   - 5조_발표자료.pptx
-    - 
+    - https://docs.google.com/presentation/d/1TwBgdPAwd4f9BYEMb3jAcJolbrrqRGut/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
   - 6조_발표자료.pptx
-    - 
+    - https://docs.google.com/presentation/d/13-Hb9YOfRF91jv_4m8nzSLnf5HA6nWYI/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
   - 7조_발표자료.pptx
-    - 
+    - https://docs.google.com/presentation/d/1n-kE5JUi6ZKqGqO3oCMuPFFv95Tv3blz/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
 - 쥬피터
   - Pytorch Efficientnet Baseline [Train] AMP+Aug(kaggle)_Rev.01
     - https://www.kaggle.com/team63/pytorch-efficientnet-baseline-train-amp-aug/edit
+  - Pytorch Efficientnet [Inference] TTA(kaggle)_Rev.01
+    - https://www.kaggle.com/team63/pytorch-efficientnet-inference-tta-rev-01/edit
   - Data download.ipynb
     - https://drive.google.com/file/d/11hQjhWN4UTZWu1_I9RozKTcWkL3ETjAg/view?usp=sharing
   - challenge_Rev.01
