@@ -370,10 +370,15 @@
     - https://docs.google.com/presentation/d/14VCE994-jkrBL9EeUJ2NgREXbj6fEgXh/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
     - 3조_발표자료.pdf
       - https://drive.google.com/file/d/1j4v9auO52qpwi-vwDOjbXWaF-NwQvhqE/view?usp=sharing
+        - Ensemble 적용
   - 4조_발표자료.pptx
     - https://docs.google.com/presentation/d/10SDuBpYw7fQlfQNxhowNoFfdocc21vzP/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+      - 캐글 점수 기준 두 번째
   - 5조_발표자료.pptx
     - https://docs.google.com/presentation/d/1TwBgdPAwd4f9BYEMb3jAcJolbrrqRGut/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
+      - 초반 데이터에 EDA 적용한 부분 좋았음
+      - Ensemble 적용
+      - 캐글 점수 가장 높음
   - 6조_발표자료.pptx
     - https://docs.google.com/presentation/d/13-Hb9YOfRF91jv_4m8nzSLnf5HA6nWYI/edit?usp=sharing&ouid=100551211948338987254&rtpof=true&sd=true
   - 7조_발표자료.pptx
