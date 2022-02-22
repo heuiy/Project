@@ -1,11 +1,2 @@
-하드웨어
-- 코그넥스
-  - 
-- KEYENCE
-  - https://www.keyence.co.kr/products/vision/
-
-- 딥노이드
-  - https://www.deepnoid.com/factory
-    - 개발 과정 구체적임
-
-
+19년 APV 모델
+https://dazzling-spence-2f8100.netlify.com/
