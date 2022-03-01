@@ -322,16 +322,6 @@
 ### 220112_안전밸브 Governance 체계 구축(PSM 연계)
 - 안전밸브_Rev.01
   - https://colab.research.google.com/drive/1_zb2luQwj36Szh50W20JO08BoGo9ziVU
-
-### 220125_설비 Governance 체계 구축(PSM 연계)
-- 설비 리스트_Rev.01
-  - https://colab.research.google.com/drive/1AAZqJmjA45AcXyU2KlbXd7JrTw2lOcvD
-
-### 220208_포장실 Vision System 도입을 통한 생산성 증대
-- Vision System_Rev.01
-  - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
-- Clear mask visualization(kaggle)_Rev.01
-  - https://www.kaggle.com/team63/clear-mask-visualization-and-simple-eda-rev-01/edit
  
 ### 220117_AI 인력 양성 Kaggle
 - Direction
@@ -356,6 +346,16 @@
     - https://colab.research.google.com/drive/1F7a3ZxD6LMF73k1AiPyU34gzomoBztpl?usp=sharing
   - 2021_dl_challenge_6조(최종본).ipynb
     - https://drive.google.com/file/d/1a_DiuJALhu6GQcpdoarefLZkPQ72tnoj/view?usp=sharing
+
+### 220125_설비 Governance 체계 구축(PSM 연계)
+- 설비 리스트_Rev.01
+  - https://colab.research.google.com/drive/1AAZqJmjA45AcXyU2KlbXd7JrTw2lOcvD
+
+### 220208_포장실 Vision System 도입을 통한 생산성 증대
+- Vision System_Rev.01
+  - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
+- Clear mask visualization(kaggle)_Rev.01
+  - https://www.kaggle.com/team63/clear-mask-visualization-and-simple-eda-rev-01/edit
 
 ### 220217_종합 챌린지
 - Direction
@@ -428,6 +428,34 @@
   - 쥬피터
     - challenge_Rev.01
       - https://drive.google.com/file/d/1G5Rr7ScOQMgWBe_LmRlu3b_QKF6UfhXt/view?usp=sharing
+
+### 220308_LG Science Park
+- BIO_FeatureEngineering_Rev.01
+  - https://drive.google.com/file/d/18ma3ARmOmorb3FgIuqnoUwc2HDVJQ7dx/view?usp=sharing
+- BIO_FeatureEngineering.html
+  - https://drive.google.com/file/d/13vf7qlnhuSAcSJVG3psN6qJHaBe2qgF-/view?usp=sharing
+- BIO_raw_Rev.01
+  - https://drive.google.com/file/d/1ctfH_n-tmu9ow5I9gF_OA9QPz8kpzAk7/view?usp=sharing
+- BIO_result_Rev.01
+  - https://drive.google.com/file/d/1zM0kbRvKRmiwtjnKKOptPuJOQFVLtRnf/view?usp=sharing
+- BIO_share1_Rev.01
+  - https://drive.google.com/file/d/1HqEQIlVQ3oiM18PhAs0DyK95mK4fLtz3/view?usp=sharing
+- BIO_share2_Rev.01
+  - https://drive.google.com/file/d/1Sg2Rh7LQEo66zDSY4c3dFJsnYQ1KuJYE/view?usp=sharing
+- BIO_share3_Rev.01
+  - https://drive.google.com/file/d/18al6srfTs6wvIroEsrqbMSqBIuPztilO/view?usp=sharing
+- BIO_share4_Rev.01
+  - https://drive.google.com/file/d/1SmM8AHKJgml60aycQ29MBZw_6UE0kyQl/view?usp=sharing
+- BIO_share5_Rev.01
+  - https://drive.google.com/file/d/1tn0Y8OWWRe1SG9QUmhxOmxp4oxzwteIa/view?usp=sharing
+- Untitled_Rev.01
+  - https://drive.google.com/file/d/1O_Ov4d0SsJXR6Xinh7ChzBNt49PhsEuR/view?usp=sharing
+
+
+
+
+
+
 
 
 
