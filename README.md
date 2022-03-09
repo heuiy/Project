@@ -366,8 +366,7 @@
   - https://www.kaggle.com/team63/clear-mask-visualization-and-simple-eda-rev-01/edit
 
 ### 220210_오송 캡핑공정 자공정완결
-- 폴더
-  - https://drive.google.com/drive/folders/1eO2xDfu_8907mOUjtnE5DOZwbuR5Aw7C?usp=sharing
+
 
 
 
