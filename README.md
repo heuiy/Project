@@ -319,10 +319,18 @@
 - 유해화학물질_Rev.01
   - https://colab.research.google.com/drive/1fJ5-BgpP4U8JKm-LrGyam1aoBc3j01jG
 
-### 220112_안전밸브 Governance 체계 구축(PSM 연계)
+### 220112_P&ID 자동 인식을 통한 안전밸브 Governance 체계 구축(PSM 연계)
 - 안전밸브_Rev.01
   - https://colab.research.google.com/drive/1_zb2luQwj36Szh50W20JO08BoGo9ziVU
- 
+- [Day 5-1] Detectron2 Introduction_Rev.02
+  - https://drive.google.com/file/d/1w8slxVmHYXBnkwoxPAkgMhfr2bqfN-0o/view?usp=sharing
+- [Day 5-2] Detectron2 Application_Rev.01
+  - https://drive.google.com/file/d/1HyvoCRXI8WUDuVHbC86Nkr4kgOUqFJkR/view?usp=sharing
+- football_detection
+  - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
+- YOLOv3_Rev.01
+  - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
+
 ### 220117_AI 인력 양성 Kaggle
 - Direction
   - challenge안내_Rev.01.pptx
