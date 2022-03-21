@@ -366,8 +366,9 @@
   - https://www.kaggle.com/team63/clear-mask-visualization-and-simple-eda-rev-01/edit
 
 ### 220210_오송 캡핑공정 자공정완결
-
-
+- Visualizing Kernels_Rev.01
+  - https://colab.research.google.com/drive/1t9BXUKYioIiPjaIP6iT6sxNywBkIruN6#scrollTo=xkQW4wex2GTq
+    - 학습된 Kernel 등이 어떻게 Visualize 되는지 확인
 
 
 
