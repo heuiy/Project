@@ -330,7 +330,11 @@
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
 - football_detection
   - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
-  
+- YOLOv5 Tutorial_Rev.01
+  - https://colab.research.google.com/drive/1zhsyX60MBGzIvpGmfjjnZEjKEpGVqQrA?usp=sharing
+- YOLOv5-Custom-Training_Rev.01
+  - https://colab.research.google.com/drive/1_8IfAvexBW8B_LWs6Rl1_d6gnx6H1Wr8?usp=sharing
+
 ### 220117_AI 인력 양성 Kaggle
 - Direction
   - challenge안내_Rev.01.pptx
