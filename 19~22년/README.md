@@ -324,6 +324,8 @@
   - https://colab.research.google.com/drive/1_zb2luQwj36Szh50W20JO08BoGo9ziVU
 - [Day 5-1] Detectron2 Introduction_Rev.02
   - https://drive.google.com/file/d/1w8slxVmHYXBnkwoxPAkgMhfr2bqfN-0o/view?usp=sharing
+- [Day 5-1] Detectron2 Introduction_Rev.03
+  - https://drive.google.com/file/d/1EMLPb2EY9oW_INUSPBNoBzCS0ci84JRR/view?usp=sharing
 - [Day 5-2] Detectron2 Application_Rev.01
   - https://drive.google.com/file/d/1HyvoCRXI8WUDuVHbC86Nkr4kgOUqFJkR/view?usp=sharing
 - YOLOv3_Rev.01
