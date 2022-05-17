@@ -330,6 +330,9 @@
     - Roboflow 데이터와 기존 데이터 달라서 에러 발생
 - [Day 5-2] Detectron2 Application_Rev.01
   - https://drive.google.com/file/d/1HyvoCRXI8WUDuVHbC86Nkr4kgOUqFJkR/view?usp=sharing
+- [Day 5-2] Detectron2 Application_Rev.02
+  - https://drive.google.com/file/d/1uUJwaCFZ-pkuANpXhfsvzTXtLpqLG9Cy/view?usp=sharing
+  - 여기서부터 도면 넣었음
 - YOLOv3_Rev.01
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
 - football_detection
