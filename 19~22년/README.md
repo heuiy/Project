@@ -333,15 +333,17 @@
 - [Day 5-2] Detectron2 Application_Rev.02
   - https://drive.google.com/file/d/1uUJwaCFZ-pkuANpXhfsvzTXtLpqLG9Cy/view?usp=sharing
     - 여기서부터 도면 넣었음
+    - Roboflow 데이터와 기존 데이터 달라서 에러 발생
 - YOLOv3_Rev.01
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
 - YOLOv3_Rev.02
   - https://drive.google.com/file/d/1uFiCdzfGYAZFiKreaI_YCnxP22vMXHag/view?usp=sharing
-    - Custom Data 자체도 외부에서 가져온거라서 현업에 적용하기 쉽지 않음
-- roboflow-jetson-license-plate_Rev.01
-  - https://colab.research.google.com/drive/1jSwdUrwaSyR_bTJPfOnsPNPM4yArQRS7?usp=sharing
 - football_detection
   - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
+- Train YOLOX on a Custom Dataset - YouTube_Rev.01
+  - https://colab.research.google.com/drive/1r-S8VK39vsdtOdYx1FxkV8MgwhNlN8qC?usp=sharing
+- Train YOLOX on a Custom Dataset - YouTube_Rev.02
+  - https://colab.research.google.com/drive/1Mosh6KMYuhNzmp23d4_c_lmnPgmCvXKQ?usp=sharing
 - YOLOv5 Tutorial_Rev.01
   - https://colab.research.google.com/drive/1zhsyX60MBGzIvpGmfjjnZEjKEpGVqQrA?usp=sharing
 - YOLOv5-Custom-Training_Rev.01
