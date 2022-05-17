@@ -335,6 +335,11 @@
     - 여기서부터 도면 넣었음
 - YOLOv3_Rev.01
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
+- YOLOv3_Rev.02
+  - https://drive.google.com/file/d/1uFiCdzfGYAZFiKreaI_YCnxP22vMXHag/view?usp=sharing
+    - Custom Data 자체도 외부에서 가져온거라서 현업에 적용하기 쉽지 않음
+- roboflow-jetson-license-plate_Rev.01
+  - https://colab.research.google.com/drive/1jSwdUrwaSyR_bTJPfOnsPNPM4yArQRS7?usp=sharing
 - football_detection
   - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
 - YOLOv5 Tutorial_Rev.01
