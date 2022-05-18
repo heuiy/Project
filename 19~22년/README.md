@@ -344,12 +344,18 @@
   - https://colab.research.google.com/drive/1r-S8VK39vsdtOdYx1FxkV8MgwhNlN8qC?usp=sharing
   - Train YOLOX on a Custom Dataset - YouTube_Rev.02
     - https://colab.research.google.com/drive/1Mosh6KMYuhNzmp23d4_c_lmnPgmCvXKQ?usp=sharing
+      - 학습이 되긴 했으나, custom data 셋으로 학습이 안되었음
 - YOLOv5 Tutorial_Rev.01
   - https://colab.research.google.com/drive/1zhsyX60MBGzIvpGmfjjnZEjKEpGVqQrA?usp=sharing
+- Roboflow-Train-YOLOv5_Rev01
+  - https://colab.research.google.com/drive/1hCHShZGh-_zUGTULTp7Z5LQoZJCPExGu?usp=sharing
+  - Roboflow-Train-YOLOv5_Rev02
+    - https://colab.research.google.com/drive/1gi1oz_gcMVESz-fuymhtb9ezXk0j0QVA?usp=sharing
 - YOLOv5-Custom-Training_Rev.01
   - https://colab.research.google.com/drive/1_8IfAvexBW8B_LWs6Rl1_d6gnx6H1Wr8?usp=sharing
   - YOLOv5-Custom-Training_Rev.02
     - https://colab.research.google.com/drive/17N7Lk23yejhw6kVRrn0OhoWOfC9PpryU?usp=sharing
+      - 성공!!
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
