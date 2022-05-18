@@ -348,6 +348,8 @@
   - https://colab.research.google.com/drive/1zhsyX60MBGzIvpGmfjjnZEjKEpGVqQrA?usp=sharing
 - YOLOv5-Custom-Training_Rev.01
   - https://colab.research.google.com/drive/1_8IfAvexBW8B_LWs6Rl1_d6gnx6H1Wr8?usp=sharing
+  - YOLOv5-Custom-Training_Rev.02
+    - https://colab.research.google.com/drive/17N7Lk23yejhw6kVRrn0OhoWOfC9PpryU?usp=sharing
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
