@@ -324,26 +324,26 @@
   - https://colab.research.google.com/drive/1_zb2luQwj36Szh50W20JO08BoGo9ziVU
 - [Day 5-1] Detectron2 Introduction_Rev.02
   - https://drive.google.com/file/d/1w8slxVmHYXBnkwoxPAkgMhfr2bqfN-0o/view?usp=sharing
-- [Day 5-1] Detectron2 Introduction_Rev.03
-  - https://drive.google.com/file/d/1EMLPb2EY9oW_INUSPBNoBzCS0ci84JRR/view?usp=sharing
-    - 여기서부터 도면 넣었음
-    - Roboflow 데이터와 기존 데이터 달라서 에러 발생
+  - [Day 5-1] Detectron2 Introduction_Rev.03
+    - https://drive.google.com/file/d/1EMLPb2EY9oW_INUSPBNoBzCS0ci84JRR/view?usp=sharing
+      - 여기서부터 도면 넣었음
+      - Roboflow 데이터와 기존 데이터 달라서 에러 발생
 - [Day 5-2] Detectron2 Application_Rev.01
   - https://drive.google.com/file/d/1HyvoCRXI8WUDuVHbC86Nkr4kgOUqFJkR/view?usp=sharing
-- [Day 5-2] Detectron2 Application_Rev.02
-  - https://drive.google.com/file/d/1uUJwaCFZ-pkuANpXhfsvzTXtLpqLG9Cy/view?usp=sharing
-    - 여기서부터 도면 넣었음
-    - Roboflow 데이터와 기존 데이터 달라서 에러 발생
+  - [Day 5-2] Detectron2 Application_Rev.02
+    - https://drive.google.com/file/d/1uUJwaCFZ-pkuANpXhfsvzTXtLpqLG9Cy/view?usp=sharing
+      - 여기서부터 도면 넣었음
+      - Roboflow 데이터와 기존 데이터 달라서 에러 발생
 - YOLOv3_Rev.01
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
-- YOLOv3_Rev.02
-  - https://drive.google.com/file/d/1uFiCdzfGYAZFiKreaI_YCnxP22vMXHag/view?usp=sharing
+  - YOLOv3_Rev.02
+    - https://drive.google.com/file/d/1uFiCdzfGYAZFiKreaI_YCnxP22vMXHag/view?usp=sharing
 - football_detection
   - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
 - Train YOLOX on a Custom Dataset - YouTube_Rev.01
   - https://colab.research.google.com/drive/1r-S8VK39vsdtOdYx1FxkV8MgwhNlN8qC?usp=sharing
-- Train YOLOX on a Custom Dataset - YouTube_Rev.02
-  - https://colab.research.google.com/drive/1Mosh6KMYuhNzmp23d4_c_lmnPgmCvXKQ?usp=sharing
+  - Train YOLOX on a Custom Dataset - YouTube_Rev.02
+    - https://colab.research.google.com/drive/1Mosh6KMYuhNzmp23d4_c_lmnPgmCvXKQ?usp=sharing
 - YOLOv5 Tutorial_Rev.01
   - https://colab.research.google.com/drive/1zhsyX60MBGzIvpGmfjjnZEjKEpGVqQrA?usp=sharing
 - YOLOv5-Custom-Training_Rev.01
