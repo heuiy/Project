@@ -359,7 +359,10 @@
       - Hat Detection
   - 퀴놀론_YOLOv5_Rev.03
     - https://colab.research.google.com/drive/1FATn6HyapwdnA7wkeqpzFcc0-ZmgQIay?usp=sharing
-      - 퀴놀론 데이터 변경
+      - 퀴놀론 데이터 Rev.01
+  - 퀴놀론_YOLOv5_Rev.04
+    - https://colab.research.google.com/drive/13QtTVaHFB7-gVrvcA1fqkmxn6gPeTvZ6?usp=sharing
+      - 퀴놀론 데이터 Rev.02
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
