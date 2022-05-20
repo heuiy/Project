@@ -366,6 +366,10 @@
       - 퀴놀론 데이터 Rev.02
       - 그나마 근사하게 결과 나옴
       - 성능은 전혀 안 나옴
+  - 퀴놀론_YOLOv5_Rev.05
+    - https://colab.research.google.com/drive/1jwYaslvVPOyzOQD7kZ6QiKgCbqjUu5oI?usp=sharing
+      - circuit 데이터
+      - Symbol 만 크게 학습시키면 되는지?
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
