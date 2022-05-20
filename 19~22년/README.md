@@ -360,9 +360,12 @@
   - 퀴놀론_YOLOv5_Rev.03
     - https://colab.research.google.com/drive/1FATn6HyapwdnA7wkeqpzFcc0-ZmgQIay?usp=sharing
       - 퀴놀론 데이터 Rev.01
+      - 너무 쪼갰더니 못 알아볼 정도
   - 퀴놀론_YOLOv5_Rev.04
     - https://colab.research.google.com/drive/13QtTVaHFB7-gVrvcA1fqkmxn6gPeTvZ6?usp=sharing
       - 퀴놀론 데이터 Rev.02
+      - 그나마 근사하게 결과 나옴
+      - 성능은 전혀 안 나옴
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
