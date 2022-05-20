@@ -351,6 +351,12 @@
   - https://colab.research.google.com/drive/1hCHShZGh-_zUGTULTp7Z5LQoZJCPExGu?usp=sharing
   - Roboflow-Train-YOLOv5_Rev02
     - https://colab.research.google.com/drive/1gi1oz_gcMVESz-fuymhtb9ezXk0j0QVA?usp=sharing
+  - Roboflow-Train-YOLOv5_Rev.03
+    - https://colab.research.google.com/drive/1IqU1aLG6Z11nIbJP_2L6_IuNh7ehO__h?usp=sharing
+      - 성공!!
+      - Dataset : NetlistGenerator Dataset
+        - https://universe.roboflow.com/ahmet-emre/netlistgenerator/3
+      - 5시간 가량 소요됨
 - YOLOv5-Custom-Training_Rev.01
   - https://colab.research.google.com/drive/1_8IfAvexBW8B_LWs6Rl1_d6gnx6H1Wr8?usp=sharing
   - YOLOv5-Custom-Training_Rev.02
@@ -370,6 +376,9 @@
     - https://colab.research.google.com/drive/1jwYaslvVPOyzOQD7kZ6QiKgCbqjUu5oI?usp=sharing
       - circuit 데이터
       - Symbol 만 크게 학습시키면 되는지?
+      - Dataset : NetlistGenerator Dataset
+        - https://universe.roboflow.com/ahmet-emre/netlistgenerator/3
+      - 3시간 가량 소요됨
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
