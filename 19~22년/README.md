@@ -357,6 +357,8 @@
       - Dataset : NetlistGenerator Dataset
         - https://universe.roboflow.com/ahmet-emre/netlistgenerator/3
       - 5시간 가량 소요됨
+    - 깃허브 기스트
+      - https://gist.github.com/heuiy/4cf4422f6814116c983acf80f8c938ce
 - YOLOv5-Custom-Training_Rev.01
   - https://colab.research.google.com/drive/1_8IfAvexBW8B_LWs6Rl1_d6gnx6H1Wr8?usp=sharing
   - YOLOv5-Custom-Training_Rev.02
@@ -372,6 +374,8 @@
       - 퀴놀론 데이터 Rev.02
       - 그나마 근사하게 결과 나옴
       - 성능은 전혀 안 나옴
+      - 깃허브 기스트
+        - https://gist.github.com/heuiy/5be60838a9129b7464014dbc91231c88
   - 퀴놀론_YOLOv5_Rev.05
     - https://colab.research.google.com/drive/1jwYaslvVPOyzOQD7kZ6QiKgCbqjUu5oI?usp=sharing
       - circuit 데이터
@@ -379,6 +383,8 @@
       - Dataset : NetlistGenerator Dataset
         - https://universe.roboflow.com/ahmet-emre/netlistgenerator/3
       - 3시간 가량 소요됨
+    - 깃허브 기스트
+      - https://gist.github.com/heuiy/2f59d6c918ed59b5f3f654bdc825971c
 
 ### 220117_AI 인력 양성 Kaggle
 - Direction
