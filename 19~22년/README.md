@@ -373,7 +373,8 @@
     - https://colab.research.google.com/drive/13QtTVaHFB7-gVrvcA1fqkmxn6gPeTvZ6?usp=sharing
       - 퀴놀론 데이터 Rev.02
       - 그나마 근사하게 결과 나옴
-      - 성능은 전혀 안 나옴
+        - 성능은 전혀 안 나옴
+        - best.pt (13.7Mb)
       - 깃허브 기스트
         - https://gist.github.com/heuiy/5be60838a9129b7464014dbc91231c88
   - 퀴놀론_YOLOv5_Rev.05
@@ -381,7 +382,8 @@
       - Symbol 만 크게 학습시키면 되는지?
       - Dataset : NetlistGenerator Dataset
         - https://universe.roboflow.com/ahmet-emre/netlistgenerator/3
-      - 3시간 가량 소요됨
+      - 학습시간 3시간 가량 소요됨
+        - best.pt (13.7Mb)
     - 깃허브 기스트
       - https://gist.github.com/heuiy/2f59d6c918ed59b5f3f654bdc825971c
 
