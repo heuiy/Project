@@ -378,7 +378,6 @@
         - https://gist.github.com/heuiy/5be60838a9129b7464014dbc91231c88
   - 퀴놀론_YOLOv5_Rev.05
     - https://colab.research.google.com/drive/1jwYaslvVPOyzOQD7kZ6QiKgCbqjUu5oI?usp=sharing
-      - circuit 데이터
       - Symbol 만 크게 학습시키면 되는지?
       - Dataset : NetlistGenerator Dataset
         - https://universe.roboflow.com/ahmet-emre/netlistgenerator/3
