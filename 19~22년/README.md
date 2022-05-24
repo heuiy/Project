@@ -426,6 +426,17 @@
   - https://colab.research.google.com/drive/1t9BXUKYioIiPjaIP6iT6sxNywBkIruN6#scrollTo=xkQW4wex2GTq
     - 학습된 Kernel 등이 어떻게 Visualize 되는지 확인
 
+### 220524_AI Generated LG Chem. Art
+- VQGAN+CLIP_Rev.01
+  - https://colab.research.google.com/drive/1ZPQ51yaOL53Dq47Ie0I6aBHQQx-PTF0N?usp=sharing
+- 1-pix2pix (sol)_Rev.02
+  - https://drive.google.com/file/d/1zXDNa-dFXx9xHKkqPyNSt4S6nuGlyBZX/view?usp=sharing
+
+
+
+
+
+
 
 
 
