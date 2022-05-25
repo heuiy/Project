@@ -433,8 +433,8 @@
   - https://drive.google.com/file/d/1zXDNa-dFXx9xHKkqPyNSt4S6nuGlyBZX/view?usp=sharing
   - 깃허브 기스트
     - https://gist.github.com/heuiy/89ebe8ecd7c7e824373c0142515b15c7
-
-
+- 1-pix2pix (sol)_Rev.03
+  - https://drive.google.com/file/d/1hLcr7oEyJnu_oP_UFuY7cphV_rfLL3C9/view?usp=sharing
 
 
 
