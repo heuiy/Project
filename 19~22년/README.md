@@ -431,7 +431,8 @@
   - https://colab.research.google.com/drive/1ZPQ51yaOL53Dq47Ie0I6aBHQQx-PTF0N?usp=sharing
 - 1-pix2pix (sol)_Rev.02
   - https://drive.google.com/file/d/1zXDNa-dFXx9xHKkqPyNSt4S6nuGlyBZX/view?usp=sharing
-
+  - 깃허브 기스트
+    - https://gist.github.com/heuiy/89ebe8ecd7c7e824373c0142515b15c7
 
 
 
