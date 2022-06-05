@@ -429,14 +429,15 @@
 ### 220524_AI Generated LG Chem. Art
 - VQGAN+CLIP_Rev.01
   - https://colab.research.google.com/drive/1ZPQ51yaOL53Dq47Ie0I6aBHQQx-PTF0N?usp=sharing
+- S2 VQGAN+CLIP Classic_Rev.01
+  - https://drive.google.com/file/d/1l0yfbQGaUSgmVFxP-5-GSaafW1gqcHSA/view?usp=sharing
+    - 잘 안되네. 조금만 변경하면 될 것 같음.
 - 1-pix2pix (sol)_Rev.02
   - https://drive.google.com/file/d/1zXDNa-dFXx9xHKkqPyNSt4S6nuGlyBZX/view?usp=sharing
   - 깃허브 기스트
     - https://gist.github.com/heuiy/89ebe8ecd7c7e824373c0142515b15c7
 - 1-pix2pix (sol)_Rev.03
   - https://drive.google.com/file/d/1hLcr7oEyJnu_oP_UFuY7cphV_rfLL3C9/view?usp=sharing
-- S2 VQGAN+CLIP Classic_Rev.01
-  - https://drive.google.com/file/d/1l0yfbQGaUSgmVFxP-5-GSaafW1gqcHSA/view?usp=sharing
 
 
 
