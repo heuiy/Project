@@ -435,7 +435,8 @@
     - https://gist.github.com/heuiy/89ebe8ecd7c7e824373c0142515b15c7
 - 1-pix2pix (sol)_Rev.03
   - https://drive.google.com/file/d/1hLcr7oEyJnu_oP_UFuY7cphV_rfLL3C9/view?usp=sharing
-
+- S2 VQGAN+CLIP Classic_Rev.01
+  - https://drive.google.com/file/d/1l0yfbQGaUSgmVFxP-5-GSaafW1gqcHSA/view?usp=sharing
 
 
 
