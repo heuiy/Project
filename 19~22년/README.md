@@ -438,8 +438,8 @@
     - https://gist.github.com/heuiy/89ebe8ecd7c7e824373c0142515b15c7
 - 1-pix2pix (sol)_Rev.03
   - https://drive.google.com/file/d/1hLcr7oEyJnu_oP_UFuY7cphV_rfLL3C9/view?usp=sharing
-
-
+- Disco Diffusion v5.3 [w/ Symmetry]_Rev.01
+  - https://colab.research.google.com/drive/1qU1Lg5F3w6-53O6RVHA3ok8pLfr01wrH?usp=sharing
 
 
 
