@@ -442,5 +442,7 @@
   - https://colab.research.google.com/drive/1qU1Lg5F3w6-53O6RVHA3ok8pLfr01wrH?usp=sharing
     - Tutorial
       - https://bytexd.com/get-started-with-disco-diffusion-to-created-ai-generated-art/
+        - 일부 이미지 출력됨
+        - Tutorial 보면서 다시 실행해봐야 할 듯
 
 
