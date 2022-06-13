@@ -440,6 +440,7 @@
   - https://drive.google.com/file/d/1hLcr7oEyJnu_oP_UFuY7cphV_rfLL3C9/view?usp=sharing
 - Disco Diffusion v5.3 [w/ Symmetry]_Rev.01
   - https://colab.research.google.com/drive/1qU1Lg5F3w6-53O6RVHA3ok8pLfr01wrH?usp=sharing
-
+    - Tutorial
+      - https://bytexd.com/get-started-with-disco-diffusion-to-created-ai-generated-art/
 
 
