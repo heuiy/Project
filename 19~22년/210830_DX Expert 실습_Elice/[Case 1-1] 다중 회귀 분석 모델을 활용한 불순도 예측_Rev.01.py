@@ -1,0 +1,480 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # [Case1-1] 광석 처리 공단에서의 이산화규소 (silica) 불순도 예측
+
+# ---
+
+# 
+# ## 프로젝트 목표
+# ---
+# - 다중 회귀 분석 모델을 구현.
+# - 불필요한 입력값을 제거하는 데이터 정제 기법.
+# - 데이터 스케일링 작업.
+# - 학습, 평가, 검증 데이터 전처리 작업.
+# - 다중 회귀 모델 하이퍼파라미터 튜닝 기법.
+# - 다중 회귀 모델의 과적합 억제 기법.
+# 
+
+# 영향 요인에 따른 IoU 결과
+# * Epochs
+# * batch size
+
+# - Feature selection
+# - 하이퍼파라미터 조정
+
+# ## 프로젝트 목차
+# ---
+# 
+# 1. **정형 데이터 읽기:** Local에 저장되어 있는 Kaggle 데이터를 불러오고 데이터 프레임 확인
+# 
+# 2. **데이터 전처리:** 모델에 필요한 입력 형태로 데이터 처리
+# 
+# 3. **다중회귀 모델 정의 :** 다중회귀 모델 구현
+# 
+# 4. **하이퍼 파라미터 설정 및 컴파일 :** 올바른 하이퍼 파라미터 설정
+# 
+# 5. **모델 학습 수행:** <span style="color:red">다중회귀 모델</span>을 통한 학습 수행, 평가 및 예측 수행
+# 
+# 6. **제출:** 예측한 결과를 제출한 후 채점 결과 확인
+
+# ## 데이터 출처
+# ---
+# https://www.kaggle.com/edumagalhaes/quality-prediction-in-a-mining-process?select=MiningProcess_Flotation_Plant_Database.csv
+
+# 각 파라미터 조건에 따른 모델 평가 결과는 아래와 같다.
+# 
+# |Run|Epochs|Bat_size|model|배치Norm|Drop_out|GRU|lr|MSE|MAE|
+# |-|-|-|-|-|-|-|-|-|-|
+# |01|X|X|기본형|X|X|X|0.5|5153313867245.56|4.38685643086041e+25|
+# |02|X|X|기본형|X|X|X|0.0001|1.0760544215849377|0.8165462263854592|
+
+# ## 프로젝트 개요
+# ---
+# 
+# **데이터:** 실제 제조 공장, 특히 광산 공장의 데이터베이스로, 채굴 과정에서 가장 중요한 부분 중 하나인 부유 플랜트 에서 나온 데이터.
+# 
+# **목표:** 주요 목표는 이 데이터를 사용하여 광석 정광에 얼마나 많은 불순물이 있는지 예측하는 것.
+# 
+# **설명:** 
+# 
+# ```
+# 1 번째 열: 시간 및 날짜 범위
+# 2-3 번째 열: 부양 시설에 공급되기 직전에 철광석 펄프의 품질 측정.
+# 4-8 번째 열: 공정이 끝날 때 광석 품질에 영향을 미치는 가장 중요한 변수.
+# 9-22 번째 열: 공정 데이터 (광석 품질에도 영향을 미치는 부양 컬럼 내부의 레벨 및 공기 흐름)
+# 23-24 번째 열: 실험실에서 예측한 최종 철광석 펄프 품질.
+# 마지막 열을 정답(Target)으로 사용.
+# ```
+
+# ## 1. 데이터 읽기 
+# ---
+
+# ### 1.1 라이브러리 불러오기
+
+# In[ ]:
+
+
+# 데이터 프레임 형태의 데이터 및 연산을 위한 라이브러리
+import random
+import numpy as np
+import pandas as pd
+
+# 시각화 및 학습 로그를 위한 라이브러리
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# In[ ]:
+
+
+# 모델 재현성을 위한 랜덤시드 설정
+random.seed(42)
+np.random.seed(42)
+
+
+# ### 1.2 데이터 불러오기
+# ---
+# 데이터 프레임 형태의 데이터를 pandas 라이브러리를 이용해 불러옵니다.
+
+# In[ ]:
+
+
+df = pd.read_csv("/mnt/data/chapter_1/MiningProcess_Flotation_Plant_Database.csv",decimal=",",parse_dates=["date"],infer_datetime_format=True,engine='python', error_bad_lines=False).drop_duplicates()
+
+
+# In[ ]:
+
+
+df.head(n=-1)
+
+
+# In[ ]:
+
+
+df.shape # 데이터 형태 확인.
+
+
+# ## 2. 데이터 정제
+# ---
+
+# ### 2.1 데이터 결측치 제거
+
+# In[ ]:
+
+
+df = df.dropna() # 결측치 제거.
+df.shape # 결측치가 없어 기존과 동일.
+
+
+# ## 3. 데이터 시각화
+
+# ### 3.1 데이터 정제
+# 
+# - 데이터의 통계치를 (개수, 평균, 분산, 표준편차) 확인합니다. 
+
+# In[ ]:
+
+
+df.describe()
+
+
+# - 결측치 처리 방법
+#     - 제거/대체/생성
+# 
+# - 5~10% 면 제거
+# - 대체는 일반적으로 % 값 넣으면 됨
+# - Q1, Q2, Q3 값을 랜덤하게 집어넣을 수도 있음.
+
+# ### 3.2 데이터의 상관 관계 분석
+
+# In[ ]:
+
+
+SMALL_SIZE = 15
+MEDIUM_SIZE = 20
+WEIGHT = 'bold'
+plt.rc('font', size=SMALL_SIZE, weight=WEIGHT) # controls default text sizes 
+plt.rc('xtick', labelsize=MEDIUM_SIZE) # fontsize of the tick labels 
+plt.rc('ytick', labelsize=MEDIUM_SIZE) # fontsize of the tick labels
+plt.figure(figsize=(30, 25))
+
+p = sns.heatmap(df.corr(), annot=True) # 데이터 컬럼 간, 상관관계 시각화. 하얀색으로 갈수록 강한 양의 상관관계. 검은색으로 갈수록 강한 음의 상관관계.
+
+
+# ### 3.3 산점도 시각화
+
+# In[ ]:
+
+
+sns.set(rc = {'figure.figsize':(15,8)})
+sns.pairplot(df[['% Silica Concentrate', 'Amina Flow', 'Ore Pulp pH', 'Flotation Column 01 Air Flow', 'Flotation Column 02 Air Flow', '% Iron Concentrate']], diag_kind='kde')
+
+
+# - 최신 딥러닝 모델에서는 
+#     - feature개수에 관계없이 모두 학습시켜서 최적화 시키는게 보통이고,
+# - 전통적인 머신러닝 기법들(다중 회귀 분석 등) 에서는 
+#     - 입력 특정 feature에 편향되는 경우가 많이 생기기 때문에
+#     - 가능한 적은 피쳐를 활용해서 좋은 성능을 내는게 좋아 보입니다.
+
+# ## 4. 데이터 전처리
+
+# In[ ]:
+
+
+# 필요없다고 판단되는 특성 몇 가지를 제거.
+##### 실습 과제 수행시 상관관계와 산점도를 분석한 뒤 추가적으로 특성 제거
+
+df = df.drop(['date', '% Iron Concentrate'], axis=1)  # 실험실 측정 값으로 예측시엔 활용 불가하여 제거
+
+
+# In[ ]:
+
+
+df.head()
+
+
+# In[ ]:
+
+
+print(df.shape)
+
+
+# ### 4.1 학습/평가 데이터셋 분리
+
+# In[ ]:
+
+
+train_dataset = df.sample(frac=0.8, random_state=0) # 수정하면 안됨
+test_dataset = df.drop(train_dataset.index) 
+
+
+# In[ ]:
+
+
+train_stats = train_dataset.describe()
+train_stats.pop("% Silica Concentrate")
+train_stats = train_stats.transpose()
+
+train_labels = train_dataset.pop('% Silica Concentrate')
+test_labels = test_dataset.pop('% Silica Concentrate')
+
+
+# ### 4.2 특성 스케일링
+
+# In[ ]:
+
+
+from sklearn.preprocessing import StandardScaler # 표준 스케일링  (평균 = 0 / 표준편차 = 1)
+from sklearn.preprocessing import MinMaxScaler  # 최대/최소 스케일링 (이상치에 취약)
+from sklearn.preprocessing import RobustScaler  # 중앙값 = 0 / IQR(1분위(25%) ~ 3분위(75%)) = 1 (이상치 영향 최소화, 넓게 분포)
+from sklearn.preprocessing import MaxAbsScaler  # |x|  <= 1 , 이상치에 취약할 수 있다. 양수만 있는 데이터의 경우 MinMaxScaler 유사
+
+
+# In[ ]:
+
+
+st_scaler = StandardScaler()
+
+normed_train_data = st_scaler.fit_transform(train_dataset)
+normed_test_data = st_scaler.fit_transform(test_dataset)
+normed_train_data = pd.DataFrame(normed_train_data)
+normed_test_data = pd.DataFrame(normed_test_data)
+
+
+# In[ ]:
+
+
+normed_train_data.head() # 스케일링 된 값 확인.
+
+
+# ## 5. 머신러닝 모델 수행
+
+# ### 5.1 다중 회귀
+# 
+# - 여러개의 입력값(X1...Xn)으로 결과값 Y를 예측하기 위해 개별 Xi를 표현할 수 있는 최적의 모델을 찾음.
+# 
+#  ![05_multiple_regression](01_01_file/05_multiple_regression.png)
+
+# In[ ]:
+
+
+# 데이터 분석 및 머신러닝을 위한 sklearn 라이브러리를 이용하여 다중 회귀 모델 정의.
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import SGDRegressor
+
+
+# In[ ]:
+
+
+# 다중 회귀 모델 정의
+
+loss='squared_loss'  # squared_loss, huber, epsilon_insensitive, squared_epsilon_insensitive
+penalty=None  # normalization: None,'l1', 'l2', 'elasticnet'
+max_iter=3
+eta0=0.0001  # LR value
+learning_rate='constant'  # constant, optimal, invscaling, adaptive
+n_iter_no_change=1
+
+reg = SGDRegressor(loss=loss, penalty=penalty, max_iter=max_iter, learning_rate=learning_rate, 
+                   n_iter_no_change=n_iter_no_change, eta0=eta0)
+
+
+# #### 5.1.1 학습
+
+# In[ ]:
+
+
+_ = reg.fit(normed_train_data, train_labels)
+
+
+# #### 5.1.2 예측
+
+# In[ ]:
+
+
+predictions = reg.predict(normed_test_data)
+
+
+# In[ ]:
+
+
+print(f"prediction results : {predictions}")
+print('='*100)
+print(f"test labels: {test_labels}")
+
+
+# #### 5.1.3 평가
+
+# In[ ]:
+
+
+from sklearn.metrics import mean_squared_error # MSE 로 오차 측정.
+from sklearn.metrics import mean_absolute_error # MAE로 오차 측정.
+
+
+# In[ ]:
+
+
+error_mse = mean_squared_error(test_labels, predictions) # 예측한 결과와의 정답 값과의 mse 오차 측정.
+error_mae = mean_absolute_error(test_labels, predictions)
+
+
+# In[ ]:
+
+
+print(f"Test mse error : {error_mse}")
+print(f"Test mae error : {error_mae}")
+
+
+# #### 5.1.4 학습 - sgd 사용
+# ----
+# - stochstic gradient descent 방법을 사용하여 다중 회귀 모델을 학습합니다.
+# - 모델의 loss function을 최소로 만드는 파라미터를 최적화합니다.
+# - 학습률(learning rate) 및 학습 횟수(max_iter)와 같은 하이퍼 파라미터를 직접 조정하며 모델을 튜닝하고 평가합니다.
+
+# In[ ]:
+
+
+from sklearn.linear_model import SGDRegressor
+
+
+# In[ ]:
+
+
+# 모델이 주어진 훈련 데이터에 과도하게 맞춰지는 것을 방지하기 위해, 규제화(Regularization)사용.
+
+loss='squared_loss'  # squared_loss, huber, epsilon_insensitive, squared_epsilon_insensitive
+penalty= 'l1'  # normalization: None,'l1', 'l2', 'elasticnet'
+max_iter=3
+learning_rate_scheduling='constant'  # constant, optimal, invscaling, adaptive
+learning_rate=0.0001  # LR value
+n_iter_no_change=3
+warm_start=False
+verbose=True
+
+
+# In[ ]:
+
+
+reg_sgd = SGDRegressor(loss=loss, penalty=penalty, 
+                       max_iter=max_iter, 
+                      learning_rate=learning_rate_scheduling, eta0=learning_rate,
+                       n_iter_no_change=n_iter_no_change, warm_start=warm_start,
+                      verbose=verbose)
+
+# 모델 학습을 진행
+_ = reg_sgd.fit(normed_train_data, train_labels)
+
+
+# In[ ]:
+
+
+predicitons_sgd = reg_sgd.predict(normed_test_data)
+
+
+# In[ ]:
+
+
+print(f"prediction results: {predicitons_sgd}")
+print('='*100)
+print(f"test labels: {test_labels}")
+
+
+# In[ ]:
+
+
+# 회귀 분석 정확도 측정 - 잔차 계수 및 결정 계수
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+
+
+# In[ ]:
+
+
+mse_sgd = mean_squared_error(test_labels, predicitons_sgd) 
+mae_sgd = mean_absolute_error(test_labels, predicitons_sgd)
+
+
+# In[ ]:
+
+
+print(f"Test mse error : {mse_sgd}")
+print(f"Test mae error : {mae_sgd}")
+
+
+# - 참고
+
+# 간단한 회귀 모델 사용이 익숙하신 분들은 documentation 보시면서 보다 세밀한 하이퍼파라미터 최적화를 진행해보세요.
+# https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html
+
+# ## 6. 제출
+
+# ※ 과제 제출 관련하여 jupyter notebook 최상단의 `randomseed(=42)`를 절대 수정하시 마세요
+# 
+# ---
+# 
+# 다중 회귀 분석 모델을 구현하여 표준 스케일링 된 테스트 데이터(**normed_test_data**)를 추론해보세요.
+# 
+# 목표 성능을 달성하기 위해서 `상관 관계 분석`을 통한 feature selection, 학습 하이퍼 파라미터(`loss`, `penalty`, `max_iter`, `learning_rate_scheduling`, `learning_rate`, `n_iter_no_change`, `warm_start`) 조정 등 어떤 방법을 활용하여도 좋습니다.
+# 
+# 추론 결과를 아래 표와 같은 포맷의 csv 파일로 저장해주세요.
+# 
+# |  | silica |
+# |-------|------|
+# | 0     | 2.34 |
+# | 1     | 1.26 |
+# | 2     | 4.37 |
+# | 3     | 0.30 |
+# | 4     | 0.31 |
+# 
+# 위처럼, 테스트 데이터(**normed_test_data**)와 같은 순서로 정렬된 `index`와 그에 대한 `silica`를 열로 갖는 dataframe을 `submission.csv` 로 저장합니다.
+# 
+# 
+# `sklearn.metrics`의 `mean_squared_error`, `mean_absolute_error`을 통한 성능 측정으로 채점되며 **mse < 1.1, mae < 0.85**가 100점입니다 
+# 
+# (부분 점수 있음).
+# 
+
+# ### 채점
+
+# 결과 csv 파일을 저장 후, 아래 코드를 실행하면 채점을 받을 수 있습니다.
+# 
+# **아래 코드를 수정하면 채점이 불가능 합니다.**
+
+# In[ ]:
+
+
+# 제출할 dataframe을 아래 코드에 대입하여 submission.csv 파일로 저장합니다.
+
+answer_df = pd.DataFrame(predicitons_sgd)
+answer_df.columns = ['silica']
+
+print(answer_df)
+answer_df.to_csv('submission.csv', index=False)
+
+
+# 위 코드 셀은 채점해야 하는 결과물의 형태에 따라 수정이 가능합니다. 
+# 아래 3개의 셀은 수정하지 마세요. 
+
+# In[ ]:
+
+
+# 채점을 수행하기 위하여 로그인
+import sys
+sys.path.append('vendor')
+from elice_challenge import check_score, upload
+
+
+# In[ ]:
+
+
+# 제출 파일 업로드
+await upload()
+
+
+# In[ ]:
+
+
+# 채점 수행
+await check_score()
+
