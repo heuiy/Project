@@ -295,12 +295,8 @@
   - https://colab.research.google.com/drive/1KJrbUVK6_mJzb5_jyhXCS2W_zXttr7GN
 
 ### 211013_GMP 가이드라인 Summary 확보를 통한 cGMP Compliance 강화
-- GMP 가이드라인 요약본 학습을 통한 품질 마인드 확립_Rev.01
-  - https://colab.research.google.com/drive/1ToDUHqi93f_ngn-TLSyZFRpMpS-GrasE?usp=sharing
-    - 전처리 등 기본 이론에 집중
-- GMP 가이드라인 요약본 학습을 통한 품질 마인드 확립_Rev.04
-  - https://drive.google.com/file/d/1BYH8elKr4zlHyypZqPbNQc2CZL7PDvT3/view?usp=sharing
-    - TLDR 기반
+- GMP 가이드라인 요약본 학습을 통한 품질 마인드 확립_Rev.05
+  - https://drive.google.com/file/d/1VgzbuJ1BP5TAOjrnKKS1hJOrq0L7RX9H/view?usp=sharing
 
 ### 211015_시노비안 공정 최적화를 통한 공중하얀 불량 최소화
 - 시노비안 공정 최적화를 통한 공중하얀 불량 최소화_Rev.01
