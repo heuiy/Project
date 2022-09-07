@@ -36,7 +36,7 @@
 
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
-        webcam = new tmImage.Webcam(800, 800, flip); // width, height, flip
+        webcam = new tmImage.Webcam(900, 900, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
@@ -59,12 +59,12 @@
     async function predict() {
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
-        if(prediction[0].className == "핀트" && prediction[0].probability.toFixed(2) >= 0.50) {
+        if(prediction[0].className == "핀트" && prediction[0].probability.toFixed(2) >= 0.40) {
             labelContainer.childNodes[0].innerHTML = "핀트가 맞지 않는 불량"
-        } else if(prediction[1].className == "이물" && prediction[1].probability.toFixed(2) >= 0.50) {
+        } else if(prediction[1].className == "이물" && prediction[1].probability.toFixed(2) >= 0.40) {
             labelContainer.childNodes[0].innerHTML = "파티클이 있습니다."
         } else {
-            labelContainer.childNodes[0].innerHTML = "적합합니다."
+            labelContainer.childNodes[0].innerHTML = "이브아르 케이스를 머신 비전 시스템에 위치시켜 주시기 바랍니다."
         }
         // for (let i = 0; i < maxPredictions; i++) {
         //     const classPrediction =
