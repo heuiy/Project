@@ -418,6 +418,8 @@
   - https://colab.research.google.com/drive/1AAZqJmjA45AcXyU2KlbXd7JrTw2lOcvD
 
 ### 220208_이브아르 케이스 자동 이물검사를 위한 머신 비전 시스템 개발
+- 별첨_이브아르 케이스 자동 이물검사를 위한 머신 비전 시스템 개발_Rev.01
+  - https://colab.research.google.com/drive/1HTV-cRF6lYKhEXZ080Rr8T_Mkb0Pdxra#scrollTo=HiebvW2Ws9-U
 - Vision System_Rev.01
   - https://colab.research.google.com/drive/18AvCrtUShSsN6fVkG8DB4skDRlIlBPUl
 - Clear mask visualization(kaggle)_Rev.01
