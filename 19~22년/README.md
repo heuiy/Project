@@ -320,6 +320,8 @@
   - https://colab.research.google.com/drive/1fJ5-BgpP4U8JKm-LrGyam1aoBc3j01jG
 
 ### 220112_P&ID 자동 인식을 통한 안전밸브 Governance 체계 구축(PSM 연계)
+- 별첨_Rev.01
+  - https://drive.google.com/file/d/14dkNFTNipz8EVNGDZdjZOhemeAMdvpZF/view?usp=sharing
 - 안전밸브_Rev.01
   - https://colab.research.google.com/drive/1_zb2luQwj36Szh50W20JO08BoGo9ziVU
 - [Day 5-1] Detectron2 Introduction_Rev.02
@@ -338,8 +340,6 @@
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
   - YOLOv3_Rev.02
     - https://drive.google.com/file/d/1uFiCdzfGYAZFiKreaI_YCnxP22vMXHag/view?usp=sharing
-  - YOLOv3_Rev.03
-    - https://drive.google.com/file/d/14dkNFTNipz8EVNGDZdjZOhemeAMdvpZF/view?usp=sharing
 - football_detection
   - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
 - Train YOLOX on a Custom Dataset - YouTube_Rev.01
