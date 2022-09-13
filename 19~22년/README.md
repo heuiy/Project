@@ -338,6 +338,8 @@
   - https://drive.google.com/file/d/1S74TWp6hwVtHoABAUeqDJlltIx_V7MfN/view?usp=sharing
   - YOLOv3_Rev.02
     - https://drive.google.com/file/d/1uFiCdzfGYAZFiKreaI_YCnxP22vMXHag/view?usp=sharing
+  - YOLOv3_Rev.03
+    - https://drive.google.com/file/d/14dkNFTNipz8EVNGDZdjZOhemeAMdvpZF/view?usp=sharing
 - football_detection
   - https://drive.google.com/file/d/19PTfPiCC5rIpCsy1ou4cr3ciHZo_P2kG/view?usp=sharing
 - Train YOLOX on a Custom Dataset - YouTube_Rev.01
