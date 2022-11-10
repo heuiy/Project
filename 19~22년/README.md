@@ -85,6 +85,10 @@
 ### 210304_HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출
 - HA 동점도 하락률 분석을 통한 최적 Heating 시간 도출_Rev.01
   - https://colab.research.google.com/drive/12VQvFxDanqUnAWxUz4aQ4sEVl3FgwcOi
+- 확률론적 선형 회귀모형_Rev.01
+  - https://colab.research.google.com/drive/19DdaygrhLEKFkeB-Zz-2-0NbvVQqIRUl?usp=share_link
+- 동점도_Rev.01  
+  - https://colab.research.google.com/drive/1BFCERbf2pmvDOJ6uB8qKZJN-MJuZs7cp?usp=share_link
 
 ### 210322_GMP 문서 자동화(RPA)를 통한 업무 효율 증대
 
