@@ -62,6 +62,8 @@
 ### 210110_Lottery
 - 딥러닝(LSTM) 활용 연금복권 당첨 가능성 극대화_Rev.04
   - https://colab.research.google.com/drive/1dvxcXZ4Pq_hmpVg_mfiD7ccneSewmMa5
+- Lottery 당첨 가능성 극대화_Rev.05
+  - https://colab.research.google.com/drive/1_Q_vZNFclCXzEEF9VedbhyVSa3Dqds1B?usp=sharing
 
 ### 210114_DP67 공정 파라미터 최적화를 통한 수율 향상
 
