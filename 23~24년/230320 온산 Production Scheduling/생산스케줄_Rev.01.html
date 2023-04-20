@@ -1,0 +1,56 @@
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+  google.charts.load("current", {
+    packages: ["timeline"]
+  });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var container = document.getElementById('example5.4');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({
+      type: 'string',
+      id: 'Room'
+    });
+    dataTable.addColumn({
+      type: 'string',
+      id: 'Name'
+    });
+    dataTable.addColumn({
+      type: 'date',
+      id: 'Start'
+    });
+    dataTable.addColumn({
+      type: 'date',
+      id: 'End'
+    });
+    dataTable.addRows([
+      ['DPX23001', '반응기_01', new Date(2023, 4, 1, 0, 0, 0), new Date(2023, 4, 3, 0, 0, 0)],
+      ['DPX23002', '반응기_02', new Date(2023, 4, 1, 0, 0, 0), new Date(2023, 4, 4, 0, 0, 0)],
+      ['DPX23002', '반응기_05', new Date(2023, 4, 1, 0, 0, 0), new Date(2023, 4, 5, 0, 0, 0)],
+      ['DPX23003', '반응기_05', new Date(2023, 4, 1, 0, 0, 0), new Date(2023, 4, 7, 0, 0, 0)],
+      ['DPX23004', '반응기_07', new Date(2023, 4, 2, 0, 0, 0), new Date(2023, 4, 9, 0, 0, 0)],
+      ['DPX23005', '반응기_08', new Date(2023, 4, 1, 0, 0, 0), new Date(2023, 4, 8, 0, 0, 0)],
+      ['DPX23005', '반응기_06', new Date(2023, 4, 8, 12, 0, 0), new Date(2023, 4, 12, 0, 0, 0)],
+      ['DPX23005', '반응기_16', new Date(2023, 4, 5, 0, 0, 0), new Date(2023, 4, 10, 0, 0, 0)],
+      ['DPX23009', '반응기_09', new Date(2023, 4, 1, 0, 0, 0), new Date(2023, 4, 15, 0, 0, 0)],
+      ['DPX23013', '반응기_10', new Date(2023, 4, 8, 0, 0, 0), new Date(2023, 4, 20, 0, 0, 0)],
+      ['DPX23015', '반응기_17', new Date(2023, 4, 9, 0, 0, 0), new Date(2023, 4, 19, 0, 0, 0)],
+      ['DPX23015', '반응기_1', new Date(2023, 4, 20, 0, 0, 0), new Date(2023, 4, 25, 0, 0, 0)],
+      ['DPX23018', '반응기_20', new Date(2023, 4, 8, 0, 0, 0), new Date(2023, 4, 13, 0, 0, 0)],
+      ['DPX23020', '반응기_22', new Date(2023, 4, 8, 0, 0, 0), new Date(2023, 4, 25, 0, 0, 0)],
+      ['DPX23022', '반응기_08', new Date(2023, 4, 12, 16, 0, 0), new Date(2023, 4, 20, 0, 0, 0)]
+    ]);
+    var options = {
+      timeline: {
+        colorByRowLabel: true
+      },
+      alternatingRowStyle: false
+    };
+    chart.draw(dataTable, options);
+  }
+</script>
+
+<div id="example5.4" style="height: 950px;"></div>
