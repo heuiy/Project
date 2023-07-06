@@ -1,0 +1,58 @@
+<script>
+    mermaid.initialize({startOnLoad:true});
+    const ganttChart = `
+    gantt
+        title Product Schedule
+        dateFormat  YYYY-MM-DD
+        section FEK-IPS
+        Batch 13           :a1, 2023-07-01, 1d
+        Batch 14           :after a1, 1d
+        Batch 15           :after a1, 2d
+        Batch 16           :after a1, 3d
+        Batch 17           :after a1, 4d
+        Batch 18           :after a1, 5d
+        Batch 19           :after a1, 6d
+        Batch 20           :after a1, 7d
+        Batch 21           :after a1, 8d
+        Batch 22           :after a1, 9d
+        Batch 23           :after a1, 10d
+        section EBX
+        Batch 60           :a2, 2023-06-30, 2d
+        Batch 61           :after a2, 3d
+        Batch 62           :after a2, 5d
+        Batch 63           :after a2, 6d
+        Batch 64           :after a2, 7d
+        Batch 65           :after a2, 8d
+        Batch 66           :after a2, 9d
+        Batch 67           :after a2, 10d
+        Batch 68           :after a2, 11d
+        Batch 69           :after a2, 12d
+        Batch 70           :after a2, 13d
+        Batch 71           :after a2, 14d
+        Batch 72           :after a2, 29d
+        Batch 73           :after a2, 30d
+        Batch 74           :after a2, 31d
+        Batch 75           :after a2, 32d
+        section FP
+        Batch 12           :a3, 2023-06-27, 1d
+        Batch 13           :after a3, 2d
+        section IKF-916
+        Batch 62           :a4, 2023-07-01, 1d
+        Batch 63           :after a4, 2d
+        Batch 64           :after a4, 3d
+        Batch 65           :after a4, 4d
+        Batch 66           :after a4, 5d
+        Batch 67           :after a4, 6d
+        Batch 68           :after a4, 7d
+        Batch 69           :after a4, 9d
+        Batch 70           :after a4, 10d
+        Batch 71           :after a4, 11d
+        Batch 72           :after a4, 12d
+        Batch 73           :after a4, 13d
+        Batch 74           :after a4, 14d
+        Batch 75           :after a4, 16d
+        Batch 76           :after a4, 17d
+        Batch 77           :after a4, 18d
+        Batch 78           :after a4, 19d
+        Batch 79           :after a4, 20
+    
