@@ -1,0 +1,79 @@
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+
+<div class="mermaid">
+    gantt
+        title Product Schedule
+        dateFormat  YYYY-MM-DD
+        section FEK-IPS
+        Batch 13           :fekips13, 2023-07-01, 1d
+        Batch 14           :after fekips13, 1d
+        Batch 15           :after fekips14, 1d
+        Batch 16           :after fekips15, 1d
+        Batch 17           :after fekips16, 1d
+        Batch 18           :after fekips17, 1d
+        Batch 19           :after fekips18, 1d
+        Batch 20           :after fekips19, 1d
+        Batch 21           :after fekips20, 1d
+        Batch 22           :after fekips21, 1d
+        Batch 23           :after fekips22, 1d
+        section EBX
+        Batch 60           :ebx60, 2023-06-30, 2d
+        Batch 61           :after ebx60, 2d
+        Batch 62           :after ebx60, 1d
+        Batch 63           :after ebx60, 1d
+        Batch 64           :after ebx60, 1d
+        Batch 65           :after ebx60, 1d
+        Batch 66           :after ebx60, 1d
+        Batch 67           :after ebx60, 1d
+        Batch 68           :after ebx60, 1d
+        Batch 69           :after ebx60, 1d
+        Batch 70           :after ebx60, 1d
+        Batch 71           :after ebx60, 1d
+        Batch 72           :after ebx60, 1d
+        Batch 73           :after ebx60, 1d
+        Batch 74           :after ebx60, 1d
+        Batch 75           :after ebx60, 1d
+        section FP
+        Batch 12           :fp12, 2023-06-27, 1d
+        Batch 13           :after fp12, 2d
+        section IKF-916
+        Batch 62           :ikf91662, 2023-07-01, 1d
+        Batch 63           :after ikf91662, 2d
+        Batch 64           :after ikf91662, 3d
+        Batch 65           :after ikf91662, 4d
+        Batch 66           :after ikf91662, 5d
+        Batch 67           :after ikf91662, 6d
+        Batch 68           :after ikf91662, 7d
+        Batch 69           :after ikf91662, 9d
+        Batch 70           :after ikf91662, 10d
+        Batch 71           :after ikf91662, 11d
+        Batch 72           :after ikf91662, 12d
+        Batch 73           :after ikf91662, 13d
+        Batch 74           :after ikf91662, 14d
+        Batch 75           :after ikf91662, 16d
+        Batch 76           :after ikf91662, 17d
+        Batch 77           :after ikf91662, 18d
+        Batch 78           :after ikf91662, 19d
+        Batch 79           :after ikf91662, 20d
+        Batch 80           :after ikf91662, 21d
+        Batch 81           :after ikf91662, 22d
+        Batch 82           :after ikf91662, 23d
+        Batch 83           :after ikf91662, 24d
+        Batch 84           :after ikf91662, 25d
+        Batch 85           :after ikf91662, 26d
+        Batch 86           :after ikf91662, 27d
+        Batch 87           :after ikf91662, 28d
+        Batch 88           :after ikf91662, 29d
+        Batch 89           :after ikf91662, 30d
+        Batch 90           :after ikf91662, 31d
+        section FPESA
+        Batch 1            :fpesa1, 2023-07-17, 2d
+        Batch 2            :after fpesa1, 3d
+        Batch 3            :after fpesa1, 6d
+</div>
+
+<script>
+    mermaid.initialize({startOnLoad:true});
+    mermaid.init(undefined, document.querySelector('.mermaid'));
+</script>
+    

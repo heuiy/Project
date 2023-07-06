@@ -1,3 +1,40 @@
+create a gantt chart for product schedule using mermaid.js. This is how mermaid.js creates a gantt chart:
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+
+This is a table with my product schedule.
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    #ganttChart {
+        width: 2000px; /* adjust this to your desired width */
+        overflow: auto;
+    }
+</style>
+
+<div class="mermaid" id="ganttChart"></div>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+
+<div class="mermaid" id="ganttChart"></div>
+
 <script>
     mermaid.initialize({startOnLoad:true});
     const ganttChart = `
@@ -6,16 +43,16 @@
         dateFormat  YYYY-MM-DD
         section FEK-IPS
         Batch 13           :a1, 2023-07-01, 1d
-        Batch 14           :after a1, 1d
-        Batch 15           :after a1, 2d
-        Batch 16           :after a1, 3d
-        Batch 17           :after a1, 4d
-        Batch 18           :after a1, 5d
-        Batch 19           :after a1, 6d
-        Batch 20           :after a1, 7d
-        Batch 21           :after a1, 8d
-        Batch 22           :after a1, 9d
-        Batch 23           :after a1, 10d
+        Batch 14           :after a2, 1d
+        Batch 15           :after a3, 1d
+        Batch 16           :after a4, 1d
+        Batch 17           :after a5, 4d
+        Batch 18           :after a6, 5d
+        Batch 19           :after a7, 6d
+        Batch 20           :after a8, 7d
+        Batch 21           :after a9, 8d
+        Batch 22           :after a10, 9d
+        Batch 23           :after a11, 10d
         section EBX
         Batch 60           :a2, 2023-06-30, 2d
         Batch 61           :after a2, 3d
@@ -55,4 +92,24 @@
         Batch 77           :after a4, 18d
         Batch 78           :after a4, 19d
         Batch 79           :after a4, 20
+        Batch 80           :after a4, 21d
+        Batch 81           :after a4, 22d
+        Batch 82           :after a4, 23d
+        Batch 83           :after a4, 24d
+        Batch 84           :after a4, 25d
+        Batch 85           :after a4, 26d
+        Batch 86           :after a4, 27d
+        Batch 87           :after a4, 28d
+        Batch 88           :after a4, 29d
+        Batch 89           :after a4, 30d
+        Batch 90           :after a4, 31d
+        section FPESA
+        Batch 1            :a5, 2023-07-17, 2d
+        Batch 2            :after a5, 3d
+        Batch 3            :after a5, 6d
+`;
+
+document.getElementById('ganttChart').innerHTML = ganttChart;
+mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+</script>
     
