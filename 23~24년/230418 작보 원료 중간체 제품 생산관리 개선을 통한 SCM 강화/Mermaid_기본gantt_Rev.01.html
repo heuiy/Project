@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+
+<div class="mermaid" id="ganttChart"></div>
+
+<script>
+mermaid.initialize({startOnLoad:true});
+const ganttChart = `
+gantt
+    title 프로젝트 일정
+    dateFormat  YYYY-MM-DD
+    section 프로젝트 단계
+    제1단계           :a1, 2023-07-06, 10d
+    제2단계           :after a1, 15d
+    제3단계           :after a2, 20d
+    section 기타 작업
+    문서 작업         :after a3, 5d
+    회의              :after a4, 3d
+`;
+
+document.getElementById('ganttChart').innerHTML = ganttChart;
+mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+</script>
