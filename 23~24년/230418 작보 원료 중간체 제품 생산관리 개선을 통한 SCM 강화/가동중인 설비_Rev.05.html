@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dashboard-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .status-operational {
+            background-color: #88dd88; /* Green for operational */
+        }
+
+        .status-nonoperational {
+            background-color: #dd8888; /* Red for non-operational */
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <!-- The dashboard will be populated here by JavaScript -->
+    </div>
+
+    <script>
+        // The data for the product schedules
+        var productSchedules = [
+            {product: 'FEK-IPS', start: '23-07-01', duration: 1, equipments: ['R-5601', 'R-5606', 'R-5603', 'R-5605', 'R-5604', 'R-5704', 'FD-5601', 'R-5701', 'R-5705']},
+            {product: 'EBX', start: '23-06-30', duration: 2, equipments: ['R-5501', 'R-5504', 'R-5503', 'FC-5502', 'DR-5503', 'R-5505']},
+            // ... Add all the other product schedules
+        ];
+
+        var dashboard = document.getElementById('dashboard');
+
+        // Populate the dashboard with data
+        for (var i = 0; i < productSchedules.length; i++) {
+            var schedule = productSchedules[i];
+            var productDiv = document.createElement('div');
+            productDiv.className = 'dashboard-item';
+            productDiv.innerHTML = '<h2>' + schedule.product + ' (' + schedule.start + ', ' + schedule.duration + ' days)</h2>';
+
+            schedule.equipments.forEach(function(equipment) {
+                var equipmentDiv = document.createElement('div');
+                equipmentDiv.className = 'status-operational';
+                equipmentDiv.textContent = equipment + ': operational';
+                productDiv.appendChild(equipmentDiv);
+            });
+
+            dashboard.appendChild(productDiv);
+        }
+    </script>
+</body>
+</html>
