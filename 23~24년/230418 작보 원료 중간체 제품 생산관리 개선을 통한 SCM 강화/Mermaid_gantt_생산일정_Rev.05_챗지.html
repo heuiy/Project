@@ -1,0 +1,191 @@
+create a gantt chart for product schedule using mermaid.js. This is how mermaid.js creates a gantt chart:
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+
+This is a table with my product schedule.
+
+Product	B #	Start Date
+FEK-IPS	13	23-07-01
+FEK-IPS	14	23-07-02
+FEK-IPS	15	23-07-03
+FEK-IPS	16	23-07-04
+FEK-IPS	17	23-07-05
+FEK-IPS	18	23-07-06
+FEK-IPS	19	23-07-07
+FEK-IPS	20	23-07-08
+FEK-IPS	21	23-07-09
+FEK-IPS	22	23-07-10
+FEK-IPS	23	23-07-11
+EBX	60	23-06-30
+EBX	61	23-07-02
+EBX	62	23-07-04
+EBX	63	23-07-05
+EBX	64	23-07-06
+EBX	65	23-07-07
+EBX	66	23-07-08
+EBX	67	23-07-09
+EBX	68	23-07-10
+EBX	69	23-07-11
+EBX	70	23-07-12
+EBX	71	23-07-13
+EBX	72	23-07-28
+EBX	73	23-07-29
+EBX	74	23-07-30
+EBX	75	23-07-31
+FP	12	23-06-27
+FP	13	23-06-28
+IKF-916	62	23-07-01
+IKF-916	63	23-07-02
+IKF-916	64	23-07-03
+IKF-916	65	23-07-04
+IKF-916	66	23-07-05
+IKF-916	67	23-07-06
+IKF-916	68	23-07-07
+IKF-916	69	23-07-09
+IKF-916	70	23-07-10
+IKF-916	71	23-07-11
+IKF-916	72	23-07-12
+IKF-916	73	23-07-13
+IKF-916	74	23-07-14
+IKF-916	75	23-07-16
+IKF-916	76	23-07-17
+IKF-916	77	23-07-18
+IKF-916	78	23-07-19
+IKF-916	79	23-07-20
+IKF-916	80	23-07-21
+IKF-916	81	23-07-22
+IKF-916	82	23-07-23
+IKF-916	83	23-07-24
+IKF-916	84	23-07-25
+IKF-916	85	23-07-26
+IKF-916	86	23-07-27
+IKF-916	87	23-07-28
+IKF-916	88	23-07-29
+IKF-916	89	23-07-30
+IKF-916	90	23-07-31
+FPESA	1	23-07-17
+FPESA	2	23-07-19
+FPESA	3	23-07-22
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  <title>My Gantt Chart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.css">
+  <style>
+    .mermaid {
+      width: 3000px;
+    }
+  </style>
+</head>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+
+<div class="mermaid">
+
+gantt
+    title Product Schedule
+    dateFormat  YYYY-MM-DD
+    
+    section FEK-IPS
+    13 : 2023-07-01, 1d
+    14 : 2023-07-02, 1d
+    15 : 2023-07-03, 1d
+    16 : 2023-07-04, 1d
+    17 : 2023-07-05, 1d
+    18 : 2023-07-06, 1d
+    19 : 2023-07-07, 1d
+    20 : 2023-07-08, 1d
+    21 : 2023-07-09, 1d
+    22 : 2023-07-10, 1d
+    23 : 2023-07-11, 1d
+
+    section EBX
+    60 : 2023-06-30, 1d
+    61 : 2023-07-02, 1d
+    62 : 2023-07-04, 1d
+    63 : 2023-07-05, 1d
+    64 : 2023-07-06, 1d
+    65 : 2023-07-07, 1d
+    66 : 2023-07-08, 1d
+    67 : 2023-07-09, 1d
+    68 : 2023-07-10, 1d
+    69 : 2023-07-11, 1d
+    70 : 2023-07-12, 1d
+    71 : 2023-07-13, 1d
+    72 : 2023-07-28, 1d
+    73 : 2023-07-29, 1d
+    74 : 2023-07-30, 1d
+    75 : 2023-07-31, 1d
+
+    section FP
+    12 : 2023-06-27, 1d
+    13 : 2023-06-28, 1d
+
+    section IKF-916
+    62 : 2023-07-01, 1d
+    63 : 2023-07-02, 1d
+    64 : 2023-07-03, 1d
+    65 : 2023-07-04, 1d
+    66 : 2023-07-05, 1d
+    67 : 2023-07-06, 1d
+    68 : 2023-07-07, 1d
+    69 : 2023-07-09, 1d
+    70 : 2023-07-10, 1d
+    71 : 2023-07-11, 1d
+    72 : 2023-07-12, 1d
+    73 : 2023-07-13, 1d
+    74 : 2023-07-14, 1d
+    75 : 2023-07-16, 1d
+    76 : 2023-07-17, 1d
+    77 : 2023-07-18, 1d
+    78 : 2023-07-19, 1d
+    79 : 2023-07-20, 1d
+    80 : 2023-07-21, 1d
+    81 : 2023-07-22, 1d
+    82 : 2023-07-23, 1d
+    83 : 2023-07-24, 1d
+    84 : 2023-07-25, 1d
+    85 : 2023-07-26, 1d
+    86 : 2023-07-27, 1d
+    87 : 2023-07-28, 1d
+    88 : 2023-07-29, 1d
+    89 : 2023-07-30, 1d
+    90 : 2023-07-31, 1d
+
+    section FPESA
+    1 : 2023-07-17, 1d
+    2 : 2023-07-19, 1d
+    3 : 2023-07-22, 1d
+</div>
+
+<script>
+    mermaid.initialize({startOnLoad:true});
+    mermaid.init(undefined, document.querySelector('.mermaid'));
+</script>  
+
+
+
+
