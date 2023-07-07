@@ -82,82 +82,94 @@ FPESA	3	3	23-07-22
 
 
 
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 
-<div class="mermaid">
-    gantt
-        title Product Schedule
-        dateFormat  YYYY-MM-DD
-        section FEK-IPS
-        Batch 13           :fekips13, 2023-07-01, 1d
-        Batch 14           :after fekips13, 1d
-        Batch 15           :after fekips14, 1d
-        Batch 16           :after fekips15, 1d
-        Batch 17           :after fekips16, 1d
-        Batch 18           :after fekips17, 1d
-        Batch 19           :after fekips18, 1d
-        Batch 20           :after fekips19, 1d
-        Batch 21           :after fekips20, 1d
-        Batch 22           :after fekips21, 1d
-        Batch 23           :after fekips22, 1d
-        section EBX
-        Batch 60           :ebx60, 2023-06-30, 2d
-        Batch 61           :after ebx60, 2d
-        Batch 62           :after ebx60, 1d
-        Batch 63           :after ebx60, 1d
-        Batch 64           :after ebx60, 1d
-        Batch 65           :after ebx60, 1d
-        Batch 66           :after ebx60, 1d
-        Batch 67           :after ebx60, 1d
-        Batch 68           :after ebx60, 1d
-        Batch 69           :after ebx60, 1d
-        Batch 70           :after ebx60, 1d
-        Batch 71           :after ebx60, 1d
-        Batch 72           :after ebx60, 1d
-        Batch 73           :after ebx60, 1d
-        Batch 74           :after ebx60, 1d
-        Batch 75           :after ebx60, 1d
-        section FP
-        Batch 12           :fp12, 2023-06-27, 1d
-        Batch 13           :after fp12, 2d
-        section IKF-916
-        Batch 62           :ikf91662, 2023-07-01, 1d
-        Batch 63           :after ikf91662, 2d
-        Batch 64           :after ikf91662, 3d
-        Batch 65           :after ikf91662, 4d
-        Batch 66           :after ikf91662, 5d
-        Batch 67           :after ikf91662, 6d
-        Batch 68           :after ikf91662, 7d
-        Batch 69           :after ikf91662, 9d
-        Batch 70           :after ikf91662, 10d
-        Batch 71           :after ikf91662, 11d
-        Batch 72           :after ikf91662, 12d
-        Batch 73           :after ikf91662, 13d
-        Batch 74           :after ikf91662, 14d
-        Batch 75           :after ikf91662, 16d
-        Batch 76           :after ikf91662, 17d
-        Batch 77           :after ikf91662, 18d
-        Batch 78           :after ikf91662, 19d
-        Batch 79           :after ikf91662, 20d
-        Batch 80           :after ikf91662, 21d
-        Batch 81           :after ikf91662, 22d
-        Batch 82           :after ikf91662, 23d
-        Batch 83           :after ikf91662, 24d
-        Batch 84           :after ikf91662, 25d
-        Batch 85           :after ikf91662, 26d
-        Batch 86           :after ikf91662, 27d
-        Batch 87           :after ikf91662, 28d
-        Batch 88           :after ikf91662, 29d
-        Batch 89           :after ikf91662, 30d
-        Batch 90           :after ikf91662, 31d
-        section FPESA
-        Batch 1            :fpesa1, 2023-07-17, 2d
-        Batch 2            :after fpesa1, 3d
-        Batch 3            :after fpesa1, 6d
-</div>
 
-<script>
-    mermaid.initialize({startOnLoad:true});
-    mermaid.init(undefined, document.querySelector('.mermaid'));
-</script>
-    
+
+<head>
+    <title>My Gantt Chart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.css">
+    <style>
+      .mermaid {
+        width: 3000px;
+      }
+    </style>
+  </head>
+  
+  <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  
+  <div class="mermaid">
+  
+  gantt
+      title Product Schedule
+      dateFormat  YYYY-MM-DD
+      section FEK-IPS
+      FEK-IPS-13: 2023-07-01, 1d
+      FEK-IPS-14: 2023-07-02, 1d
+      FEK-IPS-15: 2023-07-03, 1d
+      FEK-IPS-16: 2023-07-04, 1d
+      FEK-IPS-17: 2023-07-05, 1d
+      FEK-IPS-18: 2023-07-06, 1d
+      FEK-IPS-19: 2023-07-07, 1d
+      FEK-IPS-20: 2023-07-08, 1d
+      FEK-IPS-21: 2023-07-09, 1d
+      FEK-IPS-22: 2023-07-10, 1d
+      FEK-IPS-23: 2023-07-11, 1d
+      section EBX
+      EBX-60: 2023-06-30, 1d
+      EBX-61: 2023-07-02, 1d
+      EBX-62: 2023-07-04, 1d
+      EBX-63: 2023-07-05, 1d
+      EBX-64: 2023-07-06, 1d
+      EBX-65: 2023-07-07, 1d
+      EBX-66: 2023-07-08, 1d
+      EBX-67: 2023-07-09, 1d
+      EBX-68: 2023-07-10, 1d
+      EBX-69: 2023-07-11, 1d
+      EBX-70: 2023-07-12, 1d
+      EBX-71: 2023-07-13, 1d
+      EBX-72: 2023-07-28, 5d
+      EBX-73: 2023-07-29, 1d
+      EBX-74: 2023-07-30, 1d
+      EBX-75: 2023-07-31, 1d
+      section FP
+      FP-12: 2023-06-27, 1d
+      FP-13: 2023-06-28, 1d
+      section IKF-916
+      IKF-916-62: 2023-07-01, 1d
+      IKF-916-63: 2023-07-02, 1d
+      IKF-916-64: 2023-07-03, 1d
+      IKF-916-65: 2023-07-04, 1d
+      IKF-916-66: 2023-07-05, 1d
+      IKF-916-67: 2023-07-06, 1d
+      IKF-916-68: 2023-07-07, 1d
+      IKF-916-69: 2023-07-09, 2d
+      IKF-916-70: 2023-07-10, 1d
+      IKF-916-71: 2023-07-11, 1d
+      IKF-916-72: 2023-07-12, 1d
+      IKF-916-73: 2023-07-13, 1d
+      IKF-916-74: 2023-07-14, 1d
+      IKF-916-75: 2023-07-16, 2d
+      IKF-916-76: 2023-07-17, 1d
+      IKF-916-77: 2023-07-18, 1d
+      IKF-916-78: 2023-07-19, 1d
+      IKF-916-79: 2023-07-20, 1d
+      IKF-916-80: 2023-07-21, 1d
+      IKF-916-81: 2023-07-22, 1d
+      IKF-916-82: 2023-07-23, 1d
+      IKF-916-83: 2023-07-24, 1d
+      IKF-916-84: 2023-07-25, 1d
+      IKF-916-85: 2023-07-26, 1d
+      IKF-916-86: 2023-07-27, 1d
+      IKF-916-87: 2023-07-28, 1d
+      IKF-916-88: 2023-07-29, 1d
+      IKF-916-89: 2023-07-30, 1d
+      IKF-916-90: 2023-07-31, 1d
+      FPESA-1: 2023-07-17, 1d
+      FPESA-2: 2023-07-19, 1d
+      FPESA-3: 2023-07-22, 1d
+  </div>
+  
+  <script>
+      mermaid.initialize({startOnLoad:true});
+      mermaid.init(undefined, document.querySelector('.mermaid'));
+  </script>    
