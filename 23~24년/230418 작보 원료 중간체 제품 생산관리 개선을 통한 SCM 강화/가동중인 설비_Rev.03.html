@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dashboard-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .status-operational {
+            background-color: #88dd88; /* Green for operational */
+        }
+
+        .status-nonoperational {
+            background-color: #dd8888; /* Red for non-operational */
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <!-- The dashboard will be populated here by JavaScript -->
+    </div>
+
+    <script>
+        // Data for the products and their equipment
+        var data = {
+            'Product 1': [
+                {name: 'Equipment 1', status: 'operational'},
+                {name: 'Equipment 2', status: 'nonoperational'}
+            ],
+            'Product 2': [
+                {name: 'Equipment 1', status: 'operational'},
+                {name: 'Equipment 2', status: 'operational'}
+            ],
+            // Add more products as needed
+        };
+
+        var dashboard = document.getElementById('dashboard');
+
+        // Populate the dashboard with data
+        for (var product in data) {
+            var productDiv = document.createElement('div');
+            productDiv.className = 'dashboard-item';
+            productDiv.innerHTML = '<h2>' + product + '</h2>';
+
+            data[product].forEach(function(equipment) {
+                var equipmentDiv = document.createElement('div');
+                equipmentDiv.className = 'status-' + equipment.status;
+                equipmentDiv.textContent = equipment.name + ': ' + equipment.status;
+                productDiv.appendChild(equipmentDiv);
+            });
+
+            dashboard.appendChild(productDiv);
+        }
+    </script>
+</body>
+</html>
