@@ -1,5 +1,5 @@
-!pip install pdfrw reportlab
-!pip install PyPDF4
+# !pip install pdfrw reportlab
+# !pip install PyPDF4
 
 # 몇 개의 구간으로 나누고 싶은지 물어보고,
 # 사용자가 전체 페이지수, 시작/끝 페이지수 입력하면 됨
