@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from datetime import datetime
 import io
-import os-+
+import os
 
 def select_pdf_file():
     download_folder = "C:\\Users\\LG\\Downloads"
@@ -55,7 +55,17 @@ def add_watermark(input_pdf_path, type):
 def main():
     selected_pdf_file = select_pdf_file()
     copies = int(input("복사할 페이지 수를 입력하세요: "))
-    type_choice = input("유형을 입력하세요 (UNICEF, SPA, JPNY, EUHR, CHNFA, CHNF, ENG 중 하나): ")
+
+    type_options = ['UNICEF', 'SPA', 'JPNY', 'EUHR', 'CHNFA', 'CHNF', 'ENG']
+    print("유형을 선택하세요:")
+    for idx, option in enumerate(type_options):
+        print(f"{idx + 1}. {option}")
+    type_choice = int(input("유형 번호를 입력하세요: ")) - 1
+
+    if type_choice < 0 or type_choice >= len(type_options):
+        raise ValueError("유효하지 않은 유형 번호입니다.")
+
+    type = type_options[type_choice]
 
     temp_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", "temp.pdf")
 
@@ -65,7 +75,7 @@ def main():
         writer.write(temp_pdf)
 
     # temp.pdf 파일에 워터마크 추가
-    writer_with_watermark = add_watermark(temp_pdf_file, type_choice)
+    writer_with_watermark = add_watermark(temp_pdf_file, type)
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M")
     output_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", f"{timestamp}.pdf")
@@ -76,3 +86,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
