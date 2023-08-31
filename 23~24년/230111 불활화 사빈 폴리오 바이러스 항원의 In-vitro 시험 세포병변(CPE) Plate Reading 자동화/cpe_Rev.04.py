@@ -21,8 +21,7 @@ def create_result_folder_and_save_images(original_folder, image_name, processed_
 def find_similar_circles(image_path, threshold_value=70):
     # Load the image
     image = cv2.imread(image_path)
-    
-    # Check if the image is loaded successfully
+    ..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,, ,m.ㅜ         
     if image is None:
         print(f"Could not open or find the image at {image_path}. Skipping...")
         return
