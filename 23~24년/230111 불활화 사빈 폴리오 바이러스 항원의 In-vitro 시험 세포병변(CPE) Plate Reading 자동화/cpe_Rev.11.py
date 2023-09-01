@@ -28,6 +28,7 @@
 
 # pip install imutils
 # pip3 install opencv-python
+# pip install matplotlib
 
 import cv2
 import numpy as np
