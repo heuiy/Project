@@ -1,4 +1,5 @@
-# 열 이름 4단으로 표기까지
+# 열 이름 4단으로 표기
+# 전처리해서 이미지를 800, 600 으로 스케일링
 
 # 폴더명, 파일명에 한글 있으면 안됨
 # 큰 거는 아직 분류 못함
@@ -45,6 +46,28 @@ def create_result_folder_and_save_images(original_folder, image_name, processed_
     result_image_path = os.path.join(result_folder_path, f"{image_name}_result.jpg")
     cv2.imwrite(result_image_path, processed_image)
 
+def preprocess_image(image_path):
+    # 이미지 불러오기
+    image = cv2.imread(image_path)
+    if image is None:
+        print(f"Could not open or find the image at {image_path}. Skipping...")
+        return None
+
+    # 예시: 이미지 스케일링
+    standard_size = (800, 600)  # 원하는 표준 크기
+    image = cv2.resize(image, standard_size)
+
+    # 이미지 크기 확인
+    height, width, _ = image.shape
+    print(f"The resized image dimensions are {width}x{height}")
+
+    # 이미지 출력
+    cv2.imshow('Resized Image', image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+    return image
+
 def find_similar_circles(image_path, threshold_value=70):
     # Load the image
     image = cv2.imread(image_path)
@@ -54,6 +77,20 @@ def find_similar_circles(image_path, threshold_value=70):
         print(f"Could not open or find the image at {image_path}. Skipping...")
         return
 
+    try:
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        blurred = cv2.medianBlur(gray, 13)
+        _, dst = cv2.threshold(blurred, threshold_value, 255, cv2.THRESH_TOZERO)
+        circles = cv2.HoughCircles(dst, cv2.HOUGH_GRADIENT, dp=1, minDist=20,
+                                   param1=170, param2=10, minRadius=27, maxRadius=32)
+        
+        if circles is None or len(circles) == 0:
+            print(f"No circles found in {image_path}. Skipping...")
+            return
+
+    except Exception as e:
+        print(f"An error occurred while processing {image_path}: {e}")
+    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     blurred = cv2.medianBlur(gray, 13)
     _, dst = cv2.threshold(blurred, threshold_value, 255, cv2.THRESH_TOZERO)
