@@ -109,7 +109,7 @@ def find_similar_circles(image_path, threshold_value=70):
             # 텍스트의 길이를 고려하여 x 좌표를 동적으로 설정
             text = f"Col {idx}: {count}"
             text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.8, 2)[0]
-            adjusted_x_position = x_position - text_size[0] // 2 + 70  # 텍스트의 중심을 x_position으로 맞추고, 오른쪽으로 10 픽셀 이동
+            adjusted_x_position = x_position - text_size[0] // 2 + 80  # 텍스트의 중심을 x_position으로 맞추고, 오른쪽으로 10 픽셀 이동
 
             cv2.putText(image, text, (adjusted_x_position, y_position),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), 2)              
