@@ -26,6 +26,9 @@
 # circles = cv2.HoughCircles(dst, cv2.HOUGH_GRADIENT, dp=1, minDist=20,
 #                             param1=170, param2=10, minRadius=27, maxRadius=32)
 
+# pip install imutils
+# pip3 install opencv-python
+
 import cv2
 import numpy as np
 import os
