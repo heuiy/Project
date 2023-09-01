@@ -1,5 +1,16 @@
 # 폴더명, 파일명에 한글 있으면 안됨
-# 큰 거는 분류 못함
+# 큰 거는 아직 분류 못함
+
+# Apply the Hough Circle Transform
+# Parameter 설명 출처: https://opencv-python.readthedocs.io/en/latest/doc/26.imageHoughCircleTransform/imageHoughCircleTransform.html
+# dp – dp=1이면 Input Image와 동일한 해상도.
+# minDist – 검출한 원의 중심과의 최소거리. 값이 작으면 원이 아닌 것들도 검출이 되고, 너무 크면 원을 놓칠 수 있음.
+# param1 – 내부적으로 사용하는 canny edge 검출기에 전달되는 Parameter
+# param2 – 이 값이 작을 수록 오류가 높아짐. 크면 검출률이 낮아짐.
+# minRadius – 원의 최소 반지름.
+# maxRadius – 원의 최대 반지름.
+# circles = cv2.HoughCircles(dst, cv2.HOUGH_GRADIENT, dp=1, minDist=20,
+#                             param1=170, param2=10, minRadius=27, maxRadius=32)
 
 import cv2
 import numpy as np
