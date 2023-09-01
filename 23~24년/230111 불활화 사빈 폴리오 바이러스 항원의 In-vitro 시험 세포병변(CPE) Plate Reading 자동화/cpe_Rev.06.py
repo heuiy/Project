@@ -65,6 +65,29 @@ def find_similar_circles(image_path, threshold_value=70):
             if white_pixels < 100:
                 valid_circles.append((x, y, r))
         circle_count = len(valid_circles)
+
+        # 유효한 원을 x 좌표로 정렬
+        valid_circles.sort(key=lambda circle: circle[0])
+        
+        # 각 열에서 보라색 원의 개수를 세기 위한 딕셔너리
+        column_count = {}
+        col_idx = 1
+        last_x = valid_circles[0][0]
+        
+        for (x, y, r) in valid_circles:
+            if abs(x - last_x) > 20:  # 새로운 열로 고려하기 위한 임계값
+                col_idx += 1
+            last_x = x
+            
+            if col_idx not in column_count:
+                column_count[col_idx] = 0
+            column_count[col_idx] += 1
+        
+        # 이미지 상단에 각 열의 보라색 원 개수 표시
+        for idx, count in column_count.items():
+            cv2.putText(image, f"열 {idx}: {count}", (20, 50 + idx * 30),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), 2)
+        
         for i, (x, y, r) in enumerate(valid_circles):
             cv2.circle(image, (x, y), r, (0, 255, 0), 1)
             cv2.putText(image, str(i+1), (x-3, y-3), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 1)
