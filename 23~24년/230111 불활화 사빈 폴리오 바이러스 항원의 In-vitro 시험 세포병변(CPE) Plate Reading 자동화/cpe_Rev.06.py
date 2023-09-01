@@ -75,7 +75,7 @@ def find_similar_circles(image_path, threshold_value=70):
         last_x = valid_circles[0][0]
         
         for (x, y, r) in valid_circles:
-            if abs(x - last_x) > 20:  # 새로운 열로 고려하기 위한 임계값
+            if abs(x - last_x) > 40:  # 새로운 열로 고려하기 위한 임계값
                 col_idx += 1
             last_x = x
             
@@ -85,7 +85,7 @@ def find_similar_circles(image_path, threshold_value=70):
         
         # 이미지 상단에 각 열의 보라색 원 개수 표시
         for idx, count in column_count.items():
-            cv2.putText(image, f"열 {idx}: {count}", (20, 50 + idx * 30),
+            cv2.putText(image, f"Column {idx}: {count}", (20, 50 + idx * 30),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), 2)
         
         for i, (x, y, r) in enumerate(valid_circles):
