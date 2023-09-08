@@ -120,7 +120,9 @@ def main():
 
         # PDF 파일 선택 및 복사
         selected_pdf_file = select_pdf_file()
+        input_pdf_filename = os.path.splitext(os.path.basename(selected_pdf_file))[0]  # 입력 PDF 파일명 추출
         writer = copy_pages(selected_pdf_file, current_batch_copies)
+
         if writer is None:
             print("PDF 생성에 실패하였습니다.")
             continue
@@ -133,10 +135,10 @@ def main():
 
         # temp.pdf 파일에 워터마크 추가
         writer_with_watermark = add_watermark(temp_pdf_file, type_choice, current_document_number, total_documents)
-        
-        # 파일 이름에 current_document_number 추가
+
+        # 파일 이름에 입력 PDF 파일명, 타임스탬프, current_document_number 추가
         timestamp = datetime.now().strftime("%Y%m%d%H%M")
-        output_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", f"{timestamp}_{current_document_number}.pdf")
+        output_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", f"{input_pdf_filename}_{timestamp}_{current_document_number}.pdf")        
         with open(output_pdf_file, "wb") as output_pdf:
             writer_with_watermark.write(output_pdf)
 
