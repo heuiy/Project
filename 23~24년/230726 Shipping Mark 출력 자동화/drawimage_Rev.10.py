@@ -1,4 +1,16 @@
 # WMS 와 이름 맞추기
+# STANDARD_CHNE             이브아르_중문
+# STANDARD_CHNF             폴리트롭_중문
+# STANDARD_CHNFA           팩티브_중문
+# STANDARD_CHNY             이브아르_Y_SOLUTION_중문
+# STANDARD_ENG               표준양식_영문
+# STANDARD_EUHR             히루안원_유럽
+# STANDARD_JPNY              유셉트_일본
+# STANDARD_SPA                표준양식_스페인
+# STANDARD_UNICEF           UNICEF
+
+# !pip install pdfrw reportlab
+# !pip install PyPDF4
 
 from PyPDF4 import PdfFileReader, PdfFileWriter
 from reportlab.pdfgen import canvas
