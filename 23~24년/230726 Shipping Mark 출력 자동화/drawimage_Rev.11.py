@@ -1,3 +1,5 @@
+# 수정 중
+
 # WMS 와 이름 맞추기
 # STANDARD_CHNE             이브아르_중문
 # STANDARD_CHNF             폴리트롭_중문
