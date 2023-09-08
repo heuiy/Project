@@ -1,3 +1,5 @@
+# 이걸로 중간보고 했음
+
 from PyPDF4 import PdfFileReader, PdfFileWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter

@@ -1,3 +1,5 @@
+# drawimage_Rev.09
+
 from pdf_file_manager import select_pdf_file, copy_pages
 from watermark_manager import add_watermark
 from type_selector import select_type
