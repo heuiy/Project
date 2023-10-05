@@ -33,7 +33,8 @@ import os
 from datetime import datetime
 
 def select_pdf_file():
-    download_folder = "C:\\Users\\User\\Downloads\\PDF"
+    # download_folder = "C:\\Users\\User\\Downloads\\PDF"
+    download_folder = "C:\\Users\\LG\\Downloads"
     pdf_files = [f for f in os.listdir(download_folder) if f.endswith('.pdf')]
     print("사용 가능한 PDF 파일:")
     for idx, file in enumerate(pdf_files):
@@ -99,7 +100,7 @@ def select_type():
                     'STANDARD_JPNY',
                     'STANDARD_SPA',
                     'STANDARD_UNICEF'
-    ]
+    ] 
     print("유형을 선택하세요:")
     for idx, option in enumerate(type_options):
         print(f"{idx + 1}. {option}")
@@ -136,8 +137,8 @@ def main():
             print("PDF 생성에 실패하였습니다.")
             continue
         
-        temp_pdf_file = os.path.join("C:\\Users\\User\\Downloads\\PDF", "temp.pdf")
-        # temp_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", "temp.pdf")
+        # temp_pdf_file = os.path.join("C:\\Users\\User\\Downloads\\PDF", "temp.pdf")
+        temp_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", "temp.pdf")
         with open(temp_pdf_file, "wb") as temp_pdf:
             writer.write(temp_pdf)
 
@@ -149,8 +150,8 @@ def main():
 
         # 파일 이름에 입력 PDF 파일명, 타임스탬프, current_document_number 추가
         timestamp = datetime.now().strftime("%Y%m%d%H%M")
-        # output_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", f"{input_pdf_filename}_{timestamp}_{current_document_number}.pdf")
-        output_pdf_file = os.path.join("C:\\Users\\User\\Downloads\\PDF", f"{input_pdf_filename}_{timestamp}_{current_document_number}.pdf")
+        output_pdf_file = os.path.join("C:\\Users\\LG\\Downloads", f"{input_pdf_filename}_{timestamp}_{current_document_number}.pdf")
+        # output_pdf_file = os.path.join("C:\\Users\\User\\Downloads\\PDF", f"{input_pdf_filename}_{timestamp}_{current_document_number}.pdf")
         with open(output_pdf_file, "wb") as output_pdf:
             writer_with_watermark.write(output_pdf)
 
