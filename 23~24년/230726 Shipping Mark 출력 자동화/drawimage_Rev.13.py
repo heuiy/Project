@@ -23,6 +23,41 @@
 # STANDARD_SPA                표준양식_스페인
 # STANDARD_UNICEF           UNICEF
 
+'''
+메인 작업 흐름
+│
+├── 변수 초기화 (total_documents, current_document_number 등)
+│
+└── remaining_documents <= 0이 될 때까지 반복
+    │
+    ├── 다운로드 폴더에서 사용 가능한 PDF 파일 표시 (select_pdf_file 함수)
+    │
+    ├── 사용자가 PDF 파일 선택
+    │
+    ├── 선택된 PDF 파일 처리
+    │   │
+    │   ├── 필요한 복사본의 수를 사용자에게 묻기
+    │   │
+    │   ├── 첫 번째 페이지 (그리고 가능하다면 두 번째 페이지)의 복사본 생성 (copy_pages 함수)
+    │   │
+    │   ├── 복사본을 임시로 저장하기
+    │   │
+    │   ├── 워터마크 유형을 선택하라고 사용자에게 묻기 (select_type 함수)
+    │   │
+    │   ├── 복사된 페이지에 워터마크 (페이지 번호) 추가 (add_watermark 함수)
+    │   │
+    │   └── 워터마크가 있는 새 PDF 저장
+    │
+    └── remaining_documents, current_document_number 업데이트
+
+- select_pdf_file: 사용자의 다운로드 폴더에서 사용 가능한 PDF 파일을 나열하고, 사용자에게 어떤 파일을 사용할 것인지 선택하게 합니다.
+- copy_pages: 사용자에게 복사할 페이지 수를 물어보고, 선택된 PDF의 첫 번째 페이지와 가능하면 두 번째 페이지를 지정된 횟수만큼 복사합니다. 이후 복사된 내용을 임시 PDF 파일에 저장합니다.
+- select_type: 사용자에게 워터마크 유형을 선택하라고 요청합니다.
+- add_watermark: 선택된 워터마크 유형과 문서 번호를 이용하여 각 페이지에 워터마크를 추가합니다. 이후 완성된 PDF를 저장합니다.
+- remaining_documents와 current_document_number는 업데이트됩니다. 이는 다음 반복을 위한 준비 단계입니다.
+'''
+
+
 # !pip install pdfrw reportlab
 # !pip install PyPDF4
 
