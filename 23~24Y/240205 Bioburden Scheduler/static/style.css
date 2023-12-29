@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+ }
+ 
+ .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .calendar {
+    width: 90%;  /* 달력의 너비 */
+    max-width: 1000px;  /* 최대 너비 제한 */
+    margin: auto;
+    overflow-x: auto;  /* 내용이 넘칠 경우 스크롤바 표시 */
+    border-collapse: collapse;
+ }
+ 
+ .calendar th, .calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+ }
+ 
+ .calendar th {
+    background-color: #f2f2f2;
+ }
+ 
+ .calendar td {
+    height: 100px;  /* 각 날짜 칸의 높이 */
+ }
+ 
+ /* 메모 입력 칸 스타일 */
+ .memo-input {
+    width: 100%;
+    height: 80%;
+    border: none;
+    padding: 5px;
+ }
+ 
+ /* 달력 셀 내부의 스타일링 */
+ .event-info {
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ /* 입력 폼 스타일링 */
+ .event-form {
+    margin-top: 10px;
+ }
+ 
+ /* 입력 필드 스타일링 */
+ .event-form input,
+ .event-form select {
+    margin: 2px 0;
+    padding: 5px;
+ }

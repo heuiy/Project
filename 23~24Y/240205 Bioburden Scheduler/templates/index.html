@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>달력 일정</title>
+   <style>
+       .calendar-table {
+           width: 100%;
+           border-collapse: collapse;
+       }
+       .calendar-table th, .calendar-table td {
+           border: 1px solid #ddd;
+           padding: 10px;
+           text-align: center;
+       }
+       .calendar-table th {
+           background-color: #f2f2f2;
+       }
+       .event-form input, .event-form select, .event-form button {
+           display: block;
+           margin: 5px 0;
+       }
+   </style>
+</head>
+<body>
+   <h1>{{ year }}년 {{ month }}월 일정</h1>
+   <table class="calendar-table">
+       <tr>
+           <th>일</th>
+           <th>월</th>
+           <th>화</th>
+           <th>수</th>
+           <th>목</th>
+           <th>금</th>
+           <th>토</th>
+       </tr>
+       {% for week in cal_data %}
+       <tr>
+           {% for day in week %}
+           <td>
+               {% if day %}
+                   {{ day }}
+                   <form class="event-form" method="post" action="/add_event">
+                       <input type="hidden" name="date" value="{{ year }}-{{ '%02d' | format(month) }}-{{ '%02d' | format(day) }}">
+                       <input type="text" name="manufacture_number" placeholder="제조번호">
+                       <input type="text" name="time" placeholder="시간">
+                       <input type="text" name="production_manager" placeholder="생산팀 담당자">
+                       <input type="text" name="qc_test_director" placeholder="QC 시험 지시자">
+                       <button type="submit">이벤트 추가</button>
+                   </form>
+                   {% set event_key = year ~ '-' ~ '%02d' | format(month) ~ '-' ~ '%02d' | format(day) %}
+                   {% if events.get(event_key) %}
+                   <div>
+                       <strong>이벤트:</strong>
+                       <p>{{ events[event_key].manufacture_number }}</p>
+                       <p>{{ events[event_key].time }}</p>
+                       <p>{{ events[event_key].production_manager }}</p>
+                       <p>{{ events[event_key].qc_test_director }}</p>
+                   </div>
+                   {% endif %}
+               {% endif %}
+           </td>
+           {% endfor %}
+       </tr>
+       {% endfor %}
+   </table>
+</body>
+</html>
