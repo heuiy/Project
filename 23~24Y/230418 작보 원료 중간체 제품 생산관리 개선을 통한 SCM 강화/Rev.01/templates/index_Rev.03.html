@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>생산 캘린더</title>
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css' rel='stylesheet' />
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+   <style>
+       #external-events {
+           width: 150px;
+           padding: 10px;
+           border: 1px solid #ccc;
+           background: #eee;
+           text-align: left;
+       }
+
+       /* 제품별 색상 설정 */
+       .event-EBX { background-color: #1e90ff; color: #fff; }
+       .event-IKF-916 { background-color: #32cd32; color: #fff; }
+       .event-CCA { background-color: #ff4500; color: #fff; }
+       .event-PC { background-color: #da70d6; color: #fff; }
+
+       .fc-event { /* FullCalendar 이벤트 스타일 */
+           cursor: pointer;
+           margin: 10px 0;
+       }
+   </style>
+   <script>
+       $(document).ready(function() {
+           // FullCalendar 초기화
+           $('#calendar').fullCalendar({
+               header: {
+                   left: 'prev,next today',
+                   center: 'title',
+                   right: 'month,agendaWeek,agendaDay'
+               },
+               defaultView: 'month',
+               editable: true,
+               droppable: true,
+               eventClick: function(event) {
+                   // 이벤트 클릭 시 이벤트 삭제
+                   if (confirm("이 이벤트를 삭제하시겠습니까?")) {
+                       $('#calendar').fullCalendar('removeEvents', event._id);
+                   }
+               },
+               drop: function(date, jsEvent, ui) {
+                   // 드롭 이벤트 처리 로직 구현
+               }
+           });
+
+           // 드래그 가능한 이벤트 설정
+           $('.fc-event').each(function() {
+               $(this).data('event', {
+                   title: $.trim($(this).text()), // 제품 이름
+                   stick: true, // 이벤트가 캘린더에 고정되도록 설정
+                   className: $(this).attr('class') // 클래스 이름 사용
+               });
+
+               $(this).draggable({
+                   zIndex: 999,
+                   revert: true, // 원래 위치로 돌아감
+                   revertDuration: 0 // 즉각적인 복귀
+               });
+           });
+       });
+   </script>
+</head>
+<body>
+   <div id='external-events'>
+       <h4>생산 제품</h4>
+       <div class='fc-event event-EBX'>EBX</div>
+       <div class='fc-event event-IKF-916'>IKF-916</div>
+       <div class='fc-event event-CCA'>CCA</div>
+       <div class='fc-event event-PC'>PC</div>
+       <!-- 추가 제품들을 여기에 배치 -->
+   </div>
+   <div id='calendar'></div>
+</body>
+</html>
