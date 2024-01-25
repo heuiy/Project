@@ -1,0 +1,66 @@
+<!--일단 웹 페이지에 보여지기는 함!!-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>생산 캘린더</title>
+   <link href='https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.min.css' rel='stylesheet' />
+   <link href='https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+   <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/lib/moment.min.js'></script>
+   <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/lib/jquery.min.js'></script>
+   <script src='https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.min.js'></script>
+   <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+   <style>
+       #external-events {
+           width: 150px;
+           padding: 10px;
+           border: 1px solid #ccc;
+           background: #eee;
+           text-align: left;
+       }
+       .fc-event { /* FullCalendar 이벤트 스타일 */
+           cursor: pointer;
+           margin: 10px 0;
+       }
+   </style>
+   <script>
+       $(document).ready(function() {
+           $('#calendar').fullCalendar({
+               header: {
+                   left: 'prev,next today',
+                   center: 'title',
+                   right: 'month,agendaWeek,agendaDay'
+               },
+               editable: true,
+               droppable: true,
+               drop: function(date, jsEvent, ui) {
+                   // 여기에 드롭 이벤트 처리 로직 구현
+               }
+           });
+
+           $('.fc-event').each(function() {
+               $(this).data('event', {
+                   title: $.trim($(this).text()),
+                   stick: true
+               });
+               $(this).draggable({
+                   zIndex: 999,
+                   revert: true,
+                   revertDuration: 0
+               });
+           });
+       });
+   </script>
+</head>
+<body>
+   <div id='external-events'>
+       <h4>생산 제품</h4>
+       <div class='fc-event'>EBX</div>
+       <div class='fc-event'>IKF-916</div>
+       <div class='fc-event'>CCA</div>
+       <div class='fc-event'>PC</div>
+       <!-- 추가 제품들을 여기에 배치 -->
+   </div>
+   <div id='calendar'></div>
+</body>
+</html>
