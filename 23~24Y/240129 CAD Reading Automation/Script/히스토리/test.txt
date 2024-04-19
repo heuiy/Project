@@ -1,9 +1,3 @@
-;; 각 영역을 모두 확보했는데 출력이 안되고 있음
-;; 내가 원하는 경로에 pdf 가 저장이 안됨
-;; https://m.blog.naver.com/iagapeu/221322734578
-;; 이거 보고 다시 하세요... 될 듯 한데 잘 안됨
-;; 이걸로 메일 썼음
-
 
 (defun C:ExportAreaPDF ()
 (setq coords '(

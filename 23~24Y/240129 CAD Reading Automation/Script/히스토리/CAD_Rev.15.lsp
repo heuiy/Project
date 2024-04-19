@@ -9,8 +9,8 @@
                (-7524.3851 159.6186 -6683.6569 732.111)
                (-6651.6569 159.6186 -5814.2557 732.111)))
 ​
-;; (setq outputPath "C:\\Users\\LG\\Downloads\\") ; 출력 경로 설정
-(setq outputPath "D:\\#.Secure Work Folder\\BIG\\Project\\23~24Y\\240129 CAD Reading Automation\\PDF\\out\\") ; 출력 경로 설정
+(setq outputPath "C:\\Users\\LG\\Downloads\\") ; 출력 경로 설정
+;; (setq outputPath "D:\\#.Secure Work Folder\\BIG\\Project\\23~24Y\\240129 CAD Reading Automation\\PDF\\out\\") ; 출력 경로 설정
 (setq i 0)
 ​
 (foreach area coords

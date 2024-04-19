@@ -1,9 +1,5 @@
-;; 각 영역을 모두 확보했는데 출력이 안되고 있음
-;; 내가 원하는 경로에 pdf 가 저장이 안됨
-;; https://m.blog.naver.com/iagapeu/221322734578
-;; 이거 보고 다시 하세요... 될 듯 한데 잘 안됨
-;; 이걸로 메일 썼음
-
+;; Autodesk 에 답변 올렸음
+;; 이를 반영해서 다시 시작하려 함
 
 (defun C:ExportAreaPDF ()
 (setq coords '(
@@ -98,57 +94,38 @@
 (-8320 -5720 -7484 -5138)
 (-9220 -5720 -8384 -5138)
 ))
+​
 ;; 출력 경로
 ;; (setq outputPath "C:\\Users\\LG\\Downloads\\")
 (setq outputPath "C:\\Users\\LG\\Desktop\\")
 ;; (setq outputPath "D:\\#.Secure Work Folder\\BIG\\Project\\00Temp\\")
 ;; (setq outputPath "D:\\#.Secure Work Folder\\BIG\\Project\\23~24Y\\240129 CAD Reading Automation\\PDF\\out\\") ; 출력 경로 설정
 (setq i 0)
-
-(foreach area coords
-  (setq xMin (car area)
-        yMin (cadr area)
-        xMax (caddr area)
-        yMax (cadddr area))
-
-  ;; (command "-PLOT" "Y" "Model" "" "DWG To PDF.pc3" "" "Inches" "Landscape" "N" "Window"
-  ;; (command "-PLOT" "Y" "Model" "" "AutoCAD PDF (General Documentation).pc3" "" "Inches" "Landscape" "N" "Window"
-  ;; (command "-PLOT" "N" "Model" "" "ALPDF" "" "Inches" "Landscape" "N" "Window"
-  ;; (command "-PLOT" "N" "Model" "" "DWG To PDF.pc3" "" "Inches" "Landscape" "N" "Window"
-  ;;          (strcat (rtos xMin 2 2) "," (rtos yMin 2 2))
-  ;;          (strcat (rtos xMax 2 2) "," (rtos yMax 2 2))
-  ;;          "Fit" "Center" "Y" "" "Y" "N" "N" "N" "Y"
-  ;;          (strcat outputPath "Output_" (itoa (1+ (setq i (1+ i)))) ".pdf")
-  ;;          "Y")
-
-  ;; (command "-PLOT" "N" "Model" "DWG To PDF.pc3" "Inches" "Landscape" "N" "Window"
-  ;;         (strcat (rtos xMin 2 2) "," (rtos yMin 2 2))
-  ;;         (strcat (rtos xMax 2 2) "," (rtos yMax 2 2))
-  ;;         "Fit" "Center" "Y" "" "Y" "N" "N" "Y" "Y"
-  ;;         (strcat outputPath "Output_" (itoa (1+ (setq i (1+ i)))) ".pdf")
-  ;;         "Y")
-
-  ;; (command "-PLOT" "Y" "Model" "" "DWG To PDF.pc3" "" "Inches" "Landscape" "N" "Window"
-  ;; (command "-PLOT" "N" "Model" "" "DWG To PDF.pc3" "" "Inches" "Landscape" "Y" "Window" ;; 기본
-  (command "-PLOT" "N" "Model" "Adobe PDF" "" "Inches" "Landscape" "N" "Window"  
-      ;; 순차적으로 출력은 되는데 저장은 안됨
-  ;; (command "-PLOT" "N" "Model" "Adobe PDF" "" "Inches" "Landscape" "Y" "Window"  
-      ;; 순차적 진행, 저장 안됨
-  ;; (command "-PLOT" "N" "Model" "ALPDF" "" "Inches" "Landscape" "Y" "Window"  
-      ;; 순차적 진행, 저장 안됨
-  ;; (command "-PLOT" "N" "Model" "ALPDF" "Inches" "Landscape" "Y" "Window"  
-      ;; 이상하게 됨
-  ;; (command "-PLOT" "N" "Model" "" "DWG To PDF.pc3" "" "Inches" "Landscape" "Y" "Window" ;; 기본
-      ;; 순차적 진행, 세로 출력, 저장 안됨
-;;   (command "-PLOT" "N" "" "DWG To PDF.pc3" "" "Inches" "Landscape" "Y" "Window"  
-      ;; 순차적 진행, 세로 출력, 저장 안됨
-           (strcat (rtos xMin 2 2) "," (rtos yMin 2 2))
-           (strcat (rtos xMax 2 2) "," (rtos yMax 2 2))
-           "Fit" "Center" "Y" "" "Y" "N" "N" "N" "Y"
-           (strcat outputPath "Output_" (itoa (1+ (setq i (1+ i)))) ".pdf")
-           "Y")
-
-  (command "_.delay" "2000") ; pause 추가
+​
+   ;; -PLOT 명령어 시작
+   (command "-PLOT")
+   (command "No")  ;; 'Detailed plot configuration'에 'No' 선택
+   (command "Model") ;; 페이지 설정으로 'Model' 선택
+   (command "") ;; 출력 장치 이름
+   (command "DWG To PDF.pc3") ;; 프린터/플로터 이름
+   (command "Inches") ;; 용지 크기 단위
+   (command "Landscape") ;; 방향
+   (command "Window") ;; 플롯 영역
+   (command (strcat (rtos xMin 2 2) "," (rtos yMin 2 2))) ;; 최소 x,y 좌표
+   (command (strcat (rtos xMax 2 2) "," (rtos yMax 2 2))) ;; 최대 x,y 좌표
+   (command "Fit") ;; 출력 크기
+   (command "Center") ;; 중심
+   (command "Yes") ;; 플롯 스타일 테이블
+   (command "") ;; 플롯 스타일 테이블 이름
+   (command "Yes") ;; 선 종류
+   (command "No") ;; 선 무게
+   (command "No") ;; 플롯 개체 라인 종류
+   (command "Yes") ;; 배경색
+   (command (strcat outputPath "Output_" (itoa (1+ (setq i (1+ i)))) ".pdf")) ;; 출력 파일 경로
+   (command "Yes") ;; 계속해서 파일 저장
+​
+   (command "_.delay" "2000") ; 2초 대기 추가
+   )
+ (princ)
 )
-(princ)
-)
+​​
