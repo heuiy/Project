@@ -103,7 +103,7 @@ DP72_Impurity_1_df = dp72_Impurity_1_df[['제품', 'Site', '배치', 'Impurity-1
 DP72_Impurity_1 = dataiku.Dataset("DP72_Impurity-1")
 DP72_Impurity_1.write_with_schema(DP72_Impurity_1_df)
 
-기존 관리도 그리는 함수
+# 기존 관리도 그리는 함수
 
 st.title('Hello Streamlit!')
 
@@ -197,3 +197,4 @@ for i, (name, df) in enumerate(dataframes.items()):
 
 plt.tight_layout()
 plt.show()
+
