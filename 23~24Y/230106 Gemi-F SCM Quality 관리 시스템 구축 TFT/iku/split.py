@@ -1,4 +1,5 @@
 # 데이터 받아서 한 꺼번에 스플릿 한 거
+# 이게 반영되어 있음
 
 # -*- coding: utf-8 -*-
 import dataiku
